@@ -110,5 +110,5 @@ Sujets pouvant potentiellement être abordés durant l'année
 
   - [Snipt](https://snipt.net/public/)
   - [Clearfix](http://www.webtoolkit.info/css-clearfix.html)
-  - [Bombermine](http://bombermine.com) - Pour le fun
   - [Reveal.js](https://github.com/hakimel/reveal.js) - Présentation
+  - [CodePen](http://codepen.io/) - Expérimentations et inspiration
