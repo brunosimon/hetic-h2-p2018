@@ -71,7 +71,7 @@
 						<li class="fragment">Tous les lundis</li>
 						<li class="fragment">Même rythme pour tout le monde</li>
 						<li class="fragment">Questions en début de cours (bonus ou malus)</li>
-						<li class="fragment">Slides en HTML disponible online, sur intranet et sur github</li>
+						<li class="fragment">Slides en HTML disponible en ligne, sur intranet et sur github</li>
 						<li class="fragment">Présentation du sujet (soyez attentif)</li>
 						<li class="fragment">Pratique (essayez)</li>
 						<li class="fragment">Correction (comprenez)</li>
@@ -86,6 +86,7 @@
 						<li class="fragment">Obligatoire pour un certain nombre</li>
 						<li class="fragment">Optionnel pour les autres (ne compte pas si &lt; 10)</li>
 						<li class="fragment">Souvent par groupe de deux</li>
+						<li class="fragment">Rendus en général par zip, par mail</li>
 					</ul>
 				</section>
 
@@ -95,8 +96,8 @@
 						<li class="fragment">Chaque fin de trimestre</li>
 						<li class="fragment">3h</li>
 						<li class="fragment">Ordinateurs et Internet autorisés</li>
-						<li class="fragment">Rendus en général par zip sur l'intranet</li>
 						<li class="fragment">Commentez au maximum afin de m'aider à corriger</li>
+						<li class="fragment">Rendus en général par zip sur l'intranet</li>
 					</ul>
 				</section>
 
@@ -107,7 +108,6 @@
 						<li class="fragment">Questions variées (théorie, détection de bug, amélioration d'un code, etc.)</li>
 						<li class="fragment">Temps de réflexion</li>
 						<li class="fragment">Temps de réponse</li>
-						<li class="fragment">Note dans le bulletin</li>
 					</ul>
 				</section>
 
@@ -125,9 +125,10 @@
 				<section>
 					<h2>DÉROULEMENT : RÈGLES</h2>
 					<ul>
-						<li class="fragment">Retards non tolérés (mais bon…)</li>
-						<li class="fragment">Fautes d’orthographe tolérées (mais bon…)</li>
+						<li class="fragment">Retards non tolérés</li>
+						<li class="fragment">Fautes d’orthographe tolérées</li>
 						<li class="fragment">Mauvaise indentation non tolérée</li>
+						<li class="fragment">Copiage bête non toléré</li>
 						<li class="fragment">Code en français non toléré (sauf commentaires)</li>
 						<li class="fragment">On ferme les ordi quand c'est demandé (et vite)</li>
 						<li class="fragment">Pas vu pas pris</li>
@@ -138,7 +139,7 @@
 					<h2>ENVIRONNEMENT</h2>
 					<ul>
 						<li>Mac</li>
-						<li>Github (codes, présentations, liens, ...)<br /><a href="https://github.com/brunosimon/hetic">https://github.com/brunosimon/hetic</a></li>
+						<li>Github (codes, présentations, liens, ...)<br /><a target="_blank" href="https://github.com/brunosimon/hetic-p2018">https://github.com/brunosimon/hetic-p2018</a></li>
 						<li>Sublime text 2 ou 3</li>
 						<li>MAMP</li>
 						<li>Chrome</li>
@@ -166,10 +167,8 @@
 				</section>
 
 				<section>
-					<h2>MOTS DE LA FIN</h2>
-					<ul>
-						<li class:"fragment">C’est votre cours</li>
-					</ul>
+					<h2>MOT DE LA FIN</h2>
+					<p>C’est votre cours</p>
 				</section>
 
 				<section>
@@ -189,12 +188,12 @@
 				theme        : Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition   : Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 				dependencies : [
-					{ src: '../tools/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../tools/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../tools/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../tools/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../tools/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../tools/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src : '../tools/reveal.js/lib/js/classList.js',         condition: function() { return !document.body.classList; } },
+					{ src : '../tools/reveal.js/plugin/markdown/marked.js',   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src : '../tools/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src : '../tools/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src : '../tools/reveal.js/plugin/zoom-js/zoom.js',        async: true, condition: function() { return !!document.body.classList; } },
+					{ src : '../tools/reveal.js/plugin/notes/notes.js',         async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 		</script>

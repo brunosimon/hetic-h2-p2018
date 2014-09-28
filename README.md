@@ -87,7 +87,7 @@ Sujets pouvant potentiellement être abordés durant l'année
 ### Tuto particuliers
   - [medium.com](https://medium.com/design-ux/bea05243fe3) - Explication sur le easing
 
-### Sublime Text 2
+### Sublime Text 2 / 3
 
   - [Package controle](https://sublime.wbond.net) - Installation / Suppression rapide de plugins sublimes
   - [Prefixr](https://sublime.wbond.net/packages/Prefixr) - Rajoute les bons préfixes au CSS
@@ -105,6 +105,7 @@ Sujets pouvant potentiellement être abordés durant l'année
   - [ColorPicker](https://sublime.wbond.net/packages/ColorPicker) - Affiche un color picker
   - [LiveReload](https://sublime.wbond.net/packages/LiveReload) - Reload le navigateur (softly) après chaque sauvegarde dans le projet (nécessite plugin)
   - [Soda](https://sublime.wbond.net/packages/Theme%20-%20Soda) - Thème sublime comprenant les tabs, la sidebar et la coloration syntaxique Monokai
+  - [Side​Bar​Enhancements](https://sublime.wbond.net/packages/Side​Bar​Enhancements) - Plus d'options dans la sidebar
 
 ### De tout
 
