@@ -1,0 +1,10 @@
+body {font-family:Helvetica,arial;background:#eee;}
+
+@media (max-width:500px){
+	body {background:#f00;}
+}
+
+@media (-webkit-min-device-pixel-ratio:2), 
+	   (min-device-pixel-ratio:2){
+	body {color:#fff;}
+}

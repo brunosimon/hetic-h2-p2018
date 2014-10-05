@@ -1,0 +1,17 @@
+body {background:#a00;font-family:Helvetica,Arial;font-size:25px;}
+
+@media (min-width:500px){
+	body {background:#4ab5d6;}
+}
+
+@media (min-width:700px){
+	body {background:#accf77;}
+}
+
+@media (min-height:500px){
+	body {font-size:50px;}
+}
+
+@media (min-device-pixel-ratio:1.4), (-webkit-min-device-pixel-ratio:1.4){
+	body {color:#fff;}
+}

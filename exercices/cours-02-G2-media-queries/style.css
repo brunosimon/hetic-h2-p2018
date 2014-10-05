@@ -1,0 +1,10 @@
+body {background:#eee;font-size:14px;font-family:Helvetica,Arial;}
+
+@media screen and (max-width:500px){
+	body {background:#f00;}
+}
+
+@media screen and (min-device-pixel-ratio:2),
+	   screen and (-webkit-min-device-pixel-ratio:2){
+	body {color:#fff;}
+}
