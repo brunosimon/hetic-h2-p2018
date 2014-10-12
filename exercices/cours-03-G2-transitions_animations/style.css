@@ -1,0 +1,56 @@
+body {background:#eee;font-size:14px;font-family:Helvetica,Arial;padding:0 0 200px 0;}
+
+.transition {
+	width:200px;
+	height:200px;
+	background:#b0b;
+	margin:0 0 20px 0;
+	transition:all 1s;
+}
+
+.transition-1:hover{
+	width:400px;
+}
+
+.transition-2:hover{
+	background:#f00;
+}
+
+.container {
+	position:relative;
+	width:600px;
+	height:400px;
+	background:#0f0;
+	margin:0 0 20px 0;
+}
+
+.transition-3{
+	left:0;
+	top:0;
+	position:absolute;
+}
+
+.container:hover .transition-3{
+	left:200px;
+	top:100px;
+}
+
+.transition-4:hover{
+	border-radius:50%;
+}
+
+.transition-5{
+	transition-delay:1s;
+}
+
+.transition-5:hover{
+	width:400px;
+}
+
+
+
+
+
+
+
+

@@ -19,6 +19,7 @@
             <script src="../tools/reveal.js/lib/js/html5shiv.js"></script>
         <![endif]-->
         <style>
+            span.highlight {display:inline-block;padding:0 6px;border:1px solid #FF8F00;}
             li{margin-bottom:0.5em !important;}
             ul.checked-list li {list-style-type:none;}
             .default{text-transform:none !important;}
@@ -411,7 +412,7 @@
                 
                 <section>
                     <h2>Scale</h2>
-                    <p>scale(x,y) où "x" et "y" sont des multiplicateurs</p>
+                    <p>scale(x,y) où <span class="highlight">x</span> et <span class="highlight">y</span> sont des multiplicateurs</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:scale(3,1.3);
@@ -424,7 +425,7 @@
                 
                 <section>
                     <h2>ScaleX</h2>
-                    <p>scaleX(x) où "x" est un multiplicateur</p>
+                    <p>scaleX(x) où <span class="highlight">x</span> est un multiplicateur</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:scaleX(3);
@@ -437,7 +438,7 @@
                 
                 <section>
                     <h2>ScaleY</h2>
-                    <p>scaleX(y) où "y" est un multiplicateur</p>
+                    <p>scaleX(y) où <span class="highlight">y</span> est un multiplicateur</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:scaleY(1.3);
@@ -450,7 +451,7 @@
                 
                 <section>
                     <h2>Translate</h2>
-                    <p>translate(x,y) où "x" et "y" sont des distances (px, %, em, ...)</p>
+                    <p>translate(x,y) où <span class="highlight">x</span> et <span class="highlight">y</span> sont des distances (px, %, em, ...)</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:translate(200px,50px);
@@ -463,7 +464,7 @@
                 
                 <section>
                     <h2>TranslateX</h2>
-                    <p>translateX(x) où "x" est une distance (px, %, em, ...)</p>
+                    <p>translateX(x) où <span class="highlight">x</span> est une distance (px, %, em, ...)</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:translateX(200px);
@@ -476,7 +477,7 @@
                 
                 <section>
                     <h2>TranslateY</h2>
-                    <p>translateY(y) où "y" est une distance (px, %, em, ...)</p>
+                    <p>translateY(y) où <span class="highlight">y</span> est une distance (px, %, em, ...)</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:translateY(50px);
@@ -489,7 +490,7 @@
                 
                 <section>
                     <h2>Rotate</h2>
-                    <p>rotate(angle) où "angle" est un angle (deg, rad)</p>
+                    <p>rotate(angle) où <span class="highlight">angle</span> est un angle (deg, rad)</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:rotate(70deg);
@@ -502,13 +503,13 @@
                 
                 <section>
                     <h2>Skew</h2>
-                    <p>skew(angleX,angleY)<br />où "angleX" et "angleY" sont des angles (deg, rad)</p>
+                    <p>skew(angleX,angleY)<br />où <span class="highlight">angleX</span> et <span class="highlight">angleY</span> sont des angles (deg, rad)</p>
                     <p style="background-color:red">NE PAS UTILISER SKEW</p>
                 </section>
                 
                 <section>
                     <h2>SkewX</h2>
-                    <p>skewX(angleX) où "angleX" est un angle (deg, rad)</p>
+                    <p>skewX(angleX) où <span class="highlight">angleX</span> est un angle (deg, rad)</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:skewX(-50deg);
@@ -521,7 +522,7 @@
                 
                 <section>
                     <h2>SkewY</h2>
-                    <p>skewY(angleY) où "angleY" est un angle (deg, rad)</p>
+                    <p>skewY(angleY) où <span class="highlight">angleY</span> est un angle (deg, rad)</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:skewY(-50deg);
@@ -593,7 +594,7 @@
 
                 <section>
                     <h2>rotateY</h2>
-                    <p>rotateY(angle) où "angle" est un angle (deg, rad)</p>
+                    <p>rotateY(angle) où <span class="highlight">angle</span> est un angle (deg, rad)</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:rotateY(250deg);
@@ -606,7 +607,7 @@
 
                 <section>
                     <h2>rotateX</h2>
-                    <p>rotateX(angle) où "angle" est un angle (deg, rad)</p>
+                    <p>rotateX(angle) où <span class="highlight">angle</span> est un angle (deg, rad)</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:rotateX(250deg);
@@ -619,7 +620,7 @@
 
                 <section>
                     <h2>translateZ</h2>
-                    <p>translateZ(z) où "z" est une distance (px, %, em, ...)</p>
+                    <p>translateZ(z) où <span class="highlight">z</span> est une distance (px, %, em, ...)</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:translateZ(100px);
@@ -632,7 +633,7 @@
 
                 <section>
                     <h2>scaleZ</h2>
-                    <p>scaleZ(z) où "z" est un multiplicateur</p>
+                    <p>scaleZ(z) où <span class="highlight">z</span> est un multiplicateur</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:scaleZ(100px);
@@ -646,7 +647,7 @@
 
                 <section>
                     <h2>scale3d</h2>
-                    <p>scale3d(x,y,z) où "x", "y" et "z" sont des multiplicateurs</p>
+                    <p>scale3d(x,y,z) où <span class="highlight">x</span>, <span class="highlight">y</span> et <span class="highlight">z</span> sont des multiplicateurs</p>
                     <pre><code  data-trim contenteditable class="css">
 .block{
     transform:scale3d(2,1.7,1.5);
@@ -702,7 +703,6 @@
                 <section>
                     <h2>Matrices</h2>
                     <p>Il est possible d'appliquer des matrices de transformation.</p>
-                    <p class="fragment">Mais c'est un trop gros morceau pour ce cours.</p>
                     <p class="fragment"><a target="_blank" href="http://www.useragentman.com/blog/2011/01/07/css3-matrix-transform-for-the-mathematically-challenged/">En savoir plus</a> pour les matheux et les curieux.</p>
                     <pre class="fragment"><code  data-trim contenteditable class="css">
 .block{
@@ -717,7 +717,7 @@
                 <section>
                     <h2>Démonstrations</h2>
                     <ul>
-                        <li><a target="blank" href="http://2012.beercamp.com/">http://2012.beercamp.com/</a></li>
+                        <li><a target="blank" href="http://2012.beercamp.nclud.com/">http://2012.beercamp.nclud.com/</a></li>
                         <li><a target="blank" href="http://www.smashingmagazine.com/2012/04/17/beercamp-experiment-with-css3d/">http://www.smashingmagazine.com/2012/04/17/beercamp-experiment-with-css3d/</a></li>
                         <li><a target="_blank" href="http://www.clicktorelease.com/code/css3dclouds/">http://www.clicktorelease.com/code/css3dclouds/</a></li>
                         <li><a target="_blank" href="http://www.eleqtriq.com/wp-content/static/demos/2010/rotation/index.html">http://www.eleqtriq.com/...</a></li>

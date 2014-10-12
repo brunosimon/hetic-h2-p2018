@@ -1,10 +1,18 @@
-body {background:#eee;font-size:14px;font-family:Helvetica,Arial;}
+body {background:#f00;font-size:25px;font-family:Helvetica,Arial;}
 
-@media screen and (max-width:500px){
-	body {background:#f00;}
+@media screen and (min-width:500px){
+	body {background:#00f;}
 }
 
-@media screen and (min-device-pixel-ratio:2),
-	   screen and (-webkit-min-device-pixel-ratio:2){
+@media screen and (min-width:700px){
+	body {background:#0f0;}
+}
+
+@media screen and (min-height:500px){
+	body {font-size:50px;}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2),
+	   screen and (min-device-pixel-ratio:2){
 	body {color:#fff;}
 }
