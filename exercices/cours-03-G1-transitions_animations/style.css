@@ -50,6 +50,63 @@ body {background:#eee;font-size:14px;font-family:Helvetica,Arial;padding:0 0 200
 	border-radius:100px;
 }
 
+.animation {
+	position:relative;
+	width:200px;
+	height:200px;
+	background:#ff8600;
+	margin:0 0 20px 0;
+	-webkit-animation:awesome_stuff 5s ease 0s infinite alternate;
+	   -moz-animation:awesome_stuff 5s ease 0s infinite alternate;
+	     -o-animation:awesome_stuff 5s ease 0s infinite alternate;
+	        animation:awesome_stuff 5s ease 0s infinite alternate;
+
+	-webkit-animation-play-state:paused;
+	   -moz-animation-play-state:paused;
+	     -o-animation-play-state:paused;
+	        animation-play-state:paused;
+}
+
+.animation:hover{
+	-webkit-animation-play-state:running;
+	   -moz-animation-play-state:running;
+	     -o-animation-play-state:running;
+	        animation-play-state:running;
+}
+
+@-webkit-keyframes awesome_stuff{
+	0%   {left:0;width:200px;}
+	50%  {left:200px;}
+	75%  {left:100px;}
+	100% {left:400px;width:400px;}
+}
+
+@-moz-keyframes awesome_stuff{
+	0%   {left:0;width:200px;}
+	50%  {left:200px;}
+	75%  {left:100px;}
+	100% {left:400px;width:400px;}
+}
+
+@-o-keyframes awesome_stuff{
+	0%   {left:0;width:200px;}
+	50%  {left:200px;}
+	75%  {left:100px;}
+	100% {left:400px;width:400px;}
+}
+
+@keyframes awesome_stuff{
+	0%   {left:0;width:200px;}
+	50%  {left:200px;}
+	75%  {left:100px;}
+	100% {left:400px;width:400px;}
+}
+
+
+
+
+
+
 
 
 
