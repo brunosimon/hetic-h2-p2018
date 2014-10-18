@@ -1,0 +1,46 @@
+body {background:#eee;font-size:14px;font-family:Helvetica,Arial;}
+
+.cube {
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-animation:cube-animation 4s linear 0s infinite;
+	-webkit-transform-style:preserve-3d;
+}
+
+.face {
+	position:absolute;
+	top:0;
+	left:0;
+	width:200px;
+	height:200px;
+	background:url('http://placekitten.com/g/200/200');
+}
+
+.face.top    {-webkit-transform:rotateX(90deg)  rotateY(0deg)   translateZ(100px);}
+.face.bottom {-webkit-transform:rotateX(-90deg) rotateY(0deg)   translateZ(100px);}
+.face.left   {-webkit-transform:rotateX(0deg)   rotateY(-90deg) translateZ(100px);}
+.face.right  {-webkit-transform:rotateX(0deg)   rotateY(90deg)  translateZ(100px);}
+.face.front  {-webkit-transform:rotateX(0deg)   rotateY(0deg)   translateZ(100px);}
+.face.back   {-webkit-transform:rotateX(0deg)   rotateY(180deg) translateZ(100px);}
+
+
+@-webkit-keyframes cube-animation {
+	0%   {-webkit-transform:perspective(600px) rotateY(0deg) rotateX(0deg);}
+	100% {-webkit-transform:perspective(600px) rotateY(360deg) rotateX(360deg);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
