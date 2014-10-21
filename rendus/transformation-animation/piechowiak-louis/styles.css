@@ -1,0 +1,324 @@
+*{
+	margin: 0;
+}
+
+/*la couleur de fond d'écran partira du bleu clair vers le bleu foncé en passant par le orangé*/
+body{
+	font-family: arial;
+	-webkit-animation : color-sky 10s linear 0s infinite alternate;
+	   -moz-animation : color-sky 10s linear 0s infinite alternate;
+	     -o-animation : color-sky 10s linear 0s infinite alternate;
+	        animation : color-sky 10s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes color-sky{
+	0% {background-color: #83e9ff;}
+	40% {background-color: #83e9ff;}
+	50% {background-color: #ff714a;}
+	100% {background-color: #001f26;}
+}
+
+@-moz-keyframes color-sky{
+	0% {background-color: #83e9ff;}
+	40% {background-color: #83e9ff;}
+	50% {background-color: #ff714a;}
+	100% {background-color: #001f26;}
+}
+
+@-o-keyframes color-sky{
+	0% {background-color: #83e9ff;}
+	40% {background-color: #83e9ff;}
+	50% {background-color: #ff714a;}
+	100% {background-color: #001f26;}
+}
+
+@keyframes color-sky{
+	0% {background-color: #83e9ff;}
+	40% {background-color: #83e9ff;}
+	50% {background-color: #ff714a;}
+	100% {background-color: #001f26;}
+}
+
+/*l'animation du soleil simulera un couché de soleil, en adéquation avec le bgc du body*/
+.sun{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: yellow;
+	margin: 0 auto;
+	-webkit-animation : rising-sun 10s linear 0s infinite alternate;
+	   -moz-animation : rising-sun 10s linear 0s infinite alternate;
+	     -o-animation : rising-sun 10s linear 0s infinite alternate;
+	        animation : rising-sun 10s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes rising-sun{
+	0% {background-color: #fff82b;}
+	100% {margin-top:30%; background-color: #ff742b;}
+}
+
+@-moz-keyframes rising-sun{
+	0% {background-color: #fff82b;}
+	100% {margin-top:30%;background-color: #ff742b;}
+}
+
+@-o-keyframes rising-sun{
+	0% {background-color: #fff82b;}
+	100% {margin-top:30%;background-color: #ff742b;}
+}
+
+@keyframes rising-sun{
+	0% {background-color: #fff82b;}
+	100% {margin-top:30%;background-color: #ff742b;}
+}
+
+/*il y a deux sorte de vagues, des claires et des foncés*/
+.waves{
+	z-index: 50;
+	width: 110%;
+	position: absolute;
+	bottom: 210px;
+	overflow: hidden;
+}
+
+/*les deux sortes de vagues se chevauche de sorte qu'on voit les deux à tout moment*/
+.dark_waves{
+	left: -80px;
+	-webkit-animation : move-dark-waves 1.2s linear 0s infinite alternate;
+	   -moz-animation : move-dark-waves 1.2s linear 0s infinite alternate;
+	     -o-animation : move-dark-waves 1.2s linear 0s infinite alternate;
+	        animation : move-dark-waves 1.2s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes move-dark-waves{
+	0% {left:-80px;}
+	100% {left:-30px;}
+}
+
+@-moz-keyframes move-dark-waves{
+	0% {left:-80px;}
+	100% {left:-30px;}
+}
+
+@-o-keyframes move-dark-waves{
+	0% {left:-80px;}
+	100% {left:-30px;}
+}
+
+@keyframes move-dark-waves{
+	0% {left:-80px;}
+	100% {left:-30px;}
+}
+
+.bright_waves{
+	left: -200px;
+	-webkit-animation : move-bright-waves 1s linear 0s infinite alternate;
+	   -moz-animation : move-bright-waves 1s linear 0s infinite alternate;
+	     -o-animation : move-bright-waves 1s linear 0s infinite alternate;
+	        animation : move-bright-waves 1s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes move-bright-waves{
+	0% {left:-200px;}
+	100% {left:-150px;}
+}
+
+@-moz-keyframes move-bright-waves{
+	0% {left:-200px;}
+	100% {left:-150px;}
+}
+
+@-o-keyframes move-bright-waves{
+	0% {left:-200px;}
+	100% {left:-150px;}
+}
+
+@keyframes move-bright-waves{
+	0% {left:-200px;}
+	100% {left:-150px;}
+}
+
+/*un rectangle jaune représentera le sable de la plage*/
+.sand{
+	position: absolute;
+	bottom: 0px;
+	background-color: #ffe21f;
+	height: 220px;
+	width: 110%;
+}
+
+/*un ballon arrivera en roulant sur la plage et s'arretera a la fin*/
+.baloon{
+	position: absolute;
+	bottom: 40px;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	-webkit-transform-origin:50% 50%;
+	-moz-transform-origin:50% 50%;
+	-o-transform-origin:50% 50%;
+	transform-origin:50% 50%;
+	background: -webkit-linear-gradient(red, green);
+    background: -o-linear-gradient(red, green);
+    background: -moz-linear-gradient(red, green);
+    background: linear-gradient(red, green);
+    -webkit-animation : roll 3s ease-out 0s forwards;
+	   -moz-animation : roll 3s ease-out 0s forwards;
+	     -o-animation : roll 3s ease-out 0s forwards;
+	        animation : roll 3s ease-out 0s forwards;
+}
+
+
+@-webkit-keyframes roll{
+	0% {-webkit-transform:rotate(0deg);
+		left:0px;
+	}
+	100% {-webkit-transform:rotate(360deg);
+		left:850px;
+	}
+}
+
+@-moz-keyframes roll{
+	0% {-moz-transform:rotate(0deg);}
+	100% {-moz-transform:rotate(360deg) translateX(850px);}
+}
+
+@-o-keyframes roll{
+	0% {-o-transform:rotate(0deg);}
+	100% {-o-transform:rotate(360deg) translateX(850px);}
+}
+
+@keyframes roll{
+	0% {transform:rotate(0deg);}
+	100% {transform:rotate(360deg) translateX(850px);}
+}
+
+/*il y aura deux poisson qui sauteront dans les airs à différents endroits*/
+.fish img, .fish2 img{
+	width: 50px;
+}
+
+.fish{
+	position: absolute;
+	bottom: 220px;
+	-webkit-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+	-webkit-animation : fish 2s ease-in-out 3s infinite;
+	   -moz-animation : fish 2s ease-in-out 3s infinite;
+	     -o-animation : fish 2s ease-in-out 3s infinite;
+	        animation : fish 2s ease-in-out 3s infinite;
+}
+
+@-webkit-keyframes fish{
+	0% {left:200px;}
+	50%{bottom:440px;
+		-webkit-transform: rotate(60deg);
+	}
+	100%{left: 600px;
+		-webkit-transform: rotate(60deg);
+	}
+}
+
+@-moz-keyframes fish{
+	0% {left:200px;}
+	50%{bottom:440px;
+		-moz-transform: rotate(60deg);
+	}
+	100%{left: 600px;
+		-moz-transform: rotate(60deg);
+	}
+}
+
+@-o-keyframes fish{
+	0% {left:200px;}
+	50%{bottom:440px;
+		-o-transform: rotate(60deg);
+	}
+	100%{left: 600px;
+		-o-transform: rotate(60deg);
+	}
+}
+
+@keyframes fish{
+	0% {left:200px;}
+	50%{bottom:440px; 
+		transform:rotate(60deg);
+	}
+	100%{left: 600px; 
+		transform:rotate(60deg)
+	}
+}
+
+.fish2{
+	position: absolute;
+	bottom: 220px;
+	transform:rotate(-60deg);
+	-webkit-animation : fish2 3s ease-in-out 3s infinite;
+	   -moz-animation : fish2 3s ease-in-out 3s infinite;
+	     -o-animation : fish2 3s ease-in-out 3s infinite;
+	        animation : fish2 3s ease-in-out 3s infinite;
+}
+
+@-webkit-keyframes fish2{
+	0% {left:450px;}
+	50%{bottom:410px;
+		-webkit-transform: rotate(60deg);
+	}
+	100%{left: 950px;
+		-webkit-transform: rotate(60deg);
+	}
+}
+
+@-moz-keyframes fish2{
+	0% {left:450px;}
+	50%{bottom:410px;
+		-moz-transform: rotate(60deg);
+	}
+	100%{left: 950px;
+		-moz-transform: rotate(60deg);
+	}
+}
+
+@-o-keyframes fish2{
+	0% {left:450px;}
+	50%{bottom:410px;
+		-o-transform: rotate(60deg);
+	}
+	100%{left: 1050px; 
+		-o-transform:rotate(60deg)}
+}
+
+@keyframes fish2{
+	0% {left:450px;}
+	50%{bottom:410px;
+		transform: rotate(60deg);
+	}
+	100%{left: 1050px;
+		transform: rotate(60deg);
+	}
+}
+
+/*un crabe apeuré, s'enfuira et disparaitra si le pointeur de la souris s'approche trop*/
+.crabe{
+	position: absolute;
+	bottom: 135px;
+	left:400px;
+	width: 500px;
+}
+
+.crabe img{
+	position: relative;
+	left:0;
+	width:80px;
+	-webkit-transition: all 0.5s cubic-bezier(0.840, 1.185, 0.350, -0.600);
+   	   -moz-transition: all 0.5s cubic-bezier(0.840, 1.185, 0.350, -0.600);
+    	 -o-transition: all 0.5s cubic-bezier(0.840, 1.185, 0.350, -0.600);
+            transition: all 0.5s cubic-bezier(0.840, 1.185, 0.350, -0.600);
+}
+
+.crabe:hover img{
+	left:700px;
+	opacity: 0;
+}

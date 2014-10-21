@@ -1,0 +1,207 @@
+body{
+	background: #eee; 
+	background-image:url(bg.png); 
+	background-attachment:fixed; 
+	background-repeat:no-repeat; 
+	font-size:14px; 
+	font-family:Helvetica,Arial;}
+
+
+/** CONTAINER PAGE**/
+
+.container {
+	width:700px;
+	margin:auto;
+	margin-top:20px;
+	text-align:center;
+	}
+
+/** FIN CONTAINER PAGE**/
+
+.list_animation ul li {
+	display:inline-block;
+}	
+
+.list_animation li {
+	display:inline-block;
+}
+
+.animation_candy_blue {
+	width : 100px;
+	height:100px;
+	margin : 0px 0 20px 0;
+	background-image:url("img/candy1.png");
+	position:relative;
+	-webkit-animation: candy_blue 5s linear 0s infinite;
+		-moz-animation: candy_blue 5s linear 0s infinite;
+			-o-animation: candy_blue 5s linear 0s infinite;
+				animation: candy_blue 5s linear 0s infinite;
+}	
+
+.animation_candy_pink {
+	width : 100px;
+	height:100px;
+	margin : 0px 0 20px 0;
+	background-image:url("img/candy2.png");
+	position:relative;
+	-webkit-animation: candy_pink 3s linear 0s infinite;
+		-moz-animation: candy_pink 3s linear 0s infinite;
+			-o-animation: candy_pink 3s linear 0s infinite;
+				animation: candy_pink 3s linear 0s infinite;
+}	
+
+
+.animation_dog {
+	width : 300px;
+	height:200px;
+	margin :180px 0 20px 0;
+	background-image:url("img/panier.png");
+	position:relative;
+	-webkit-animation: dog 12s linear 0s infinite alternate;
+		-moz-animation: dog 12s linear 0s infinite alternate;
+			-o-animation: dog 12s linear 0s infinite alternate;
+				animation: dog 12s linear 0s infinite alternate;
+}	
+
+/**ANIMATION BONBON BLEU**/
+
+@-webkit-keyframes candy_blue {
+	0% {top:0px;transform:rotate(0deg);}
+	50%{transform:rotate(180deg);}
+	75%{opacity:;0.5;transform:rotate(270deg);}
+	100% {top:250px; opacity:0;transform:rotate(360deg);}
+}
+
+@-moz-keyframes candy_blue {
+	0% {top:0px;transform:rotate(0deg);}
+	50%{transform:rotate(180deg);}
+	75%{opacity:;0.5;transform:rotate(270deg);}
+	100% {top:250px; opacity:0;transform:rotate(360deg);}
+}
+
+@-o-keyframes candy_blue {
+	0% {top:0px;transform:rotate(0deg);}
+	50%{transform:rotate(180deg);}
+	75%{opacity:;0.5;transform:rotate(270deg);}
+	100% {top:250px; opacity:0;transform:rotate(360deg);}
+}
+
+@keyframes candy_blue {
+	0% {top:0px;transform:rotate(0deg);}
+	50%{transform:rotate(180deg);}
+	75%{opacity:;0.5;transform:rotate(270deg);}
+	100% {top:250px; opacity:0;transform:rotate(360deg);}
+}
+
+
+/**ANIMATION BONBON ROSE**/
+
+@-webkit-keyframes candy_pink {
+	0% {top:0px;transform:rotate(0deg);}
+	50%{transform:rotate(-180deg);}
+	75%{opacity:;0.5;transform:rotate(-270deg);}
+	100% {top:250px; opacity:0;transform:rotate(-360deg);}
+}
+
+@-moz-keyframes candy_pink {
+	0% {top:0px;transform:rotate(0deg);}
+	50%{transform:rotate(-180deg);}
+	75%{opacity:;0.5;transform:rotate(-270deg);}
+	100% {top:250px; opacity:0;transform:rotate(-360deg);}
+}
+
+@-o-keyframes candy_pink {
+	0% {top:0px;transform:rotate(0deg);}
+	50%{transform:rotate(-180deg);}
+	75%{opacity:;0.5;transform:rotate(-270deg);}
+	100% {top:250px; opacity:0;transform:rotate(-360deg);}
+}
+
+@keyframes candy_pink {
+	0% {top:0px;transform:rotate(0deg);}
+	50%{transform:rotate(-180deg);}
+	75%{opacity:;0.5;transform:rotate(-270deg);}
+	100% {top:250px; opacity:0;transform:rotate(-360deg);}
+}
+
+
+/**ANIMATION DOG**/
+
+@-webkit-keyframes dog {
+	0% {left:0px;}
+	100% {left:400px;}
+}
+
+@-moz-keyframes dog {
+	0% {left:0px;}
+	100% {left:400px;}
+}
+
+@-o-keyframes dog {
+	0% {left:0px;}
+	100% {left:400px;}
+}
+
+@keyframes dog {
+	0% {left:0px;}
+	100% {left:400px;}
+}
+
+
+@media screen and (max-width:800px){
+	.container{
+		width:500px;
+	}
+	.animation_dog {
+	transform:scale(0.75,0.75);
+	margin :180px 0 20px 0;}
+
+	@-webkit-keyframes dog {
+		0% {left:0px;}
+		100% {left:200px;}
+	}
+
+	@-moz-keyframes dog {
+		0% {left:0px;}
+		100% {left:200px;}
+	}	
+
+	@-o-keyframes dog {
+		0% {left:0px;}
+		100% {left:200px;}
+	}
+
+	@keyframes dog {
+		0% {left:0px;}
+		100% {left:200px;}
+	}				
+}
+
+@media screen and (max-width:400px){
+	.container{
+		width:300px;
+	}
+	.animation_dog {
+	transform:scale(0.5,0.5);
+	margin :180px 0 20px 0;}
+
+	@-webkit-keyframes dog {
+		0% {left:0px;}
+		100% {left:100px;}
+	}
+
+	@-moz-keyframes dog {
+		0% {left:0px;}
+		100% {left:100px;}
+	}	
+
+	@-o-keyframes dog {
+		0% {left:0px;}
+		100% {left:100px;}
+	}
+
+	@keyframes dog {
+		0% {left:0px;}
+		100% {left:100px;}
+	}				
+}

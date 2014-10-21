@@ -1,0 +1,73 @@
+body {background: #eee;font-size:14px;font-family: Helvetica, Verdana;}
+
+.container{
+	position: relative;
+	width: 1000px;
+	height: 500px;
+	margin: 0 0 20px 0;
+}
+
+.circle {
+	position: absolute;
+	width:200px;
+	height:200px;
+	background:#51a6bb;
+	margin:50px 0 20px 0;
+	transition:all 3s;
+
+	border-radius: 100px;
+	/*pareil que border-radius: 50%;*/
+}
+
+.transition-one:hover{
+	background:#ff83c5;
+	left: 40px;	
+}
+
+
+
+.cube{
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-animation:cube-animation 20s linear 0s infinite;
+	-webkit-transform-style:preserve-3d;
+	-webkit-transform:scale(10,10);
+}
+
+
+
+.face{
+	position: absolute;
+	top: 0%;
+	left:0%;
+	width: 200px;
+	height: 200px;
+	top: 0;
+	bottom: 0;
+	opacity: 0.50;
+	-webkit-transform-style:preserve-3d;
+}
+
+
+
+.face.top{background: #ffd5a0;-webkit-transform:rotateX(90deg) rotateY(0deg) translateZ(100px);}
+.face.bottom{background: #d5ff89;-webkit-transform:rotateX(-90deg) rotateY(0deg) translateZ(100px);}
+.face.left{background: #62eaff;-webkit-transform:rotateX(0deg) rotateY(-90deg) translateZ(100px);}
+.face.right{background: #9597ff;-webkit-transform:rotateX(0deg) rotateY(90deg) translateZ(100px);}
+.face.front{background: #ff7ac7;-webkit-transform:rotateX(0deg) rotateY(0deg) translateZ(100px);}
+.face.back{background: #962d49;-webkit-transform:rotateX(0deg) rotateY(180deg) translateZ(100px);}
+.face.plus{background: #FF0;-webkit-transform:rorateX(0deg) rotateY(90deg) translateZ(100px);}
+/*le "rorate" au-dessus est une erreur qui fait apparaître le carré plan au milieu du cube ; si on enlève le "rorate", ça ne marche plus*/
+
+/*.face.plus2{background: #000;-webkit-transform:rorateX(90deg) rotateY(0deg) translateZ(100px);}*/
+
+.rond.transition-4{-webkit-transform:scale(2,2);}
+
+
+
+@-webkit-keyframes cube-animation {
+	0% {-webkit-transform:perspective(1000px)rotateY(0deg) rotateX(0deg);}
+	/*10% {-webkit-transform:perspective(1000px)rotateY(180deg) rotateX(180deg);}*/
+	100% {-webkit-transform:perspective(1000px)rotateY(360deg) rotateX(360deg);}
+}

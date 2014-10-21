@@ -1,0 +1,398 @@
+html, body {
+margin: 0;
+padding: 0;
+color:#000;
+}
+
+html {
+background: url(background.jpg);
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.blackboard {
+position : fixed;
+top : 0;
+left : 0;
+width : 100%;
+height  : 100%;
+background-color : #000000;
+filter : alpha(opacity=10);
+opacity:0.4;
+z-index : -1;
+}
+
+a, a:link, a:hover, a:visited, a:active {
+color:#FFFFFF;
+cursor:pointer;
+text-decoration:none;
+}
+
+/* /////////////////////////////////////////////
+					SECTION
+////////////////////////////////////////////  */
+
+section {
+margin: 2.5%;
+}
+
+		/* /////////////////////////////////////////////
+							BLOCK
+		////////////////////////////////////////////  */
+
+.block {
+width:300px;
+height:550px;
+background: #fff;
+padding: 15px;
+margin: 0 25px 0 0;
+float:left;
+opacity: 0.8;
+border-radius: 10px;
+}
+
+.block:hover {
+cursor:pointer;
+}
+
+.block a, .block a:hover {
+color : #000;
+text-decoration: underline;
+}
+
+.blockone {
+-webkit-animation: blockone 5s ease 0s infinite;
+   -moz-animation: blockone 5s ease 0s infinite;
+	 -o-animation: blockone 5s ease 0s infinite;
+		animation: blockone 5s ease 0s infinite;
+}
+
+.blocktwo {
+-webkit-animation: blocktwo 5s ease 0s infinite;
+   -moz-animation: blocktwo 5s ease 0s infinite;
+	 -o-animation: blocktwo 5s ease 0s infinite;
+		animation: blocktwo 5s ease 0s infinite;
+}
+
+.blockthree {
+-webkit-animation: blockthree 5s ease 0s infinite;
+   -moz-animation: blockthree 5s ease 0s infinite;
+	 -o-animation: blockthree 5s ease 0s infinite;
+		animation: blockthree 5s ease 0s infinite;
+}
+
+.blockfour {
+-webkit-animation: blockfour 5s ease 0s infinite;
+   -moz-animation: blockfour 5s ease 0s infinite;
+	 -o-animation: blockfour 5s ease 0s infinite;
+		animation: blockfour 5s ease 0s infinite;
+}
+
+		/* /////////////////////////////////////////////
+							BLOCK > IMG
+		////////////////////////////////////////////  */
+
+.block img {
+width: 100%;
+height: 100%;
+-webkit-transition:all 1s ease 0s;
+   -moz-transition:all 1s ease 0s;
+	 -o-transition:all 1s ease 0s;
+		transition:all 1s ease 0s;
+}
+
+.blockone:hover img {
+filter : alpha(opacity=10);
+opacity: 0;
+-webkit-transform:scale(1.5,1.5);
+   -moz-transform:scale(1.5,1.5);
+	 -o-transform:scale(1.5,1.5);
+		transform:scale(1.5,1.5);
+}
+
+.blocktwo:hover img {
+filter : alpha(opacity=10);
+opacity: 0;
+-webkit-transform:scale(0,0);
+   -moz-transform:scale(0,0);
+	 -o-transform:scale(0,0);
+		transform:scale(0,0);
+}
+
+.blockthree:hover img {
+filter : alpha(opacity=10);
+opacity: 0;
+-webkit-transform:translateY(-600px) scale(0,0);
+   -moz-transform:translateY(-600px) scale(0,0);
+	 -o-transform:translateY(-600px) scale(0,0);
+		transform:translateY(-600px) scale(0,0);
+}
+
+.blockfour img {
+-webkit-transition:all 2s ease 0s;
+   -moz-transition:all 2s ease 0s;
+	 -o-transition:all 2s ease 0s;
+		transition:all 2s ease 0s;
+}
+
+.blockfour:hover img {
+filter : alpha(opacity=10);
+opacity: 0;
+-webkit-transform:rotate(1080deg) translateX(350px);
+   -moz-transform:rotate(1080deg) translateX(350px);
+	 -o-transform:rotate(1080deg) translateX(350px);
+		transform:rotate(1080deg) translateX(350px);
+}
+
+		/* /////////////////////////////////////////////
+							CONTAINER
+		////////////////////////////////////////////  */
+
+.container {
+position: absolute;
+top: 0;
+left:0;
+padding: 0 15px 0 15px;
+filter : alpha(opacity=10);
+opacity: 0;
+-webkit-transition : all 1s ease 0s;
+   -moz-transition : all 1s ease 0s;
+	 -o-transition : all 1s ease 0s;
+		transition : all 1s ease 0s;
+}
+
+.container p {
+text-align: justify;
+font-weight: bold;
+font-size: 14pt;
+padding: 0 15px 0 15px;
+}
+
+.container h2 {
+text-align: center;
+font-size: 16pt;
+}
+
+.container p span {
+color:red;
+}
+
+.block:hover .container {
+opacity: 1;
+}
+
+		/* /////////////////////////////////////////////
+							INFORMATION DIV
+		////////////////////////////////////////////  */
+
+.reveal {
+position: fixed;
+bottom:-100%;
+left: 0;
+width: 100%;
+height: 100%;
+background: #000;
+z-index: 2;
+filter : alpha(opacity=10);
+opacity: 0.9;
+-webkit-transition: all .5s ease-in;
+   -moz-transition: all .5s ease-in;
+	 -o-transition: all .5s ease-in;
+		transition: all .5s ease-in;
+}
+
+#reveal:target {
+bottom: 0;
+}
+
+.reveal p, .reveal a {
+color : #fff;
+font-size: 14pt;
+font-weight: bold;
+}
+
+.reveal .text {
+margin: 2.5%;
+text-align: justify;
+}
+
+.reveal:target .text {
+margin-top:7.5%;
+}
+
+.reveal a {
+position: absolute;
+width:15%;
+margin-left: 42.5%;
+top: -10%;
+height: 10%;
+line-height: 75px;
+text-align: center;
+background: #000;
+border-radius: 10px 10px 0 0;
+}
+
+#reveal a.close {
+display: none;
+}
+
+#reveal:target a.show {
+display: none;
+}
+
+#reveal:target a.close {
+display: block;
+border-style:solid;
+border-width:0 1px 1px 1px;
+border-color: #fff;
+top:0;
+border-radius:0 0 10px 10px;
+}
+
+.reveal .text .what {
+margin-left: 2.5%;
+} 
+
+		/* /////////////////////////////////////////////
+							CREATOR'S NAME
+		////////////////////////////////////////////  */
+
+.name {
+position: fixed;
+bottom: 0;
+right: 0;
+margin-right: 15px;
+}
+
+.name p {
+color : #fff;
+font-weight: bold;
+font-size: 12pt;
+}
+
+/* /////////////////////////////////////////////
+					KEYFRAMES
+////////////////////////////////////////////  */
+
+		/* /////////////////////////////////////////////
+							BLOCK ONE
+		////////////////////////////////////////////  */
+
+@-webkit-keyframes blockone {
+	0%		{-webkit-transform:scale(0.8,0.8);}
+	50%		{-webkit-transform:scale(1,1);}
+	100%	{-webkit-transform:scale(0.8,0.8);}
+}
+
+@-moz-keyframes blockone {
+	0%		{-moz-transform:scale(0.8,0.8);}
+	50%		{-moz-transform:scale(1,1);}
+	100%	{-moz-transform:scale(0.8,0.8);}
+}
+
+@-o-keyframes blockone {
+	0%		{-o-transform:scale(0.8,0.8);}
+	50%		{-o-transform:scale(1,1);}
+	100%	{-o-transform:scale(0.8,0.8);}
+}
+
+@keyframes blockone {
+	0%		{transform:scale(0.8,0.8);}
+	50%		{transform:scale(1,1);}
+	100%	{transform:scale(0.8,0.8);}
+}
+
+		/* /////////////////////////////////////////////
+							BLOCK TWO
+		////////////////////////////////////////////  */
+
+@-webkit-keyframes blocktwo {
+	0%		{-webkit-transform:scale(1,1);}
+	50%		{-webkit-transform:scale(0.8,0.8);}
+	100%	{-webkit-transform:scale(1,1);}
+}
+
+@-moz-keyframes blocktwo {
+	0%		{-moz-transform:scale(1,1);}
+	50%		{-moz-transform:scale(0.8,0.8);}
+	100%	{-moz-transform:scale(1,1);}
+}
+
+@-o-keyframes blocktwo {
+	0%		{-o-transform:scale(1,1);}
+	50%		{-o-transform:scale(0.8,0.8);}
+	100%	{-o-transform:scale(1,1);}
+}
+
+@keyframes blocktwo {
+	0%		{transform:scale(1,1);}
+	50%		{transform:scale(0.8,0.8);}
+	100%	{transform:scale(1,1);}
+}
+
+		/* /////////////////////////////////////////////
+							BLOCK THREE
+		////////////////////////////////////////////  */
+
+@-webkit-keyframes blockthree {
+	0%		{-webkit-transform:scale(0.8,0.8);}
+	50%		{-webkit-transform:scale(1,1);}
+	100%	{-webkit-transform:scale(0.8,0.8);}
+}
+
+@-moz-keyframes blockthree {
+	0%		{-moz-transform:scale(0.8,0.8);}
+	50%		{-moz-transform:scale(1,1);}
+	100%	{-moz-transform:scale(0.8,0.8);}
+}
+
+@-o-keyframes blockthree {
+	0%		{-o-transform:scale(0.8,0.8);}
+	50%		{-o-transform:scale(1,1);}
+	100%	{-o-transform:scale(0.8,0.8);}
+}
+
+@keyframes blockthree {
+	0%		{transform:scale(0.8,0.8);}
+	50%		{transform:scale(1,1);}
+	100%	{transform:scale(0.8,0.8);}
+}
+
+		/* /////////////////////////////////////////////
+							BLOCK FOUR
+		////////////////////////////////////////////  */
+
+@-webkit-keyframes blockfour {
+	0%		{-webkit-transform:scale(1,1);}
+	50%		{-webkit-transform:scale(0.8,0.8);}
+	100%	{-webkit-transform:scale(1,1);}
+}
+
+@-moz-keyframes blockfour {
+	0%		{-moz-transform:scale(1,1);}
+	50%		{-moz-transform:scale(0.8,0.8);}
+	100%	{-moz-transform:scale(1,1);}
+}
+
+@-o-keyframes blockfour {
+	0%		{-o-transform:scale(1,1);}
+	50%		{-o-transform:scale(0.8,0.8);}
+	100%	{-o-transform:scale(1,1);}
+}
+
+@keyframes blockfour {
+	0%		{transform:scale(1,1);}
+	50%		{transform:scale(0.8,0.8);}
+	100%	{transform:scale(1,1);}
+}
+
+/* /////////////////////////////////////////////
+					MEDIA QUERIES
+////////////////////////////////////////////  */
+
+@media screen and (min-device-width:1080px) {
+	.block {width:300px;height:550px;}
+}

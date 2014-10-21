@@ -1,0 +1,274 @@
+body {font-family: Helvetica,arial; background-color: #000;}
+
+				/*///animation du ciel///*/
+
+.ciel{
+	position: absolute;
+	width: 1602px;
+	height: 467px;
+	margin-left: -10px;
+	margin-top: -20px;
+	-webkit-animation:ciel 20s linear 0 infinite;
+	        animation:ciel 20s linear 0 infinite;
+
+}
+
+@-webkit-keyframes ciel{
+	0%	 {opacity: 100}
+	45%  {opacity: 100}
+	50%  {opacity: 0}
+	90%  {opacity: 0}
+	100% {opacity: 100}
+}
+
+.ciel_etoile{
+	position: absolute;
+	width: 1602px;
+	height: 467px;
+	margin-left: -10px;
+	margin-top: -20px;
+	-webkit-animation:ciel_etoile 20s linear 0 infinite;
+            animation:ciel_etoile 20s linear 0 infinite;
+
+}
+
+@-webkit-keyframes ciel_etoile{
+	0%	 {background-image: url(images/ciel_etoile.png); opacity: 0}
+	45%  {opacity: 0}
+	50%  {background-image: url(images/ciel_etoile.png); opacity: 100}
+	95%  {opacity: 100}
+	100% {background-image: url(images/ciel_etoile.png); opacity: 0}
+}
+@keyframes ciel_etoile{
+	0%	 {background-image: url(images/ciel_etoile.png); opacity: 0}
+	45%  {opacity: 0}
+	50%  {background-image: url(images/ciel_etoile.png); opacity: 100}
+	95%  {opacity: 100}
+	100% {background-image: url(images/ciel_etoile.png); opacity: 0}
+}
+
+				/*///animation du soleil///*/
+
+.soleil{
+	background-image: url(images/soleil.png);
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+	margin-top: 20px;
+	margin-left: -200px;
+	-webkit-animation:soleil 20s linear 0 infinite;
+	        animation:soleil 20s linear 0 infinite;
+
+}
+
+@-webkit-keyframes soleil{
+	0%	 {left: 0px;}
+	50%  {left: 1800px;}
+	100% {left: 1800px;}
+}
+@keyframes soleil{
+	0%	 {left: 0px;}
+	50%  {left: 1800px;}
+	100% {left: 1800px;}
+}
+
+				/*///animation de l'image de fond///*/
+
+.fond{
+	position: absolute;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+
+.fond_nuit{
+	position: absolute;
+	margin-left: -10px;
+	margin-top: -10px;
+	-webkit-animation:fond_nuit 20s linear 0 infinite;
+	        animation:fond_nuit 20s linear 0 infinite;
+}
+
+@-webkit-keyframes fond_nuit{
+	0%	 {opacity: 0;}
+	45%  {opacity: 0;}
+	50%  {opacity: 100;}
+	95%  {opacity: 100;}
+	100% {opacity: 0}
+}
+@keyframes fond_nuit{
+	0%	 {opacity: 0;}
+	45%  {opacity: 0;}
+	50%  {opacity: 100;}
+	95%  {opacity: 100;}
+	100% {opacity: 0}
+}
+
+				/*///animation de l'ombre de la montagne///*/
+
+.ombre{
+	position: absolute;
+	width: 1602px;
+	height: 100px;
+	margin-left: -10px;
+	margin-top: 565px;
+	transform-origin:0 0;
+
+	-webkit-animation:ombre 20s linear 0 infinite;
+	        animation:ombre 20s linear 0 infinite;
+}
+
+@-webkit-keyframes ombre{
+	0%	 {transform:skewX(30deg);}
+	45%  {opacity: 100;}
+	50%  {transform:skewX(-30deg); opacity: 0;}
+	95%  {transform:skewX(30deg); opacity: 0;}
+	100% {transform:skewX(30deg); opacity: 100;}
+
+}
+@keyframes ombre{
+	0%	 {transform:skewX(30deg);}
+	45%  {opacity: 100;}
+	50%  {transform:skewX(-30deg); opacity: 0;}
+	95%  {transform:skewX(30deg); opacity: 0;}
+	100% {transform:skewX(30deg); opacity: 100;}
+
+}
+
+				/*///animation de la lune///*/
+
+.lune{
+	background-image: url(images/lune.png);
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+	margin-top: 20px;
+	margin-left: -200px;
+	-webkit-animation:lune 20s linear 10s infinite;
+			animation:lune 20s linear 10s infinite;
+}
+
+@-webkit-keyframes lune{
+	0%	 {left: 0px;}
+	50%  {left: 1800px;}
+	100% {left: 1800px;}
+
+}
+@keyframes lune{
+	0%	 {left: 0px;}
+	50%  {left: 1800px;}
+	100% {left: 1800px;}
+
+}
+
+				/*///bloc en 3D (soleil)///*/
+
+.tete_soleil{
+	position: absolute;
+	top: 500px;
+	left: 1200px;
+	transform-style:preserve-3d;
+	-webkit-animation:rotation-cube-soleil 20s linear 0 infinite;
+			animation:rotation-cube-soleil 20s linear 0 infinite;
+}
+
+.face_soleil{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+}
+
+.face_soleil.left_soleil{
+	background-color: #000;
+	opacity: 50;
+	backface-visibility:visible;
+	transform:rotateX(0deg) rotateY(90deg) translateZ(100px);
+}
+
+.face_soleil.right_soleil{
+	background-color: #000;
+	opacity: 50;
+	backface-visibility:visible;
+	transform:rotateX(0deg) rotateY(-90deg) translateZ(100px);
+
+}
+
+.face_soleil.font_soleil{
+	background-color: #000;
+	opacity: 50;
+	backface-visibility:visible;
+	transform:rotateX(0deg) rotateY(0deg) translateZ(100px);
+}
+
+@-webkit-keyframes rotation-cube-soleil{
+	0%   {transform:rotateY(-30deg);}
+	45%  {opacity: 100}
+	50%  {opacity: 0}
+	55%  {transform:rotateY(30deg);}
+	95%  {opacity: 0;}
+	100% {transform:rotateY(-30deg); opacity: 100}
+}
+@keyframes rotation-cube-soleil{
+	0%   {transform:rotateY(-30deg);}
+	45%  {opacity: 100}
+	50%  {opacity: 0}
+	55%  {transform:rotateY(30deg);}
+	95%  {opacity: 0;}
+	100% {transform:rotateY(-30deg); opacity: 100}
+}
+
+				/*///bloc en 3D (lune)///*/
+
+.tete_lune{
+	position: absolute;
+	top: 500px;
+	left: 1200px;
+	transform-style:preserve-3d;
+	-webkit-animation:rotation-cube-lune 20s linear 0s infinite;
+			animation:rotation-cube-lune 20s linear 0s infinite;
+}
+
+.face_lune{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+}
+
+.face_lune.left_lune{
+	background-color: #000;
+	opacity: 50;
+	transform:rotateX(0deg) rotateY(90deg) translateZ(100px);
+}
+
+.face_lune.right_lune{
+	background-color: #000;
+	opacity: 50;
+	transform:rotateX(0deg) rotateY(-90deg) translateZ(100px);
+
+}
+
+.face_lune.font_lune{
+	background-color: #000;
+	opacity: 50;
+	transform:rotateX(0deg) rotateY(0deg) translateZ(100px);
+}
+
+@-webkit-keyframes rotation-cube-lune{
+	0%   {transform:rotateY(-30deg); opacity: 0}
+	50%  {opacity: 0}
+	55%  {transform:rotateY(30deg); opacity: 100;}
+	95%  {opacity: 100;}
+	100% {transform:rotateY(-30deg); opacity: 0}
+}
+@keyframes rotation-cube-lune{
+	0%   {transform:rotateY(-30deg); opacity: 0}
+	50%  {opacity: 0}
+	55%  {transform:rotateY(30deg); opacity: 100;}
+	95%  {opacity: 100;}
+	100% {transform:rotateY(-30deg); opacity: 0}
+}

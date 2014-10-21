@@ -1,0 +1,195 @@
+body {background: url("land3.jpg"); font-family:Helvetica,Arial;font-size:25px;
+}
+
+
+.Candy
+{
+  width:300px;
+  height:90px;
+  border-radius:75px;
+  background:#fcff00;
+  position: relative;
+  transform: rotate(-30deg);
+  margin:100px auto;
+  top: 200px;
+  border:10px solid #1f1544;
+  box-shadow:0px -20px 0px 0px #dadd00 inset;
+
+
+}
+
+.Candy:after {
+  content:"";
+  width:100px;
+  height:90px;
+  position:absolute;
+  left:40px;
+  top:-65px;
+  background:#f7426b;
+  transform:rotate(180deg);
+  border-radius: 75px 75px 75px 75px;
+  border:10px solid #1f1544;
+  box-shadow:-20px 0px 0px 0px #d1345e inset;
+  -webkit-animation:awesome 2s ease 0s infinite alternate;
+	-webkit-animation-play-state: running;
+  
+
+}
+
+.animation {
+	width: 200px;
+  text-align: center; margin: auto;
+  top:50%;
+	height: 150px;
+  transform: rotate(90deg);
+	position:absolute;
+	background: white;
+	border-radius: 800px 800px 800px 800px;
+	border:10px solid #1f1544;
+	box-shadow:-20px 0px 0px 0px #d1d1d1 inset;
+  -webkit-animation: good 2s ease-out 0s infinite alternate;
+  -webkit-animation-play-state: running;
+
+}
+
+.one {
+  width:30px;
+  height: 30px;
+  position:relative;
+  background: black;
+  border-radius: 40px 40px 40px 40px;
+  left: 40px;
+  top: 10px;
+  border:2px solid black;
+  box-shadow:0px -5px 0px 0px #d1d1d1 inset;
+  -webkit-animation: clin 2s ease 0s infinite alternate;
+  -webkit-animation-play-state: running;
+}
+
+.one1 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  margin: auto;
+  background: white;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-animation: clinbis 1s ease 0s infinite alternate;
+  -webkit-animation-play-state: running;
+
+
+}
+
+.two {
+  width:30px;
+  height: 30px;
+  position:relative;
+  background: black;
+  border-radius: 40px 40px 40px 40px;
+  left: 40px;
+  top: 30px;
+  border:2px solid black;
+  box-shadow:0px -5px 0px 0px #d1d1d1 inset;
+  -webkit-animation: clin 2s ease 0s infinite alternate;
+  -webkit-animation-play-state: running;
+
+}
+
+.two1 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  margin: auto;
+  background: white;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-animation: clinbis 1s ease 0s infinite alternate;
+  -webkit-animation-play-state: running;
+
+}
+
+.mouth {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  transform: rotate(-90deg);
+  background: black;
+  border-radius: 100px 30px 30px 50px;
+  left: 100px;
+  top: 40px;
+  border:5px solid red;
+  -webkit-animation: mouth 2s ease 0s infinite alternate;
+  -webkit-animation-play-state: running;
+
+
+}
+
+
+.teeth {
+  position: relative;
+  left: 5px;
+  top: -1px;
+  transform: rotate(90deg);
+}
+
+.teeth1 {
+  width: 15px;
+  height: 10px;
+  top: 25%;
+  left: 20px;
+  position: relative;
+  background: white;
+  border:1px solid black;
+  border-radius: 2px;
+
+}
+
+.teeth2 {
+  width: 15px;
+  height: 10px;
+  top: -60%;
+  left: 20px;
+  position: relative;
+  background: white;
+  border:1px solid black;
+  border-radius: 2px;
+}
+
+
+
+@-webkit-keyframes awesome {
+	0%	{right:100px;}
+	70% {background: blue;}
+	80%	{background: red;}
+	100% {left:400px;}
+
+}
+
+@-webkit-keyframes good {
+  0%  {left: 1px;}
+  10% {border-radius: 1000px;}
+  80% {background: #585858;}
+  80% {border-radius: 2000px;}
+  100% {background: #585858; left:270px;}
+}
+
+@-webkit-keyframes goodbis {
+  0%  {right: 100px;}
+  10% {border-radius: 1000px;}
+  80% {border-radius: 2000px;}
+  100% {right:270px;}
+}
+@-webkit-keyframes clin {
+  0% {width: 20px; height: 20px}
+
+}
+
+@-webkit-keyframes clinbis {
+  0% {width: 13px; height: 13px;}
+}
+
+@-webkit-keyframes mouth {
+  0% {height: 0px}
+  10% {height: 0px}
+  50% {height: 20px}
+  70% {height: 30px}
+  100% {height: 40px}
+}

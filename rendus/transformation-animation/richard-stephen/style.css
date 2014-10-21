@@ -1,0 +1,119 @@
+body {background:#eee;font-family:Helvetica,Arial;font-size:14px;}
+
+/* Browser adaptation */
+.squares{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #FF3300;
+	top:0;
+	left: 0;
+}
+
+/* Define each square*/
+
+.square{
+	position: relative;
+	top:3%;
+	border:solid 5px #003504;
+	margin:auto;
+	-webkit-animation:turn 15s linear infinite;
+	-webkit-transform-style:preserve-3d;
+}
+
+.square.one{width: 95%;height: 95%;z-index: 0;
+	-webkit-transition-delay:0.5s;
+	background: #FF6600;
+}
+.square.two{width: 95%;height: 95%;z-index: 1;
+	-webkit-transition-delay:1s;
+	background: #FF6633;
+}
+.square.three{width: 95%;height: 95%;z-index: 2;
+	-webkit-transition-delay:1.5s;
+	background: #FFCC33;
+}
+.square.four{width: 95%;height: 95%;z-index: 3;
+	-webkit-transition-delay:2s;
+	background: #FFFF00;
+}
+.square.five{width: 95%;height: 95%;z-index: 4;
+	-webkit-transition-delay:2.5s;
+	background: #FFFF99;
+
+}
+.square.six{width: 95%;height: 95%;z-index: 5;
+	-webkit-transition-delay:3s;
+	background: #CCFF99;
+}
+.square.seven{width: 95%;height: 95%;z-index: 6;
+	-webkit-transition-delay:3.5s;
+	background: #99FF66;
+}
+.square.height{width: 95%;height: 95%;z-index: 7;
+	-webkit-transition-delay:4s;
+	background: #009900;
+}
+.square.nine{width: 95%;height: 95%;z-index: 8;
+	-webkit-transition-delay:4.5s;
+	background: #00FF33;
+
+}
+.square.ten{width: 90%;height: 90%;z-index: 9;
+	-webkit-transition-delay:5s;
+	background: #33FF99;
+}
+.square.eleven{width: 95%;height: 95%;z-index: 10;
+	-webkit-transition-delay:5.5s;
+	background: #99FFCC;
+
+}
+.square.twelve{width: 95%;height: 95%;z-index: 11;
+	-webkit-transition-delay:6s;
+	background: #99CCFF;
+
+}
+.square.thirteen{width: 95%;height: 95%;z-index: 12;
+	-webkit-transition-delay:6.5s;
+	background: #0000FF;
+
+}
+.square.fourteen{width: 95%;height: 95%;z-index: 13;
+	-webkit-transition-delay:7s;
+	background: #0000CC;
+
+}
+.square.fifteen{width: 95%;height: 95%;z-index: 14;
+	-webkit-transition-delay:7.5s;
+	background: #3333CC;
+
+}
+.square.sixteen{width: 95%;height: 95%;z-index: 15;
+	-webkit-transition-delay:8s;
+	background: #6633CC;
+}
+.square.seventeen{width: 95%;height: 95%;z-index: 16;
+	-webkit-transition-delay:8.5s;
+	background: #660099;
+
+}
+.square.heighteen{width: 95%;height: 95%;z-index: 17;
+	-webkit-transition-delay:9s;
+	background: #330066;
+
+}
+
+/* Animate each square movement */
+
+@-webkit-keyframes turn{
+	0%{-webkit-transform:rotate(0deg);width: 95%;height: 95%;-webkit-border-radius:0px;}
+	25%{-webkit-transform:rotate(180deg);width: 85%;height: 85%;-webkit-border-radius:20px;}
+	50%{-webkit-transform:rotate(270deg);width: 90%;height: 90%;-webkit-border-radius:40px;}
+	75%{-webkit-transform:rotate(280deg);width: 90%;height: 90%;-webkit-border-radius:20px;}
+	100%{-webkit-transform:rotate(360deg);width: 95%;height: 95%;-webkit-border-radius:30px;}
+}
+
+
+
+
+

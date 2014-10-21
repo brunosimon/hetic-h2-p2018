@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<script type="text/javascript" src="js/main.js"> </script>
+</head>
+<body>
+	<div class="mountain mountain1"></div>
+	<div class="mountain mountain2"></div>
+	<div class="mountain mountain3"></div>
+	<div class="mountain mountain4"></div>
+	<div class="mountain mountain5"></div>
+	<div class="cloud cloud1"></div>
+	<div class="cloud cloud2"></div>
+	<div class="cloud cloud3"></div>
+	<div class="cloud cloud4"></div>
+	<div class="sunOrMoon"></div>
+	<div class="floor"></div>
+	<div id="menu">
+		<h1>WIND</h1>
+		<div>
+			<i onclick="parentNode.style.webkitTransform=' rotateY(180deg)';windChange();" class="fa fa-arrow-circle-o-left fa-4x"></i>
+			<i onclick="parentNode.style.webkitTransform=' rotateY(0deg)';windChange();" class="fa fa-arrow-circle-o-right fa-4x"></i>
+		</div>
+		<h1>DAY / NIGHT</h1>
+		<div>
+			<i onclick="parentNode.style.webkitTransform=' rotateY(180deg)';dayChange();" class="fa fa-sun-o fa-4x"></i>
+			<i onclick="parentNode.style.webkitTransform=' rotateY(0deg)';dayChange();" class="fa fa-moon-o fa-4x"></i>
+		</div>
+	</div>
+	<div id="night"></div>
+</body>
+</html>

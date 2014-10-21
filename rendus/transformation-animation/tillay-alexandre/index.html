@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" media="screen and (min-width:1280px) and (min-height:680px)" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" media="screen and (max-width: 1279px)" href="css/unsupported.css" type="text/css" />
+	<link rel="stylesheet" media="screen and (max-height: 679px)" href="css/unsupported.css" type="text/css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</head>
+<body>
+
+
+	<!-- ////////////////////////////////////////////////
+					   BACKGROUND
+	///////////////////////////////////////////////// -->
+	<div id="background"></div>
+
+
+	<!-- ////////////////////////////////////////////////
+					   TOP BAR
+	///////////////////////////////////////////////// -->
+	<div id="top-bar">
+		<div id="left-bar"><img src="img/topbar/logo.png"></div>
+		<ul id="right-bar">
+			<li><img src="img/topbar/battery.png"></li>
+			<li><img src="img/topbar/wifi.png"></li>
+			<li><img src="img/topbar/sound.png"></li>
+			<li id="date"></li>
+			<li><img src="img/topbar/search.png"></li>
+			<li><img src="img/topbar/sidebar.png"></li>
+		</ul>
+	</div>
+
+
+	<!-- ////////////////////////////////////////////////
+					APPLICATIONS
+	///////////////////////////////////////////////// -->
+	<div id="apps">
+		<div id="finder-app"></div>
+		<div id="help-app">
+			<div class="app-header">Aide</div>
+			<div class="app-body">
+				<p>Certaines applications du dock permettent de lancer diverses animations (Finder, Launchpad, Sublime Text, Photoshop et Aide).</p>
+				<p>Pour ouvrir ou fermer une application, cliquez sur son icone.</p>
+				<p>Libre à vous de les essayer !</p>
+			</div>
+		</div>
+		<div id="sublimetext-app"></div>
+		<div id="photoshop-app"></div>
+	</div>	
+
+	
+	<!-- ////////////////////////////////////////////////
+						   LAUNCHPAD
+	///////////////////////////////////////////////// -->
+	<div id="launchpad">
+		<div id="launchpad-container">
+			<div id="launchpad-slide-1">
+				<ul>
+					<li><img src="img/icons/aftereffects.png" alt="alt"><br />After Effects</li>
+					<li><img src="img/icons/appstore.png" alt="alt"><br />Apple Store</li>
+					<li><img src="img/icons/bitcoin.png" alt="alt"><br />BTC Wallet</li>
+					<li><img src="img/icons/bootcamp.png" alt="alt"><br />Bootcamp</li>
+					<li><img src="img/icons/calculator.png" alt="alt"><br />Calculator</li>
+					<li><img src="img/icons/calendar.png" alt="alt"><br />Calendar</li>
+
+					<li><img src="img/icons/chromecanary.png" alt="alt"><br />Chrome Canary</li>
+					<li><img src="img/icons/dash.png" alt="alt"><br />Dash</li>
+					<li><img src="img/icons/finder.png" alt="alt"><br />Finder</li>
+					<li><img src="img/icons/googledrive.png" alt="alt"><br />Google Drive</li>
+					<li><img src="img/icons/illustrator.png" alt="alt"><br />Illustrator</li>
+					<li><img src="img/icons/itunes.png" alt="alt"><br />iTunes</li>
+
+					<li><img src="img/icons/keynote.png" alt="alt"><br />Keynote</li>
+					<li><img src="img/icons/logicprox.png" alt="alt"><br />Logic Pro X</li>
+					<li><img src="img/icons/mamp.png" alt="alt"><br />Mamp</li>
+					<li><img src="img/icons/maps.png" alt="alt"><br />Maps</li>
+					<li><img src="img/icons/messages.png" alt="alt"><br />Messages</li>					
+					<li><img src="img/icons/notes.png" alt="alt"><br />Notes</li>
+				</ul>
+			</div>
+			<div id="launchpad-slide-2">
+				<ul>
+					<li><img src="img/icons/numbers.png" alt="alt"><br />Numbers</li>
+					<li><img src="img/icons/pages.png" alt="alt"><br />Pages</li>
+					<li><img src="img/icons/photobooth.png" alt="alt"><br />Photo Booth</li>
+					<li><img src="img/icons/photoshop.png" alt="alt"><br />Photoshop</li>
+					<li><img src="img/icons/popcorntime.png" alt="alt"><br />Popcorn Time</li>
+					<li><img src="img/icons/rekordbox.png" alt="alt"><br />Rekordbox</li>
+
+					<li><img src="img/icons/safari.png" alt="alt"><br />Safari</li>
+					<li><img src="img/icons/seratodj.png" alt="alt"><br />Serato DJ</li>
+					<li><img src="img/icons/settings.png" alt="alt"><br />Settings</li>
+					<li><img src="img/icons/skype.png" alt="alt"><br />Skype</li>
+					<li><img src="img/icons/sublimetext.png" alt="alt"><br />Sublime Text</li>
+					<li><img src="img/icons/teamviewer.png" alt="alt"><br />Teamviewer</li>
+
+					<li><img src="img/icons/terminal.png" alt="alt"><br />Terminal</li>
+					<li><img src="img/icons/tor.png" alt="alt"><br />Tor</li>
+					<li><img src="img/icons/transmission.png" alt="alt"><br />Transmit</li>
+					<li><img src="img/icons/transmit.png" alt="alt"><br />Transmit</li>
+					<li><img src="img/icons/vlc.png" alt="alt"><br />VLC</li>
+					<li><img src="img/icons/xcode.png" alt="alt"><br />Xcode</li>
+				</ul>
+			</div>
+		</div>
+		<div id="launchpad-nav">
+			<ul>
+				<li onclick="switchButton(1)" class="active"></li>
+				<li onclick="switchButton(2)"></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- ////////////////////////////////////////////////
+							DOCK
+	///////////////////////////////////////////////// -->
+	<div id="dock">
+		<ul>
+			<li><img onclick="finder()" src="img/icons/finder.png" id="dock-finder"></li>
+			<li><img onclick="launchpad()" src="img/icons/launchpad.png" id="dock-launchpad"></li>
+			<li><img src="img/icons/chromecanary.png"></li>
+			<li><img src="img/icons/appstore.png"></li>
+			<li><img src="img/icons/terminal.png"></li>
+			<li><img src="img/icons/googledrive.png"></li>
+			<li><img onclick="sublimetext()" src="img/icons/sublimetext.png" id="dock-sublimetext"></li>
+			<li><img src="img/icons/itunes.png"></li>
+			<li><img onclick="photoshop()" src="img/icons/photoshop.png" id="dock-photoshop"></li>
+			<li><img src="img/icons/illustrator.png"></li>
+			<li><img src="img/icons/popcorntime.png"></li>
+			<li><img src="img/icons/transmit.png"></li>
+			<li><img src="img/icons/transmission.png"></li>
+			<li><img src="img/icons/photobooth.png"></li>
+			<li><img src="img/icons/bootcamp.png"></li>
+			<li><img onclick="help()" src="img/icons/help.png" id="dock-help"></li>
+		</ul>
+	</div>
+
+<div id="unsupported">
+	<p>
+		Votre écran est trop petit, la resolution minimale requise est de 1280 x 680, agrandissez au maximum la fenetre ou dezoomer le site...
+	</p>
+</div>
+</body>
+</html>

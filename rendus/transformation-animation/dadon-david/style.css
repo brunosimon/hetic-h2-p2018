@@ -1,0 +1,103 @@
+﻿
+/* 
+David Dadon H2 P2018
+Bonjour Monsieur ! Vous allez bien ?
+Voici mon devoir concernant les animations CSS.
+Mon but était de faire un "Shooter" en full Html/CSS.
+Vous noterez qu'il n'y a pas une ligne de Javascript !
+Amusez-vous bien !
+*/
+
+body {
+    /* Le fond d'écran de Windows XP*/
+    background-image: url(bliss.jpg);
+    background-repeat: no-repeat
+    height: 700px;
+    width: 700px;
+    margin: auto;
+    overflow:hidden;
+}
+
+p {    
+    /*Le <p> me sert à cibler l'image des canards en css pour les faire bouger*/
+
+    z-index: 3;
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    background-image: url(canard.png);
+    background-repeat:no-repeat;
+    transition: 1s all;   
+}
+
+
+/*Canard 1*/
+
+.square {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    transition: all 1s ease;
+     -webkit-animation: one 1s infinite alternate;
+     -moz-animation: one 1s infinite alternate; 
+    /*Le Square est l'élément qui contient mon canard*/
+}
+
+@-webkit-keyframes one {
+0% {left:0%;}
+100% {left:100%;}
+}
+
+input[type="radio"]{
+position: relative;
+ height: 250px;
+width:250px;
+transition: all 1s ease;
+    z-index: 6;
+opacity: 0;
+/*J'utilise les boutons Radio pour faire un "onclick" en Css */
+}
+
+input[type="radio"]:checked + p.transform{
+transform:translate(0px,1500px) rotate(360deg);   
+}
+
+/*Canard 2*/
+
+.square2 {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin: auto;
+    transition: all 3s ease;
+     -webkit-animation: two 1.5s infinite alternate; 
+}
+
+
+@-webkit-keyframes two{
+0% {top:0px;}
+100% {top:1000px;}
+}
+
+
+input[type="radio"]:checked + p.transform2{
+transform:translate(0px,-1500px) skewX(90deg) skewY(90deg);   
+}
+
+/*Canard 3*/
+
+.square3 {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    float: right;
+    transition: all 3s ease;
+     -webkit-animation: three 1s infinite alternate; 
+}
+@-webkit-keyframes three{
+0% {right:0%;}
+50% {right:50%;}
+100% {right:100%;}
+}
+
+input[type="radio"]:checked + p.transform3{
+    transform:translate(900px,-900px) rotateY(150deg);   
+}

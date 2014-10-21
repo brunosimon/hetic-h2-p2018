@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cours 01 - Media Queries</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="cube">
+			<div class="face top"></div>
+			<div class="face forhead"></div>
+			<div class="face bottom"></div>
+			<div class="face left"><img src="images/batman-right.png"></div>
+			<div class="face right"><img src="images/batman-right.png"></div>
+			<div class="face front"><img src="images/batman-face.png"></div>
+			<div class="face back"></div>
+			
+		</div>
+
+		<div class="cube_2">
+			<div class="face_2 top"></div>
+			<div class="face_2 forhead"></div>
+			<div class="face_2 bottom"></div>
+			<div class="face_2 left"><img src="images/batman-2-right.png"></div>
+			<div class="face_2 right"><img src="images/batman-2-right.png"></div>
+			<div class="face_2 front"><img src="images/batman-2-face.png"></div>
+			<div class="face_2 back"></div>
+			
+		</div>
+	</div>
+
+	<div class="kube" onmouseover='playpause()' onmouseout='playpause()'>
+		<div class="robin top"></div>
+		<div class="robin bottom"></div>
+		<div class="robin left"><img src="images/robin-side.png"></div>
+		<div class="robin right"><img src="images/robin-side.png"></div>
+		<div class="robin front">
+			<div class="slap"><img src="images/slap.png"></div>
+			<div class="eyes-slap"><img src="images/eyes-slap.png"></div>
+			<div class="slap-face"><img src="images/slap_face.png"></div>
+			<img src="images/robin-face.png">
+			<div class="mouth"></div>
+		</div>
+		<div class="robin back"></div>
+		
+	</div>
+
+	<audio src="slap.mp3"  id="sonRobin"></audio>
+	<embed src="batman.mp3" autostart="true" loop="true" hidden="true"></embed>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

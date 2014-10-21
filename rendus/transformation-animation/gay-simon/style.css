@@ -1,0 +1,333 @@
+
+/*------------Background--------------*/
+
+body{
+	overflow:hidden;
+	display:block;
+	-webkit-animation:background 20s linear 0s infinite;
+ 	-moz-animation:background 20s linear 0s infinite;
+ 	-o-animation:background 20s linear 0s infinite;
+ 	animation:background 20s linear 0s infinite;
+ }
+
+ 	@-keyframes background{
+	0%{background-color: #9CE0F4;}
+	50% {background-color:#385054;}
+	100%{background-color: #9CE0F4;}
+}
+
+	@-webkit-keyframes background{
+	0%{background-color: #9CE0F4;}
+	50% {background-color:#385054;}
+	100%{background-color: #9CE0F4;}
+}
+
+	@-moz-keyframes background{
+	0%{background-color:#9CE0F4;}
+	50% {background-color:#385054;}
+	100%{background-color:#9CE0F4;}
+}
+
+	@-o-keyframes background{
+	0%{background-color:#9CE0F4;}
+	50% {background-color:#385054;}
+	100%{background-color:#9CE0F4;}
+}	
+
+/*------------Soleil------------*/
+
+.soleil {
+
+ 	display: block;
+ 	position:absolute;
+ 	left:80%;
+ 	top:3%;
+ 	border-radius: 50%;
+ 	height: 200px;
+ 	width: 200px;
+ 	-webkit-animation:soleil 20s linear 0s infinite;
+ 	-moz-animation:soleil 20s linear 0s infinite;
+ 	-o-animation:soleil 20s linear 0s infinite;
+ 	animation:soleil 20s linear 0s infinite;
+}
+
+@-keyframes soleil{
+	0%{background-color:#EAE359;}
+	50% {background-color:white;}
+	100%{background-color:#EAE359;}
+}
+
+@-webkit-keyframes soleil{
+	0%{background-color:#EAE359;}
+	50% {background-color:white;}
+	100%{background-color:#EAE359;}
+}
+
+@-moz-keyframes soleil{
+	0%{background-color:#EAE359;}
+	50% {background-color:white;}
+	100%{background-color:#EAE359;}
+}
+
+@-o-keyframes soleil{
+	0%{background-color:#EAE359;}
+	50% {background-color:white;}
+	100%{background-color:#EAE359;}
+}
+
+/*----------------Etoiles------------------------------------*/ 
+
+.parent{
+	-webkit-animation:etoile 20s linear 0s infinite;
+ 	-moz-animation:etoile 20s linear 0s infinite;
+ 	-o-animation:etoile 20s linear 0s infinite;
+ 	animation:etoile 20s linear 0s infinite;
+}
+
+.etoile { /*Premier grand triangle */ 
+   margin: 100px;
+   position: relative;
+   display: block;
+   color: white;
+   width: 0px;
+   height: 0px;
+   border-right:  100px solid transparent;
+   border-bottom: 70px  solid white;
+   border-left:   100px solid transparent;
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-t
+   transform:      rotate(35deg);
+}
+
+.etoile:before { /*Petit triangle placer au dessus */ 
+   border-bottom: 80px solid white;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -45px;
+   left: -65px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+   
+}
+.etoile:after { /*Second Grand Trangle */ 
+   position: absolute;
+   display: block;
+   color: white;
+   top: 3px;
+   left: -105px;
+   width: 0px;
+   height: 0px;
+   border-right: 100px solid transparent;
+   border-bottom: 70px solid white;
+   border-left: 100px solid transparent;
+   content: '';
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+}
+
+@-keyframes etoile{
+	0%{color:#EAE359;}
+	50% {color:white;}
+	100%{color:#EAE359;}
+}
+
+@-webkit-keyframes etoile{
+	0%{color:#EAE359;}
+	50% {color:white;}
+	100%{color:#EAE359;}
+}
+
+@-moz-keyframes etoile{
+	0%{color:#EAE359;}
+	50% {color:white;}
+	100%{color:#EAE359;}
+}
+
+@-o-keyframes etoile{
+	0%{color:#EAE359;}
+	50% {color:white;}
+	100%{color:#EAE359;}
+}
+
+/*----------------Animation des vagues-----------------------*/
+
+.vague1 { 
+	position:absolute;	
+	right:1px;	
+
+	transform:translateX(20%);
+	-webkit-transform:translateX(20%);
+	-moz-transform:translateX(20%);
+	-o-transform:translateX(20%);
+
+	-webkit-animation:surf 3s linear 0s infinite;
+	-moz-animation:surf 3s linear 0s infinite;
+	-o-animation:surf 3s linear 0s infinite;
+	animation:surf 3s linear 0s infinite;
+}
+
+@-keyframes surf{
+	0%{top:80%;}
+	50% {top:85%;}
+	100% {top:80%;}
+}
+
+@-webkit-keyframes surf{
+	0%{top:80%;}
+	50% {top:85%;}
+	100% {top:80%;}
+}
+
+@-moz-keyframes surf{
+	0%{top:80%;}
+	50% {top:85%;}
+	100% {top:80%;}
+}
+
+@-o-keyframes surf{
+	0%{top:80%;}
+	50% {top:85%;}
+	100% {top:80%;}
+}
+
+.vague2 { 
+	position:absolute;
+	right:1px;	
+
+	transform:translateX(20%);
+	-webkit-transform:translateX(20%);
+	-moz-transform:translateX(20%);
+	-o-transform:translateX(20%);
+
+	-webkit-animation:surfa 3s linear 0s infinite ;
+	-moz-animation:surfa 3s linear 0s infinite ;
+	-o-animation:surfa 3s linear 0s infinite ;
+	animation:surfa 3s linear 0s infinite ;
+}
+
+@-keyframes surfa{
+	0%{top:85%;}
+	50% {top:90%;}
+	100% {top:85%;}
+}
+
+@-webkit-keyframes surfa{
+	0%{top:85%;}
+	50% {top:93%;}
+	100% {top:85%;}
+}
+
+@-moz-keyframes surfa{
+	0%{top:85%;}
+	50% {top:93%;}
+	100% {top:85%;}
+}
+
+@-o-keyframes surfa{
+	0%{top:85%;}
+	50% {top:93%;}
+	100% {top:85%;}
+}
+
+.vague3 { 
+	position:absolute;
+	right:1px;	
+
+	transform:translateX(20%);
+	-webkit-transform:translateX(20%);
+	-moz-transform:translateX(20%);
+	-o-transform:translateX(20%);
+
+	-webkit-animation:surfb 3s linear 0s infinite ;
+	-moz-animation:surfb 3s linear 0s infinite ;
+	-o-animation:surfb 3s linear 0s infinite ;
+	animation:surfb 3s linear 0s infinite ;
+}
+
+@-keyframes surfb{
+	0%{top:90%;}
+	50% {top:100%;}
+	100% {top:90%;}
+}
+
+@-webkit-keyframes surfb{
+	0%{top:90%;}
+	50% {top:97%;}
+	100% {top:90%;}
+}
+
+@-moz-keyframes surfb{
+	0%{top:90%;}
+	50% {top:100%;}
+	100% {top:90%;}
+}
+
+@-o-keyframes surfb{
+	0%{top:90%;}
+	50% {top:100%;}
+	100% {top:90%;}
+}
+
+/*------------Animation surfeur --------------*/ 
+
+.anim2{
+	position:absolute;
+	-webkit-animation:go-animation 10s linear 0s infinite reverse;
+	-moz-animation:go-animation 10s linear 0s infinite reverse;
+	-o-animation:go-animation 10s linear 0s infinite reverse;
+	animation:go-animation 10s linear 0s infinite reverse;
+}
+
+@-webkit-keyframes go-animation{
+	0% {right:100%;top:65%;}
+	50% {top:70%;}
+	100% {right:0%;top:65%;}
+}
+
+
+.animation{ /* Animation du surfeur : itération infinie qui dure 3seconde et qui est linéaire + automatiquement sur pause */ 
+	-webkit-animation:rotate-animation 1s linear 0s infinite alternate;
+
+	-webkit-animation-play-state:paused;
+	-moz-animation-play-state:paused;
+	-o-animation-play-state:paused;
+	-animation-play-state:paused;
+}
+
+.animation:hover{ /* Passage de l'état de pause à celui de joué au survol de la souris sur l'objet + rotation de 0 à 360 degré. */
+	-webkit-animation-play-state:running;
+	-moz-animation-play-state:running;
+	-o-animation-play-state:running;
+	-animation-play-state:running;
+}
+
+@-keyframes rotate-animation{
+	0% {transform:rotate(10deg);}
+	100% {transform:rotate(80deg);}
+}
+
+@-webkit-keyframes rotate-animation{
+	0% {transform:rotate(10deg);}
+	100% {transform:rotate(80deg);}
+}
+
+@-moz-keyframes rotate-animation{
+	0% {transform:rotate(10deg);}
+	100% {transform:rotate(80deg);}
+}
+
+@-o-keyframes rotate-animation{
+	0% {transform:rotate(10deg);}
+	100% {transform:rotate(80deg);}
+}

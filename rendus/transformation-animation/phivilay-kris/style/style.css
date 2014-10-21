@@ -1,0 +1,635 @@
+body, html {
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  transition: opacity 400ms;
+  background:#000;
+  color:#fff;
+}
+
+body, .onepage-wrapper, html {
+  display: block;
+  position: static;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*************ONE PAGE SCROLL********/
+
+.onepage-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 0;
+  -webkit-transform-style: preserve-3d;
+}
+
+.onepage-wrapper .section {
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-pagination {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  z-index: 5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.onepage-pagination li {
+  padding: 0;
+  text-align: center;
+}
+.onepage-pagination li a{
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: block;
+  
+}
+.onepage-pagination li a:before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.onepage-pagination li a.active:before{
+  width: 10px;
+  height: 10px;
+  background: blue;
+  border: 1px solid black;
+  margin-top: -4px;
+  left: 8px;
+}
+
+/*************PAGE 1********/
+
+.bmw1 {
+  width: 80%;
+  margin: auto;
+  padding: 35px 0;
+  position: relative;
+  clear: both;
+}
+
+.bmw1-details {
+  float: right;
+  width: 40%;
+  padding-left: 0px;
+  clear: both;
+}
+
+.bmw1-details h2 {
+  padding-top: 300px;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  margin-top: 0px;
+  padding-bottom: 10px;
+  box-shadow:  0 1px 0 #DFDEDC, 0 2px 0 rgba(255,255,255,0.5);
+}
+
+.bmw1-details p {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  line-height: 22px;
+}
+
+.bmw1-preview {
+  padding-top: 100px;
+  width: 58%;
+  float: left;
+  position: relative;
+}
+
+.bmw1-left .bmw1-details{
+  float: left;
+  padding-right: 20px;
+  padding-left: 0px;
+  text-align: right;
+}
+
+.bmw1 img {
+  clear: both;
+  margin: 0 auto;
+  max-width: 100%;
+  display: block;
+  opacity: 0.8;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bmw1-notes {
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(33,62,68,0.3);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+  opacity: 0;
+  z-index: 5;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bmw1-notes span {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  position: absolute;
+  padding: 10px 25px;
+  width: 33%;
+  min-width: 140px;
+  text-align: center;
+  background: rgba(255,255,255,1);
+  color: rgba(20,40,47,0.9);
+  font-size: 16px;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+  opacity: 0;
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bmw1-notes span:after {
+  position: absolute;
+  background: transparent url(../images/arrowd.png) no-repeat center center;
+  width: 32px;
+  height: 33px;
+  top: 50%;
+  left: 100%;
+  margin: -16px 0 0 -16px;
+  content: '';
+}
+
+/*Disposition des notes lors du clic sur l'image*/
+.bmw1-notes span:nth-child(1) {
+  top: 50%;
+  left: -10%;
+}
+
+.bmw1-notes span:nth-child(2) {
+  top: 20%;
+  left: 5%;
+}
+
+.bmw1-notes span:nth-child(3) {
+  top: 37%;
+  right: 2%;
+}
+.bmw1-notes span:nth-child(3):after,
+.bmw1:nth-child(2) .bmw1-notes span:nth-child(1):after {
+  left: auto;
+  right: 100%;
+  margin: -16px -16px 0 0;
+  background-image: url(../images/arrowg.png);
+}
+
+input.bmw1-survol {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  z-index: 100;
+  border: none;
+  cursor: pointer;
+}
+
+/*Action sur les spans lors du clic*/
+input.bmw1-survol:checked + img {
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+  opacity: 1;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+input.bmw1-survol:hover + img{
+  opacity: 1;
+}
+
+input.bmw1-survol:checked ~ .bmw1-notes,
+input.bmw1-survol:checked ~ .bmw1-notes span{
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+input.bmw1-survol:checked ~ .bmw1-notes span:nth-child(1) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  -ms-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+input.bmw1-survol:checked ~ .bmw1-notes span:nth-child(2) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  -ms-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+input.bmw1-survol:checked ~ .bmw1-notes span:nth-child(3) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  -ms-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+
+/*************PAGE 1********/
+
+
+/*************PAGE 2 (même code css que précédemment)********/
+
+.bmw2 {
+  width: 80%;
+  margin: auto;
+  padding: 35px 0;
+  position: relative;
+  clear: both;
+}
+
+.bmw2-details2 {
+  float: right;
+  width: 40%;
+  padding-left: 0px;
+  clear: both;
+}
+
+.bmw2-details2 h2 {
+  padding-top: 300px;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  margin-top: 0px;
+  padding-bottom: 10px;
+  box-shadow:  0 1px 0 #DFDEDC, 0 2px 0 rgba(255,255,255,0.5);
+}
+
+.bmw2-details2 p {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  line-height: 22px;
+}
+
+.bmw2-preview2 {
+ padding-top: 130px;
+  width: 58%;
+  float: left;
+  position: relative;
+}
+
+.bmw2-left2 .bmw2-details2{
+  padding-right: 20px;
+  padding-left: 0px;
+  text-align: right;
+}
+
+.bmw2 img {
+  clear: both;
+  margin: 0 auto;
+  max-width: 100%;
+  display: block;
+  opacity: 0.8;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bmw2-notes2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(33,62,68,0.3);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+  opacity: 0;
+  z-index: 5;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bmw2-notes2 span {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  position: absolute;
+  padding: 10px 25px;
+  width: 33%;
+  min-width: 140px;
+  text-align: center;
+  background: rgba(255,255,255,1);
+  color: rgba(20,40,47,0.9);
+  font-size: 16px;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+  opacity: 0;
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bmw2-notes2 span:after {
+  position: absolute;
+  background: transparent url(../images/arrowd.png) no-repeat center center;
+  width: 32px;
+  height: 33px;
+  top: 50%;
+  left: 100%;
+  margin: -16px 0 0 -16px;
+  content: '';
+}
+
+.bmw2-notes2 span:nth-child(1) {
+  top: 60%;
+  left: -20%;
+}
+
+.bmw2-notes2 span:nth-child(2) {
+  top: 40%;
+  left: -13%;
+}
+
+.bmw2-notes2 span:nth-child(3) {
+  top: 55%;
+  right: -20%;
+}
+
+
+.bmw2-notes2 span:nth-child(3):after,
+.bmw2:nth-child(2) .bmw2-notes2 span:nth-child(1):after {
+  left: auto;
+  right: 100%;
+  margin: -16px -16px 0 0;
+  background-image: url(../images/arrowg.png);
+}
+
+input.bmw2-survol2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  z-index: 100;
+  border: none;
+  cursor: pointer;
+}
+
+input.bmw2-survol2:checked + img {
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+  opacity: 1;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+input.bmw2-survol2:hover + img{
+  opacity: 1;
+}
+
+input.bmw2-survol2:checked ~ .bmw2-notes2,
+input.bmw2-survol2:checked ~ .bmw2-notes2 span{
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+input.bmw2-survol2:checked ~ .bmw2-notes2 span:nth-child(1) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  -ms-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+input.bmw2-survol2:checked ~ .bmw2-notes2 span:nth-child(2) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  -ms-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+input.bmw2-survol2:checked ~ .bmw2-notes2 span:nth-child(3) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  -ms-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+
+/*************PAGE 3********/
+
+.container{
+  margin-top: 250px;
+}
+
+.contact {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.contact:after,
+.cercle:before {
+  content: '';
+    display: table;
+}
+
+.contact:after {
+  clear: both;
+}
+
+.contact li {
+  width: 220px;
+  height: 220px;
+  display: inline-block;
+  margin: 20px;
+}
+.cercle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  -webkit-perspective: 900px;
+  -moz-perspective: 900px;
+  -o-perspective: 900px;
+  -ms-perspective: 900px;
+  perspective: 900px;
+}
+.info{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.info > div {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-position: center;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+.info .info-front {
+  box-shadow : 0 0 0 5px rgba(0,0,0,0.3);
+}
+
+.info .info-back {
+  -webkit-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+  -moz-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+  -o-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+  -ms-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+  transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+  background: #000;
+  opacity: 0;
+}
+
+.moi { 
+  background-image: url(../images/photo.png);
+}
+.css { 
+  background-image: url(../images/css3.png);
+  background-repeat: no-repeat;
+}
+.html { 
+  background-image: url(../images/html5.png);
+}
+.jquery { 
+  background-image: url(../images/jquery.png);
+}
+
+.info h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  margin: 0 15px;
+  padding: 60px 0 0 0;
+  height: 110px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.info p {
+  color: #fff;
+  padding: 10px 5px;
+  margin: 0 30px;
+  font-size: 12px;
+  border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+/*Effectue une rotation lors du hover du cercle*/
+.cercle:hover .info-front {
+  -webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+  -moz-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+  -o-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+  -ms-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+  transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+  opacity: 0;
+}
+
+.cercle:hover .info-back {
+  -webkit-transform: rotate3d(1,0,0,0deg);
+  -moz-transform: rotate3d(1,0,0,0deg);
+  -o-transform: rotate3d(1,0,0,0deg);
+  -ms-transform: rotate3d(1,0,0,0deg);
+  transform: rotate3d(1,0,0,0deg);
+  opacity: 1;
+}

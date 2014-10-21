@@ -1,0 +1,846 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*************************************************
+
+				STARS BACKGROUND
+
+**************************************************/
+
+body{
+	font-family: Helvetica,arial ;
+	background: url("images/space.png") repeat;
+	z-index: 1;
+    -webkit-animation: space 30s linear infinite;
+       -moz-animation: space 30s linear infinite;
+         -o-animation: space 30s linear infinite;
+            animation: space 30s linear infinite;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*************************************************
+
+					SUPERNOVA
+
+**************************************************/
+
+
+.supernova{
+	position:absolute;
+	margin:auto;
+	width:100px;
+	height: 200px;
+	display:block;
+	left: 27%;
+	top:15%;
+}
+
+.supernova div{
+	width: 100px;
+	height: 16px;
+	border: 8px #fff solid;
+	border-right: 8px #fff solid;
+	border-bottom: none;
+	border-top: none;
+	-webkit-animation: swing 5s linear infinite alternate;
+	   -moz-animation: swing 5s linear infinite alternate;
+	     -o-animation: swing 5s linear infinite alternate;
+	        animation: swing 5s linear infinite alternate;
+}
+
+.supernova div>div{
+	border-color: #0DFFF8;
+	border-width: 7px
+}
+
+.supernova div>div>div{
+	border-color: #0CE8A3;
+	border-width: 6px
+}
+
+.supernova div>div>div>div{
+	border-color: #00FF67;
+	border-width: 5px
+}
+
+.supernova div>div>div>div>div{
+	border-color: #0CE826;
+	border-width: 4px
+}
+
+.supernova div>div>div>div>div>div{
+	border-color: #3DFF0D;
+	border-width: 3px
+}
+
+.supernova div>div>div>div>div>div>div{
+	border-color: #2CA309;
+	border-width: 2px
+}
+
+.supernova div>div>div>div>div>div>div>div{
+	border-color: #1B6306;
+	border-width: 1px
+}
+
+
+
+/*************************************************
+
+					PLANETS
+
+**************************************************/
+
+
+/**********    GENERAL CSS    **************/
+
+.planet{
+	-webkit-transition:all 0.8s linear 0s;
+	   -moz-transition:all 0.8s linear 0s;
+		 -o-transition:all 0.8s linear 0s;
+			transition:all 0.8s linear 0s;
+}
+
+.planet:hover{
+	-webkit-transform:scale3d(2,2,2);
+	   -moz-transform:scale3d(2,2,2);
+		 -o-transform:scale3d(2,2,2);
+			transform:scale3d(2,2,2);
+	z-index: 200;
+}
+
+
+.circle1{
+	width: 35%;
+	height: 25%;
+	top:-4%;
+	left: 10%;
+}
+.circle2{
+	width: 30%;
+	height: 25%;
+	top:50%;
+	left: 10%;
+}
+.circle3{
+	width: 35%;
+	height: 20%;
+	top:20%;
+	left: 85%;
+}
+.circle4{
+	width: 45%;
+	height: 25%;
+	top:75%;
+	left: 80%;
+}
+.circle5{
+	width: 15%;
+	height: 15%;
+	top:65%;
+	left: 65%;
+}
+
+
+/**********    EYES   **************/
+
+.eyes{
+	position:absolute;
+	top: 28%;
+	left: 38%;
+	border-radius: 50%;
+	z-index:15;
+	width: 25%;
+	height: 25%;
+	
+}
+
+.eyes .right{
+	width: 30%;
+	height: 80%;
+	z-index:15;
+	position:absolute;
+	background: #000;
+	border-radius: 50%;
+	-webkit-animation: eyes 2s linear 0s infinite;
+       -moz-animation: eyes 2s linear 0s infinite;
+         -o-animation: eyes 2s linear 0s infinite;
+            animation: eyes 2s linear 0s infinite;
+}
+.eyes .left{
+	width: 30%;
+	height: 80%;
+	background: #000;
+	position:absolute;
+	left:40%;
+	z-index:15;
+	border-radius: 50%;
+	-webkit-animation: eyes 2s linear 0s infinite;
+       -moz-animation: eyes 2s linear 0s infinite;
+         -o-animation: eyes 2s linear 0s infinite;
+            animation: eyes 2s linear 0s infinite;
+}
+
+
+/**********    EARTH   **************/
+
+.earth{
+	position:absolute;
+	width: 160px;
+	height: 160px;
+	border-radius:50%;
+	background: -webkit-radial-gradient(50px 50px, circle, #5cabff, #000);
+	background:    -moz-radial-gradient(50px 50px, circle, #5cabff, #000);
+	background:      -o-radial-gradient(50px 50px, circle, #5cabff, #000);
+	background:         radial-gradient(50px 50px, circle, #5cabff, #000);
+	z-index:9;
+	overflow: hidden;
+	left:65%;
+	top:42%;
+}
+.earth_circle{
+	background: #DAD8D8;
+	border-radius: 50%;
+	position:absolute;
+	box-shadow: 0px -3px 5px #362121 inset;
+	z-index: 8;
+}
+
+
+.circle_green{
+	background: #2CA20E;
+	box-shadow: 0px -3px 5px #08250A inset;
+}
+
+
+
+/**********   MARS   **************/
+
+.mars{
+	position:absolute;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: -webkit-radial-gradient(50px 50px, circle, #922020, #000);
+	background:    -moz-radial-gradient(50px 50px, circle, #922020, #000);
+	background:      -o-radial-gradient(50px 50px, circle, #922020, #000);
+	background:         radial-gradient(50px 50px, circle, #922020, #000);
+	z-index:9;
+	overflow: hidden;
+	left:80%;
+	top:45%;
+}
+.mars_circle{
+	background: #2E2525;
+	border-radius: 50%;
+	position:absolute;
+	box-shadow: 0px -3px 5px #7E1010 inset;
+	z-index: 8;
+}
+
+
+/**********    MERCURE   **************/
+
+.mercure{
+	position:absolute;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: -webkit-radial-gradient(50px 50px, circle, #F2DDDD, #000);
+	background:    -moz-radial-gradient(50px 50px, circle, #F2DDDD, #000);
+	background:      -o-radial-gradient(50px 50px, circle, #F2DDDD, #000);
+	background:         radial-gradient(50px 50px, circle, #F2DDDD, #000);
+	z-index:2;
+	overflow: hidden;
+	left:35%;
+	top:48%;
+}
+.mercure_circle{
+	background: #ECDBDB;
+	border-radius: 50%;
+	position:absolute;
+	box-shadow: 0px -3px 5px #050404 inset;
+	z-index: 8;
+}
+
+
+/**********    VENUS   **************/
+
+.venus{
+	position:absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: -webkit-radial-gradient(50px 50px, circle, #FFAE00, #545353);
+	background:    -moz-radial-gradient(50px 50px, circle, #FFAE00, #545353);
+	background:      -o-radial-gradient(50px 50px, circle, #FFAE00, #545353);
+	background:         radial-gradient(50px 50px, circle, #FFAE00, #545353);
+	z-index:9;
+	overflow: hidden;
+	left:45%;
+	top:40%;
+}
+.venus_circle{
+	background: #F2B531;
+	border-radius: 50%;
+	position:absolute;
+	box-shadow: 0px -3px 5px #BD3516 inset;
+	z-index: 8;
+}
+
+.circle_red{
+	background: #961D1D;
+	box-shadow: 0px -3px 5px #2C110B inset;
+}
+
+
+/*************************************************************
+
+					    	NAME
+
+*************************************************************/
+
+
+.name{
+	z-index: 100;
+	position:absolute;
+	top:55%;
+	left: 37%;
+	font-weight: bold;
+	font-family: 'Lobster', cursive, Arial;
+	font-size: 16px;
+	opacity:0;
+	-webkit-transition:opacity 1s cubic-bezier(0.385, 0.220, 1.000, -0.165) 0s;
+	   -moz-transition:opacity 1s cubic-bezier(0.385, 0.220, 1.000, -0.165) 0s;
+		 -o-transition:opacity 1s cubic-bezier(0.385, 0.220, 1.000, -0.165) 0s;
+			transition:opacity 1s cubic-bezier(0.385, 0.220, 1.000, -0.165) 0s;
+}
+
+.mercure>.name {
+	left: 20%;
+}
+
+.contain_sun>.name {
+	color:#fff;
+	top: 42%;
+	left: 40%;
+	font-size: 35px;
+}
+.contain_sun:hover>.name {
+	opacity:1;
+}
+
+.supernova>.name {
+	color:#fff;
+	top: -65%;
+	left: 20%;
+	font-size: 25px;
+}
+.supernova:hover>.name {
+	opacity:1;
+}
+
+.planet:hover>.name{
+	opacity:1;
+}
+
+
+
+/***********************************************
+
+                      SUN
+
+***********************************************/
+
+.contain_sun {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	top: 35%;
+	left: 5%;
+}
+
+
+/**********   LARGE SUN - YELLOW   **************/
+
+.sun_large {
+	opacity:0.5;
+	background: #FFE800;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	-webkit-animation: turn_left 12.5s linear 0s infinite;
+       -moz-animation: turn_left 12.5s linear 0s infinite;
+         -o-animation: turn_left 12.5s linear 0s infinite;
+            animation: turn_left 12.5s linear 0s infinite;
+}
+
+.sun_large:nth-child(2) {
+	-webkit-animation-delay:0.8s;
+	   -moz-animation-delay:0.8s;
+		 -o-animation-delay:0.8s;
+			animation-delay:0.8s;
+}
+.sun_large:nth-child(3) {
+	-webkit-animation-delay:1.6s;
+	   -moz-animation-delay:1.6s;
+		 -o-animation-delay:1.6s;
+			animation-delay:1.6s;
+}
+.sun_large:nth-child(4) {
+	-webkit-animation-delay:2.4s;
+	   -moz-animation-delay:2.4s;
+		 -o-animation-delay:2.4s;
+			animation-delay:2.4s;
+}
+
+
+/**********   MEDIUM SUN - ORANGE   **************/
+
+.sun_medium {
+	z-index: 5;
+	opacity:0.5;
+	background: #FF9B00;
+	width: 80%;
+	height: 80%;
+	position:absolute;
+	left: 10%;
+	top: 10%;
+	-webkit-animation: turn_left 12.5s linear 0s infinite reverse;
+       -moz-animation: turn_left 12.5s linear 0s infinite reverse;
+         -o-animation: turn_left 12.5s linear 0s infinite reverse;
+            animation: turn_left 12.5s linear 0s infinite reverse;
+}
+
+.sun_medium2 {
+	-webkit-animation-delay:0.8s;
+	   -moz-animation-delay:0.8s;
+		 -o-animation-delay:0.8s;
+			animation-delay:0.8s;
+}
+.sun_medium3 {
+	-webkit-animation-delay:1.6s;
+	   -moz-animation-delay:1.6s;
+		 -o-animation-delay:1.6s;
+			animation-delay:1.6s;
+}
+.sun_medium4 {
+	-webkit-animation-delay:2.4s;
+	   -moz-animation-delay:2.4s;
+		 -o-animation-delay:2.4s;
+			animation-delay:2.4s;
+}
+
+
+
+/**********   LITTLE SUN - RED   **************/
+
+.sun_little {
+	z-index: 10;
+	opacity:0.5;
+	background: -webkit-radial-gradient(50px 50px, circle, #F40A0A, #692917);
+	background:    -moz-radial-gradient(50px 50px, circle, #F40A0A, #692917);
+	background:      -o-radial-gradient(50px 50px, circle, #F40A0A, #692917);
+	background:         radial-gradient(50px 50px, circle, #F40A0A, #692917);
+	width: 60%;
+	height: 60%;
+	position:absolute;
+	top: 20%;
+	left: 20%;
+	-webkit-animation: turn_left 18.75s linear 0s infinite;
+       -moz-animation: turn_left 18.75s linear 0s infinite;
+         -o-animation: turn_left 18.75s linear 0s infinite;
+            animation: turn_left 18.75s linear 0s infinite;
+}
+
+
+.sun_little2 {
+	-webkit-animation-delay:1.2s;
+	   -moz-animation-delay:1.2s;
+		 -o-animation-delay:1.2s;
+			animation-delay:1.2s;
+}
+.sun_little3 {
+	-webkit-animation-delay:2.4s;
+	   -moz-animation-delay:2.4s;
+		 -o-animation-delay:2.4s;
+			animation-delay:2.4s;
+}
+.sun_little4 {
+	-webkit-animation-delay:3.6s;
+	   -moz-animation-delay:3.6s;
+		 -o-animation-delay:3.6s;
+			animation-delay:3.6s;
+}
+
+
+/***********************************************
+
+                  DEATH STAR
+
+***********************************************/
+
+
+.death_star{
+	width: 350px;
+	height: 307px;
+	background: url("images/etoile_noire.png");
+	background-size: 350px 307px;
+	z-index: 3;
+	position: absolute;
+	background-repeat: no-repeat;
+	opacity: 0;
+	-webkit-animation: move_death_star 14s linear 0s;
+       -moz-animation: move_death_star 14s linear 0s;
+         -o-animation: move_death_star 14s linear 0s ;
+            animation: move_death_star 14s linear 0s;
+}
+
+
+
+/**********************************************
+
+                   STARS
+
+**********************************************/
+
+
+.star {
+	width: 5px;
+	height: 5px;
+	border-radius:50%;
+	box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);
+	background: #fff;
+	position:absolute;
+}
+
+.star:nth-child(odd) {
+	-webkit-animation: pulse_A 30s linear 0s infinite alternate;
+       -moz-animation: pulse_A 30s linear 0s infinite alternate;
+         -o-animation: pulse_A 30s linear 0s infinite alternate;
+            animation: pulse_A 30s linear 0s infinite alternate;
+}
+
+.star:nth-child(even) {
+	-webkit-animation: pulse_B 23s linear 0s infinite alternate;
+       -moz-animation: pulse_B 23s linear 0s infinite alternate;
+         -o-animation: pulse_B 23s linear 0s infinite alternate;
+            animation: pulse_B 23s linear 0s infinite alternate;
+}
+
+.star:nth-child(1) {
+	top:5%;
+	left: 70%;
+}
+
+.star:nth-child(2) {
+	top:85%;
+	left: 20%;
+}
+
+.star:nth-child(3) {
+	top:73%;
+	left: 40%;
+	-webkit-animation-delay:3s;
+	   -moz-animation-delay:3s;
+	     -o-animation-delay:3s;
+			animation-delay:3s;
+}
+
+.star:nth-child(4) {
+	top:25%;
+	left: 80%;
+	-webkit-animation-delay:3s;
+	   -moz-animation-delay:3s;
+	     -o-animation-delay:3s;
+			animation-delay:3s;
+}
+
+.star:nth-child(5) {
+	top:65%;
+	left: 60%;
+}
+
+.star:nth-child(6) {
+	top:7%;
+	left: 35%;
+}
+
+.star:nth-child(7) {
+	top:50%;
+	left: 85%;
+	-webkit-animation-delay:5s;
+	   -moz-animation-delay:5s;
+		 -o-animation-delay:5s;
+			animation-delay:5s;
+}
+
+.star:nth-child(8) {
+	top:80%;
+	left: 75%;
+	-webkit-animation-delay:5s;
+	   -moz-animation-delay:5s;
+		 -o-animation-delay:5s;
+			animation-delay:5s;
+}
+
+
+
+
+
+
+/**************************************************
+
+                    KEYFRAMES
+
+**************************************************/
+
+
+/**********   BACKGROUND MOVE   **************/
+
+@-webkit-keyframes space {
+	0%   {background-position:0px 0px;}
+	100% {background-position:700px 0px;}
+}
+@-moz-keyframes space {
+	0%   {background-position:0px 0px;}
+	100% {background-position:700px 0px;}
+}
+@-o-keyframes space {
+	0%   {background-position:0px 0px;}
+	100% {background-position:700px 0px;}
+}
+@keyframes space {
+	0%   {background-position:0px 0px;}
+	100% {background-position:700px 0px;}
+}
+
+
+/**********   OPEN/CLOSE EYES   **************/
+
+@-webkit-keyframes eyes {
+	0% {height:100%;}
+	5% {height:5%;}
+	10% {height:100%;}
+	100% {height:100%;}
+}
+@-moz-keyframes eyes {
+	0% {height:100%;}
+	5% {height:5%;}
+	10% {height:100%;}
+	100% {height:100%;}
+}
+@-o-keyframes eyes {
+	0% {height:100%;}
+	5% {height:5%;}
+	10% {height:100%;}
+	100% {height:100%;}
+}
+@keyframes eyes {
+	0% {height:100%;}
+	5% {height:5%;}
+	10% {height:100%;}
+	100% {height:100%;}
+}
+
+
+/**********   SUPERNOVA TURN  **************/
+
+@-webkit-keyframes swing {
+	0%   {-webkit-transform : rotate(250deg);opacity:1;}
+	30%  {border-color: #0D29FD;}
+	50%  {border-color: #0CE824;}
+	70%  {border-color: #0D29FD;}
+	100% {-webkit-transform : rotate(310deg) translate(50px,-50px);opacity:1;}
+}
+@-moz-keyframes swing {
+	0%   {-moz-transform : rotate(250deg);opacity:1;}
+	30%  {border-color: #0D29FD;}
+	50%  {border-color: #0CE824;}
+	70%  {border-color: #0D29FD;}
+	100% {-moz-transform : rotate(310deg) translate(50px,-50px);opacity:1;}
+}
+@-o-keyframes swing {
+	0%   {-o-transform : rotate(250deg);opacity:1;}
+	30%  {border-color: #0D29FD;}
+	50%  {border-color: #0CE824;}
+	70%  {border-color: #0D29FD;}
+	100% {-o-transform : rotate(310deg) translate(50px,-50px);opacity:1;}
+}
+@keyframes swing {
+	0%   {transform : rotate(250deg);opacity:1;}
+	30%  {border-color: #0D29FD;}
+	50%  {border-color: #0CE824;}
+	70%  {border-color: #0D29FD;}
+	100% {transform : rotate(310deg) translate(50px,-50px);opacity:1;}
+}
+
+
+
+/**********   SHINING AND MOVING STARS - TYPE A   **************/
+
+@-webkit-keyframes pulse_A {
+	0%   {-webkit-transform:translate(0px,0px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	10%  {-webkit-transform:translate(30px,30px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	20%  {-webkit-transform:translate(-10px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	30%  {-webkit-transform:translate(10px,20px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	40%  {-webkit-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	50%  {-webkit-transform:translate(100px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	60%  {-webkit-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	70%  {-webkit-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	80%  {-webkit-transform:translate(70px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	90%  {-webkit-transform:translate(50px,30px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	100% {-webkit-transform:translate(80px,20px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+}
+@-moz-keyframes pulse_A {
+	0%   {-moz-transform:translate(200px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	10%  {-moz-transform:translate(30px,30px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	20%  {-moz-transform:translate(-10px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	30%  {-moz-transform:translate(10px,20px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	40%  {-moz-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	50%  {-moz-transform:translate(100px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	60%  {-moz-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	70%  {-moz-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	80%  {-moz-transform:translate(70px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	90%  {-moz-transform:translate(50px,30px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	100% {-moz-transform:translate(200px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+}
+@-o-keyframes pulse_A {
+	0%   {-o-transform:translate(200px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	10%  {-o-transform:translate(30px,30px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	20%  {-o-transform:translate(-10px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	30%  {-o-transform:translate(10px,20px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	40%  {-o-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	50%  {-o-transform:translate(100px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	60%  {-o-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	70%  {-o-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	80%  {-o-transform:translate(70px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	90%  {-o-transform:translate(50px,30px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	100% {-o-transform:translate(200px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+}
+@keyframes pulse_A {
+	0%   {transform:translate(200px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	10%  {transform:translate(30px,30px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	20%  {transform:translate(-10px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	30%  {transform:translate(10px,20px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	40%  {transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	50%  {transform:translate(100px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	60%  {transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	70%  {transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	80%  {transform:translate(70px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	90%  {transform:translate(50px,30px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	100% {transform:translate(200px,50px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+}
+
+
+/**********   SHINING AND MOVING STARS - TYPE B   **************/
+
+@-webkit-keyframes pulse_B {
+	0%   {-webkit-transform:translate(0px,0px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	10%  {-webkit-transform:translate(20px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	20%  {-webkit-transform:translate(40px,20px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	30%  {-webkit-transform:translate(30px,-10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	40%  {-webkit-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	50%  {-webkit-transform:translate(0px,10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	60%  {-webkit-transform:translate(0px,10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	70%  {-webkit-transform:translate(0px,15px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	80%  {-webkit-transform:translate(10px,5px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	90%  {-webkit-transform:translate(70px,25px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	100% {-webkit-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+}
+@-moz-keyframes pulse_B {
+	0%   {-moz-transform:translate(0px,0px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	10%  {-moz-transform:translate(20px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	20%  {-moz-transform:translate(40px,20px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	30%  {-moz-transform:translate(30px,-10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	40%  {-moz-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	50%  {-moz-transform:translate(0px,10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	60%  {-moz-transform:translate(0px,10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	70%  {-moz-transform:translate(0px,15px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	80%  {-moz-transform:translate(10px,5px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	90%  {-moz-transform:translate(70px,25px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	100% {-moz-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+}
+@-o-keyframes pulse_B {
+	0%   {-o-transform:translate(0px,0px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	10%  {-o-transform:translate(20px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	20%  {-o-transform:translate(40px,20px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	30%  {-o-transform:translate(30px,-10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	40%  {-o-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	50%  {-o-transform:translate(0px,10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	60%  {-o-transform:translate(0px,10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	70%  {-o-transform:translate(0px,15px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	80%  {-o-transform:translate(10px,5px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	90%  {-o-transform:translate(70px,25px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	100% {-o-transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+}
+@keyframes pulse_B {
+	0%   {transform:translate(0px,0px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	10%  {transform:translate(20px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	20%  {transform:translate(40px,20px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	30%  {transform:translate(30px,-10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	40%  {transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	50%  {transform:translate(0px,10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+	60%  {transform:translate(0px,10px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	70%  {transform:translate(0px,15px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	80%  {transform:translate(10px,5px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	90%  {transform:translate(70px,25px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0);}
+	100% {transform:translate(40px,40px);box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.9);}
+}
+
+
+/**********   TURNING SUN   **************/
+
+@-webkit-keyframes turn_left {
+	0%   {-webkit-transform: rotate(0deg); }
+	100% {-webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes turn_left {
+	0%   {-moz-transform: rotate(0deg); }
+	100% {-moz-transform: rotate(360deg); }
+}
+@-o-keyframes turn_left {
+	0%   {-o-transform: rotate(0deg); }
+	100% {-o-transform: rotate(360deg); }
+}
+@keyframes turn_left {
+	0%   {transform: rotate(0deg); }
+	100% {transform: rotate(360deg); }
+}
+
+
+/**********   COME AND GO DEATH STAR   **************/
+
+@-webkit-keyframes move_death_star {
+	0%   {top: 10%;left: 80%;background-size: 87px 71px;opacity:1;}
+	50%  {top: 60%;left: 50%;background-size: 245px 215px;}
+	94%  {top: 64%;left: 34%;background-size: 350px 307px;}
+	99%  {top: 15%;left: 27%;background-size: 43px 35px;opacity:1;}
+	100% {top: 15%;left: 27%;background-size: 43px 35px;opacity:0;}
+}
+@-moz-keyframes move_death_star {
+	0%   {top: 10%;left: 80%;background-size: 87px 71px;opacity:1;}
+	50%  {top: 60%;left: 50%;background-size: 245px 215px;}
+	94%  {top: 64%;left: 34%;background-size: 350px 307px;}
+	99%  {top: 15%;left: 27%;background-size: 43px 35px;opacity:1;}
+	100% {top: 15%;left: 27%;background-size: 43px 35px;opacity:0;}
+}
+@-o-keyframes move_death_star {
+	0%   {top: 10%;left: 80%;background-size: 87px 71px;opacity:1;}
+	50%  {top: 60%;left: 50%;background-size: 245px 215px;}
+	94%  {top: 64%;left: 34%;background-size: 350px 307px;}
+	99%  {top: 15%;left: 27%;background-size: 43px 35px;opacity:1;}
+	100% {top: 15%;left: 27%;background-size: 43px 35px;opacity:0;}
+}
+@keyframes move_death_star {
+	0%   {top: 10%;left: 80%;background-size: 87px 71px;opacity:1;}
+	50%  {top: 60%;left: 50%;background-size: 245px 215px;}
+	94%  {top: 64%;left: 34%;background-size: 350px 307px;}
+	99%  {top: 15%;left: 27%;background-size: 43px 35px;opacity:1;}
+	100% {top: 15%;left: 27%;background-size: 43px 35px;opacity:0;}
+}
