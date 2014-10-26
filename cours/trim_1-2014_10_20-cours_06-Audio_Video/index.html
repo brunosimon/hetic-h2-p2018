@@ -217,6 +217,16 @@
                 </section>
 
                 <section>
+                    <p>Avant tout, il faut récupérer l'élément.<br />En JS, il existe plusieurs façon de récupérer un élément HTML</p>
+                    <pre><code contenteditable class="javascript">
+var video = document.getElementsByTagName('video')[0]; // Renvoie un tableau
+var video = document.getElementById('video'); // Suppose que l'ID a bien été rajouté en HTML
+var video = document.querySelector('.video'); // Suppose que la classe à bien été rajoutée en HTML
+                    </code></pre>
+                    <p>Une fois récupéré, on va pouvoir y appliquer des méthodes et changer ses propriétés</p>
+                </section>
+
+                <section>
                     <h2>Méthodes</h2>
                     <p><small>Fonctions que l'on peut appliquer</small></p>
                     <ul>
@@ -225,22 +235,30 @@
                         <li>load()</li>
                     </ul>
                     <pre><code data-trim contenteditable class="javascript">
-var video = document.getElementById('video');
 video.play();
+video.pause();
+video.load();
                     </code></pre>
                 </section>
 
                 <section>
                     <h2>Propriétés</h2>
                     <p><small>Informations que l'on peut obtenir et modifier</small></p>
-                    <ul>
-                        <li>volume</li>
-                        <li>currentTime</li>
-                        <li>duration</li>
-                        <li>muted</li>
-                    </ul>
-                    <pre><code data-trim contenteditable class="javascript">
-var video = document.getElementById('video');
+                    <div style="width:60%;margin:0 auto;">
+                        <ul style="float:left;">
+                            <li>controls</li>
+                            <li>loop</li>
+                            <li>autoplay</li>
+                            <li>volume</li>
+                        </ul>
+                        <ul style="float:right;">
+                            <li>currentTime</li>
+                            <li>duration</li>
+                            <li>muted</li>
+                            <li><a href="http://www.w3schools.com/tags/ref_av_dom.asp" target="_blank">...</a></li>
+                        </ul>
+                    </div>
+                    <pre style="clear:both;"><code data-trim contenteditable class="javascript">
 console.log(video.volume);
 video.volume += 0.1;
                     </code></pre>
@@ -259,12 +277,11 @@ video.volume += 0.1;
                         <ul style="float:right;">
                             <li>canplay</li>
                             <li>canplaythrough</li>
-                            <li>loadstart</li>
                             <li>progress</li>
+                            <li><a href="http://www.w3schools.com/tags/ref_av_dom.asp" target="_blank">...</a></li>
                         </ul>
                     </div>
                     <pre style="clear:both;"><code data-trim contenteditable class="javascript">
-var video = document.getElementById('video');
 video.addEventListener('play',function(e)
 {
     console.log('playing');
@@ -279,74 +296,82 @@ video.addEventListener('play',function(e)
 
                 <section>
                     <h2>Exemples</h2>
-                    <p><small>Écouter l'événement "click" sur un bouton pour augmenter le volume sans dépasser la limite<br />(le html de la vidéo n'est pas présent dans ce code)</small></p>
+                    <p><small>Écouter l'événement "click" sur un bouton pour augmenter le volume sans dépasser la limite</small></p>
+
                     <pre style="clear:both;"><code data-trim contenteditable class="html">
+<video src="#"></video>
 <button id="volume-up">+</button>
+                    </code></pre>
+                    <pre style="clear:both;"><code data-trim contenteditable class="javascript">
+// Récupérer les éléments
+var video     = document.getElementById('video'),
+    volume_up = document.getElementById('volume-up');
 
-<script>
-    //Retrieving elements with their IDs
-    var video     = document.getElementById('video');
-    var volume_up = document.getElementById('volume-up');
-
-    //Listen to click
-    volume_up.onclick = function()
-    {
-        if(video.volume + 0.1 <= 1)
-            video.volume += 0.1;
-        else
-            video.volume = 1;
-    };
-</script>
+// Écouter les clicks
+volume_up.onclick = function()
+{
+    // Met à jour le volume
+    if(video.volume + 0.1 <= 1)
+        video.volume += 0.1;
+    else
+        video.volume = 1;
+};
                     </code></pre>
                 </section>
 
                 <section>
                     <h2>Exemples</h2>
-                    <p><small>Écouter l'événement "click" sur une div pour changer la position de la lecture<br />(le html de la vidéo n'est pas présent dans ce code. La div n'a pas de style ici; il faut lui mettre une largeur, une hauteur et une couleur)</small></p>
+                    <p><small>Écouter l'événement "click" sur une div pour changer la position de la lecture<br />(CSS non inclus)</small></p>
+
                     <pre style="clear:both;"><code data-trim contenteditable class="html">
+<video src="#"></video>
 <div id="bar">
     <div id="cursor"></div>
 </div>
+                    </code></pre>
+                    <pre style="clear:both;"><code data-trim contenteditable class="javascript">
+// Récupérer les éléments
+var video = document.getElementById('video'),
+    bar   = document.getElementById('bar');
 
-<script>
-    //Retrieving elements with their IDs
-    var video     = document.getElementById('video');
-    var bar       = document.getElementById('bar');
+// Écouter les clicks
+bar.onclick = function(e)
+{
+    // Calculer le temps de la vidéo par rapport à la position du click sur la bar
+    var ratio   = e.offsetX / bar.offsetWidth,
+        current = video.duration * ratio;
 
-    //Listen to click
-    bar.onclick = function(e)
-    {
-        //Get seeked second with click position, bar width and video duration
-        var ratio         = e.offsetX / bar.offsetWidth;
-        var current       = video.duration * ratio;
-        video.currentTime = current;
-    };
-</script>
+    // Met à jour la lecture de la vidéo
+    video.currentTime = current;
+};
                     </code></pre>
                 </section>
 
                 <section>
                     <h2>Exemples</h2>
-                    <p><small>Mettre à jour le curseur d'une barre en fonction de l'avancement dans la vidéo<br />(le html de la vidéo n'est pas présent dans ce code. Le curseur et son conteneur n'ont pas de style ici)</small></p>
+                    <p><small>Mettre à jour le curseur d'une barre en fonction de l'avancement dans la vidéo<br />(CSS non inclus)</small></p>
+
                     <pre style="clear:both;"><code data-trim contenteditable class="html">
+<video src="#"></video>
 <div id="bar">
     <div id="cursor"></div>
 </div>
+                    </code></pre>
+                    <pre style="clear:both;"><code data-trim contenteditable class="javascript">
+// Récupérer les éléments
+var video     = document.getElementById('video'),
+    bar       = document.getElementById('bar'),
+    cursor    = document.getElementById('cursor');
 
-<script>
-    //Retrieving elements with their IDs
-    var video     = document.getElementById('video');
-    var bar       = document.getElementById('bar');
-    var cursor    = document.getElementById('cursor');
+// Executer cette fonction toutes les 50ms
+window.setInterval(function()
+{
+    // Calcul le pourcentage de vidéo déjà passé
+    var percent = (video.currentTime / video.duration) * 100;
 
-    //Call the function every 50 ms
-    window.setInterval(function()
-    {
-        //Update the cursor width (in percents) width video current time and video duration 
-        var percent = (video.currentTime / video.duration) * 100;
-        cursor.style.width = percent + '%';
-    },50);
-</script>
+    // Met à jour la bar de lecture
+    cursor.style.width = percent + '%';
+},50);
                     </code></pre>
                 </section>
 			</div>

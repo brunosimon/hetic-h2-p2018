@@ -1,0 +1,511 @@
+body {
+  background: url("img/background.jpg") 50% no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size:    cover;
+  -ms-background-size:     cover;
+  -o-background-size:      cover;
+  background-size:         cover;
+  margin:0;
+  padding:0;
+}
+
+/* ---- Menu ---- */
+nav {
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 26px;
+  background: rgba(250,250,250,0.8);
+  box-shadow: 0px 1px 1px #7c7c7c;
+}
+
+ul.all_menu {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  z-index: 3;
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-size: 14px;
+}
+
+ul.all_menu li {
+  list-style: none;
+  display: inline-block;
+  margin: -1px 0 0 0;
+  padding: 6px 8px 6px 6px;
+}
+
+ul.all_menu li:hover {
+  background-color: rgba(27, 119, 240, 0.9);
+  color: #fff; 
+}
+
+/*Définition de l'animation pour le logo Apple*/
+ul.all_menu img#logo {
+  width: auto;
+  height: 16px;
+  padding: 0 10px;
+  margin: 0 0 0 10px;
+  vertical-align: bottom;
+  -webkit-animation: apple 1s ease-in-out 2s infinite alternate;
+  -moz-animation:    apple 1s ease-in-out 2s infinite alternate;
+  -o-animation:      apple 1s ease-in-out 2s infinite alternate;
+  animation:         apple 1s ease-in-out 2s infinite alternate;
+}
+
+#app_name {
+  font-weight: bold;
+}
+
+/* ---- Sub Menu ---- */
+
+/*Définition de l'animation pour l'affichage des sous menus*/
+ul.all_menu li ul {
+  position: absolute;
+  list-style: none;
+  margin: 6px 0 0 -6px;
+  background-color: rgba(250,250,250,0.8);
+  box-shadow: 0px 1px 1px #7c7c7c;
+  color: #000;
+  padding: 0;
+  visibility: hidden;
+  -webkit-transition: height 0.5s ease-in 0s;
+  -moz-transition:    height 0.5s ease-in 0s;
+  -o-transition:      height 0.5s ease-in 0s;
+  transition:         height 0.5s ease-in 0s;
+}
+
+ul.all_menu li ul li {
+  display: inline-block;
+  padding: 12px;
+}
+
+/*Définition de l'animation pour l'affichage différés du texte dans les sous-menus*/
+ul.all_menu li:hover ul li  {
+  -webkit-animation: textfade 0.5s ease-in 0 1 normal;
+  -moz-animation:    textfade 0.5s ease-in 0 1 normal;
+  -o-animation:      textfade 0.5s ease-in 0 1 normal;
+  animation:         textfade 0.5s ease-in 0 1 normal;
+}
+
+ul.all_menu li:hover ul {
+  visibility: visible;
+  height: 38px;
+}
+
+ul.all_menu li:hover ul li:hover {
+  background-color: rgba(27, 119, 240, 0.9);
+  color: #fff;
+}
+
+/* ---- Screen ---- */
+
+/*Affichage de la fenêtre contenant une image du texte et une animation*/
+#screen {
+  background: url("img/yosemite_screen.png") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size:    cover;
+  -ms-background-size:     cover;
+  -o-background-size:      cover;
+  background-size:         cover;
+  width: 900px;
+  height: 600px;
+  margin: 100px auto;
+  background-color: #fff;
+  display: none;
+  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:    0 4px 12px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow:     0 4px 12px rgba(0, 0, 0, 0.5);
+  -o-box-shadow:      0 4px 12px rgba(0, 0, 0, 0.5);
+  box-shadow:         0 4px 12px rgba(0, 0, 0, 0.5);
+  -webkit-animation: genius 2s ease-in-out 0s 1 normal;
+  -moz-animation:    genius 2s ease-in-out 0s 1 normal;
+  -o-animation:      genius 2s ease-in-out 0s 1 normal;
+  animation:         genius 2s ease-in-out 0s 1 normal;
+  z-index: 10;
+}
+
+#screen:before {
+  content:'';
+  display:block;
+  position:absolute;
+  background:inherit;
+}
+
+/*Permet de gérer l'opacité et l'animation nuage lors de l'ouverture de la fenêtre */
+#screen:after {
+  content:'';
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: url('img/clouds.png') no-repeat rgba(0, 0, 0, 0.6);
+  -webkit-background-size: cover;
+  -moz-background-size:    cover;
+  -ms-background-size:     cover;
+  -o-background-size:      cover;
+  background-size:         cover;
+  -webkit-filter: saturate(1.5) contrast(1.25);
+  filter: saturate(1.5) contrast(1.25);
+  z-index: -999;
+  -webkit-animation: clouds 120s linear 0s infinite alternate;
+  -moz-animation:    clouds 120s linear 0s infinite alternate;
+  -o-animation:      clouds 120s linear 0s infinite alternate;
+  animation:         clouds 120s linear 0s infinite alternate;
+}
+
+#screen > p {
+  margin: 0px 0 0 270px;
+  top: 420px;
+  font-size: 50px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-weight: thin;
+  position: relative;
+  color: #fff;
+}
+
+/* ---- File ---- */
+
+#file {
+  width: 100px;
+  height: 100px;
+  background-image: url("img/icons/folder.png");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: center center;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  float: right;
+  margin: 20px 20px 0 0;
+  -webkit-transition: background-color 0.5s ease-in-out 0s;
+  -moz-transition:    background-color 0.5s ease-in-out 0s;
+  -o-transition:      background-color 0.5s ease-in-out 0s;
+  transition:         background-color 0.5s ease-in-out 0s;
+}
+
+#file:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-animation: file 1s linear 0s infinite alternate;
+  -moz-animation:    file 1s linear 0s infinite alternate;
+  -o-animation:      file 1s linear 0s infinite alternate;
+  animation:         file 1s linear 0s infinite alternate;
+}
+
+#file p:first-child {
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-weight: thin;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  margin: 100px 0 0 0;
+  text-align: center;
+}
+
+/* ---- Dock Apple ---- */
+
+/*Background du dock*/
+.dock {
+  width: 55%;
+  height: 80px;
+  position: absolute;
+  background:inherit;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  bottom: -60px;
+  margin: -0.1em 20%;
+  padding: 0;
+  overflow: inherit;
+  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:    0 4px 12px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow:     0 4px 12px rgba(0, 0, 0, 0.5);
+  -o-box-shadow:      0 4px 12px rgba(0, 0, 0, 0.5);
+  box-shadow:         0 4px 12px rgba(0, 0, 0, 0.5);
+  -webkit-transition: bottom 0.5s ease-in-out 0s;
+  -moz-transition:    bottom 0.5s ease-in-out 0s;
+  -o-transition:      bottom 0.5s ease-in-out 0s;
+  transition:         bottom 0.5s ease-in-out 0s;
+}
+
+.dock:hover {bottom: 0;}
+
+.dock:before {
+  content:'';
+  display:block;
+  position:absolute;
+  height: 110%;
+  width: 100%;
+  background:inherit; 
+  -webkit-filter:blur(8px) saturate(1.5) contrast(1.25);
+  filter:blur(8px) saturate(1.5) contrast(1.25);
+}
+
+.dock:after {
+  content:'';
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  padding: 30px 0 0 0;
+  width:100%;
+  height:100%;
+  background: rgba(200,200,200,.5);
+ }
+
+/* ---- Dock Icons ---- */
+
+ul.dock_icons {
+  position: relative;
+  margin: 0 1%;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  z-index: 3;
+  }
+
+ul.dock_icons li {
+  list-style: none;
+  margin: 0 auto;
+  display: inline-block;
+  margin: 7px 0 0 0;
+  padding: 0 4px 0 0;
+}
+
+ul.dock_icons li img {
+  width: 68px;
+  height: 68px;
+  margin: auto;
+  border: none;
+  z-index: 3;
+}
+
+/*Permet de séléctionner chaque icone impair dans le dock et de l'animer*/
+ul.dock_icons li:nth-child(odd):hover img { 
+  -webkit-animation: icons_bounces_odd 0.8s ease-in-out 0s infinite alternate;
+  -moz-animation:    icons_bounces_odd 0.8s ease-in-out 0s infinite alternate;
+  -o-animation:      icons_bounces_odd 0.8s ease-in-out 0s infinite alternate;
+  animation:         icons_bounces_odd 0.8s ease-in-out 0s infinite alternate;
+}
+
+/*Permet de séléctionner chaque icone pair dans le dock et de l'animer*/
+ul.dock_icons li:nth-child(even):hover img {
+  -webkit-animation: icons_bounces_even 0.8s ease-in-out 0s infinite alternate;
+  -moz-animation:    icons_bounces_even 0.8s ease-in-out 0s infinite alternate;
+  -o-animation:      icons_bounces_even 0.8s ease-in-out 0s infinite alternate;
+  animation:         icons_bounces_even 0.8s ease-in-out 0s infinite alternate;
+}
+
+/*Permet de faire sauter l'icone Finder dans le dock*/
+ul.dock_icons li:nth-child(1):not(:hover) img {
+  -webkit-animation: icons_bounces_welcome 0.6s ease-out 0.3s 10 alternate;
+  -moz-animation:    icons_bounces_welcome 0.6s ease-out 0.3s 10 alternate;
+  -o-animation:      icons_bounces_welcome 0.6s ease-out 0.3s 10 alternate;
+  animation:         icons_bounces_welcome 0.6s ease-out 0.3s 10 alternate;
+}
+
+/*Créé la ligne verticale dans le dockk*/
+ul.dock_icons li.line {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  height: 80%;
+  margin: 0 10px 0 6px;
+} 
+
+
+/* ---- Keyframes ---- */ 
+@-webkit-keyframes icons_bounces_welcome {
+    0%   {transform: translateY(0px)}
+    100% {transform: translateY(-65px)}
+}
+
+@-moz-keyframes icons_bounces_welcome {
+    0%   {transform: translateY(0px)}
+    100% {transform: translateY(-65px)}
+}
+
+@-o-keyframes icons_bounces_welcome {
+    0%   {transform: translateY(0px)}
+    100% {transform: translateY(-65px)}
+}
+
+@keyframes icons_bounces_welcome {
+    0%   {transform: translateY(0px)}
+    100% {transform: translateY(-65px)}
+}
+
+
+@-webkit-keyframes icons_bounces_odd {
+    0%   {transform: translateY(0px)}
+    65%  {transform: translateY(-35px)}
+    100% {transform: translateY(-30px)}
+}
+
+@-moz-keyframes icons_bounces_odd {
+    0%   {transform: translateY(0px)}
+    65%  {transform: translateY(-35px)}
+    100% {transform: translateY(-30px)}
+}
+
+@-o-keyframes icons_bounces_odd {
+    0%   {transform: translateY(0px)}
+    65%  {transform: translateY(-35px)}
+    100% {transform: translateY(-30px)}
+}
+
+@keyframes icons_bounces_odd {
+    0%   {transform: translateY(0px)}
+    65%  {transform: translateY(-35px)}
+    100% {transform: translateY(-30px)}
+}
+  
+
+@-webkit-keyframes icons_bounces_even {
+    0%   {transform: translateY(0px)}
+    65%  {transform: translateY(-35px)}
+    75%  {transform: translateY(-30px)}
+    100% {transform: rotateY(270deg)}
+}
+
+@-moz-keyframes icons_bounces_even {
+    0%   {transform: translateY(0px)}
+    65%  {transform: translateY(-35px)}
+    75%  {transform: translateY(-30px)}
+    100% {transform: rotateY(270deg)}
+}
+
+@-o-keyframes icons_bounces_even {
+    0%   {transform: translateY(0px)}
+    65%  {transform: translateY(-35px)}
+    75%  {transform: translateY(-30px)}
+    100% {transform: rotateY(270deg)}
+}
+
+@keyframes icons_bounces_even {
+    0%   {transform: translateY(0px)}
+    65%  {transform: translateY(-35px)}
+    75%  {transform: translateY(-30px)}
+    100% {transform: rotateY(270deg)}
+}
+
+
+@-webkit-keyframes textfade {
+    0%   {color: rgba(0, 0, 0, 0)}
+    100% {color: rgba(0, 0, 0, 1)}
+}
+
+@-moz-keyframes textfade {
+    0%   {color: rgba(0, 0, 0, 0)}
+    100% {color: rgba(0, 0, 0, 1)}
+}
+
+@-o-keyframes textfade {
+    0%   {color: rgba(0, 0, 0, 0)}
+    100% {color: rgba(0, 0, 0, 1)}
+}
+
+@keyframes textfade {
+    0%   {color: rgba(0, 0, 0, 0)}
+    100% {color: rgba(0, 0, 0, 1)}
+}
+
+
+@-webkit-keyframes genius {
+    0%   {transform:rotateY(0deg)   rotateZ(0deg)   translate(-1500px,-800px)}
+    50%  {transform:rotateY(180deg) rotateZ(180deg) translate(-200px, -300px)}
+    100% {transform:rotateY(360deg) rotateZ(360deg) translate(-150px, -200px) scale(3,1.3)}
+    100% {transform:rotateY(360deg) rotateZ(360deg) translate(0px, 0px)       scale(1,1)}
+}
+
+@-moz-keyframes genius {
+    0%   {transform:rotateY(0deg)   rotateZ(0deg)   translate(-1500px,-800px)}
+    50%  {transform:rotateY(180deg) rotateZ(180deg) translate(-200px, -300px)}
+    100% {transform:rotateY(360deg) rotateZ(360deg) translate(-150px, -200px) scale(3,1.3)}
+    100% {transform:rotateY(360deg) rotateZ(360deg) translate(0px, 0px)       scale(1,1)}
+}
+
+@-o-keyframes genius {
+    0%   {transform:rotateY(0deg)   rotateZ(0deg)   translate(-1500px,-800px)}
+    50%  {transform:rotateY(180deg) rotateZ(180deg) translate(-200px, -300px)}
+    100% {transform:rotateY(360deg) rotateZ(360deg) translate(-150px, -200px) scale(3,1.3)}
+    100% {transform:rotateY(360deg) rotateZ(360deg) translate(0px, 0px)       scale(1,1)}
+}
+
+@keyframes genius {
+    0%   {transform:rotateY(0deg)   rotateZ(0deg)   translate(-1500px,-800px)}
+    50%  {transform:rotateY(180deg) rotateZ(180deg) translate(-200px, -300px)}
+    100% {transform:rotateY(360deg) rotateZ(360deg) translate(-150px, -200px) scale(3,1.3)}
+    100% {transform:rotateY(360deg) rotateZ(360deg) translate(0px, 0px)       scale(1,1)}
+}
+
+
+@-webkit-keyframes clouds {
+    0%   {background-position: -2000px}
+    100% {background-position: 1000px}
+}
+
+@-moz-keyframes clouds {
+    0%   {background-position: -2000px}
+    100% {background-position: 1000px}
+}
+
+@-o-keyframes clouds {
+    0%   {background-position: -2000px}
+    100% {background-position: 1000px}
+}
+
+@keyframes clouds {
+    0%   {background-position: -2000px}
+    100% {background-position: 1000px}
+}
+
+
+@-webkit-keyframes apple {
+    0%   {transform-origin:50% 50%; transform:rotate(-70deg)}
+    50%  {transform-origin:50% 50%; transform:rotate(0deg)}
+    100% {transform-origin:50% 50%; transform:rotate(70deg)}
+}
+
+@-moz-keyframes apple {
+    0%   {transform-origin:50% 50%; transform:rotate(-70deg)}
+    50%  {transform-origin:50% 50%; transform:rotate(0deg)}
+    100% {transform-origin:50% 50%; transform:rotate(70deg)}
+}
+
+@-o-keyframes apple {
+    0%   {transform-origin:50% 50%; transform:rotate(-70deg)}
+    50%  {transform-origin:50% 50%; transform:rotate(0deg)}
+    100% {transform-origin:50% 50%; transform:rotate(70deg)}
+}
+
+@keyframes apple {
+    0%   {transform-origin:50% 50%; transform:rotate(-70deg)}
+    50%  {transform-origin:50% 50%; transform:rotate(0deg)}
+    100% {transform-origin:50% 50%; transform:rotate(70deg)}
+}
+
+@-webkit-keyframes file {
+    0%   {transform: translateX(0px)   scale3d(1, 1, 1)       rotateZ(0)}
+    50%  {transform: translateX(-20px) scale3d(1.2, 1.2, 1.2) rotateZ(5deg)}
+    100% {transform: translateX(-50px) scale3d(1, 1, 1)       rotateZ(20deg)}
+}
+
+@-moz-keyframes file {
+    0%   {transform: translateX(0px)   scale3d(1, 1, 1)       rotateZ(0)}
+    50%  {transform: translateX(-20px) scale3d(1.2, 1.2, 1.2) rotateZ(5deg)}
+    100% {transform: translateX(-50px) scale3d(1, 1, 1)       rotateZ(20deg)}
+}
+
+@-o-keyframes file {
+    0%   {transform: translateX(0px)   scale3d(1, 1, 1)       rotateZ(0)}
+    50%  {transform: translateX(-20px) scale3d(1.2, 1.2, 1.2) rotateZ(5deg)}
+    100% {transform: translateX(-50px) scale3d(1, 1, 1)       rotateZ(20deg)}
+}
+
+@keyframes file {
+    0%   {transform: translateX(0px)   scale3d(1, 1, 1)       rotateZ(0)}
+    50%  {transform: translateX(-20px) scale3d(1.2, 1.2, 1.2) rotateZ(5deg)}
+    100% {transform: translateX(-50px) scale3d(1, 1, 1)       rotateZ(20deg)}
+}

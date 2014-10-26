@@ -1,0 +1,269 @@
+/* C'est la premiere fois que je code une page, je l'ai réaliser tout seul, en bidouillant...Merci d'etre indulgent :) Loic Tuil H2 */
+ 
+@media screen and (min-width: 0px) and (max-width: 900px){
+        body{background-image:url("images/suziki.png");}
+} /* A defaut d'etre responsive, il y a tout de meme une surprise */
+/* Pour mon body,je met un margin auto pour enlever les marges automatiques */
+body {
+        font-family: 'Patua One', cursive;
+        color :white;
+        font-size:11px;
+        margin: auto;
+        background-color: #003399;
+}
+/* Je selectionne la div titreUn et je lui applique une hauteur de 90px et une largeur de 100% de la page */
+.titreUn{
+        margin:0; padding: 0;
+        height: 135px;
+        width: 100%;
+        background-color: #009999;
+}
+/* Je definis la hauteur et largeur de ma page pour pouvoir mettre un text-align:center pour centrer mon texte*/
+.titreUn h1{
+        margin:0; padding: 0;
+        text-align: center;
+}
+/* le :hover me permet d'effectuer une action au passage de la souris. J'ai mis un temps de transition de 1s pour un effet plus naturel*/
+.titreUn:hover {
+ 
+        height: 160px;
+        background-color:#16a085;
+        transition:1s;
+}
+ 
+.titreUn p{
+        opacity: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+        color:black;
+        margin: 0%;
+        height:40%;
+}
+ 
+.titreUn p:hover{
+        opacity: 1;
+        transition:3s;
+}
+ 
+.titreDeux{
+        margin:auto;
+        width: 100%;
+        height:90px;
+        background-color: #009999;
+}
+ 
+.titreDeux>h1{
+        position: relative;
+        width: 26%;
+        height: 26%;
+        text-align: center;
+        margin: auto; /* Sans margin:auto , ma div ne se place pas juste en dessous ... */
+ 
+}
+/*  opacity:0 permet de masquer mon texte. display:none aurait surement ete un meillleur choix*/
+.titreDeux>p{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        opacity: 0;
+        color:black;
+        font-size: 17px;
+ 
+}
+ 
+.titreDeux>p:hover{
+        opacity: 1;
+        transition:2s;
+}
+/*  J'ai mis a toutes mes fontions le transform-style:preserve-3d; sans mettre deprefixe car ca ne changé rien. Transform scale X fait un zoom sur ma div*/
+.titreDeux:hover{
+        height: 100px;
+        background-color: #16a085;
+        transform:scaleX(1.1);
+        transition:2s;
+        -webkit-transform-style:preserve-3d;
+        -o-transform-style:preserve-3d;
+        -moz-transform-style:preserve-3d;
+        -ms-transform-style:preserve-3d;
+        transform-style:preserve-3d;
+
+}
+ 
+.animation {
+        width: 200px;
+        height: 250px;
+        background: green;
+/* j'ai mis une compatibilité pour tous les navigateurs. ma fonction s'appelle mon_chrono , elle dure 60s, elle est de type linear (meme vitesse du debut a la fin), elle se repete a l'infini. */
+        -webkit-animation: mon_chrono 60s linear 0s infinite ;
+        -moz-animation: mon_chrono 60s linear 0s infinite ;
+        -o-animation: mon_chrono 60s linear 0s infinite ;
+        -ms-animation: mon_chrono 60s linear 0s infinite ;
+        animation: mon_chrono 60s linear 0s infinite ;
+ 
+        -webkit-animation-play-state:paused;
+        -moz-animation-play-state:paused;
+        -o-animation-play-state:paused;
+        animation-play-state:paused;
+}
+ 
+.animation:hover{
+        -webkit-animation-play-state :running;
+        -moz-animation-play-state :running;
+        -o-animation-play-state :running;
+        animation-play-state :running;
+}
+ 
+@-webkit-keyframes mon_chrono{
+        0%   {width: 300px;}
+    50%  {width:50%;background:yellow;}
+    75%  {width:75%;background:orange;}
+    100% {width:100%;background: red}
+}
+ 
+@-moz-keyframes mon_chrono{
+        0%   {width: 300px;}
+    50%  {width:50%;background:yellow;}
+    75%  {width:75%;background:orange;}
+    100% {width:100%;background: red}
+}
+ 
+@-o-keyframes mon_chrono{
+        0%   {width: 300px;}
+    50%  {width:50%;background:yellow;}
+    75%  {width:75%;background:orange;}
+    100% {width:100%;background: red}
+}
+@-ms-keyframes mon_chrono{
+        0%   {width: 300px;}
+    50%  {width:50%;background:yellow;}
+    75%  {width:75%;background:orange;}
+    100% {width:100%;background: red}
+}
+ 
+/* Mes 5 jetons sont ici. Il y a un hover pour appliquer les differentes transformations */
+.jetonUn{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: gray;
+        display: inline-block;
+}
+ 
+.jetonUn:hover{
+        transform:rotateZ(360deg);
+        -webkit-transform:rotateZ(360deg);
+        -o-transform:rotateZ(360deg);
+        -moz-transform:rotateZ(360deg);
+        -ms-transform:rotateZ(360deg);
+        transition:2s;
+        -webkit-transform-style:preserve-3d;
+        -o-transform-style:preserve-3d;
+        -moz-transform-style:preserve-3d;
+        -ms-transform-style:preserve-3d;
+        transform-style:preserve-3d;
+}
+ 
+.jetonDeux{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border-radius:50%;
+        display: inline-block;
+}
+ 
+.jetonDeux:hover{
+    transform:rotateX(360deg);
+    -webkit-transform:rotateX(360deg);
+    -o-transform:rotateX(360deg);
+    -moz-transform:rotateX(360deg);
+    -ms-transform:rotateX(360deg);
+    transition:2s;
+     -webkit-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+ 
+.jetonTrois{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius:50%;
+        display: inline-block;
+}
+ 
+ 
+.jetonTrois:hover{
+    transform:rotateY(360deg);
+    -webkit-transform:rotateY(360deg);
+    -o-transform:rotateY(360deg);
+    -moz-transform:rotateY(360deg);
+    -ms-transform:rotateY(360deg);
+    transition:2s;
+     -webkit-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+ 
+.jetonQuatre{
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        border-radius:50%;
+        display: inline-block;
+}
+ 
+.jetonQuatre:hover{
+    transform:rotateZ(360deg);
+    -webkit-transform:rotateZ(360deg);
+    -o-transform:rotateZ(360deg);
+    -moz-transform:rotateZ(360deg);
+    -ms-transform:rotateZ(360deg);
+    transition:2s;
+     -webkit-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+.jetonCinq{
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        border-radius:50%;
+        display: inline-block;
+}
+ 
+.jetonCinq:hover{
+   transform:rotateX(360deg);
+   -webkit-transform:rotateX(360deg);
+   -o-transform:rotateX(360deg);
+   -moz-transform:rotateX(360deg);
+   -ms-transform:rotateX(360deg);
+   transition:2s;
+    -webkit-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+ 
+/* Creation d'id pour apliquer une meme propriété a plusieurs elements */
+#jeton>div>div{
+        margin: 2%;
+}
+#jeton{
+        margin-left: 20%;
+}
+#valeur>div>p{
+        position: relative;
+        height: 100%;
+        width:100%;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+}
