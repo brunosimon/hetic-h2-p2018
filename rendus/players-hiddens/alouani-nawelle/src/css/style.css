@@ -1,0 +1,81 @@
+body {
+    background:#d2a7a7;
+}
+
+#video {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.player {
+    position:relative;
+    margin-left: 26px;
+}
+
+.playpause {
+    width:40px;
+    height:40px;
+    background: #c92f2f;
+    margin: 5px 5px 5px 5px;
+    float:left;
+    border-radius: 5px;
+    cursor:pointer;  
+}
+
+.bar {
+    position:relative;
+    width:400px;
+    height:10px;
+    background: #c92f2f;
+    margin: 5px 5px 5px 5px;
+    float:left;
+    border-radius: 5px;
+    margin-top: 19px;
+    cursor:pointer;
+}
+
+.mute {
+    width:40px;
+    height:40px;
+    background: #c92f2f;
+    margin: 5px 5px 5px 5px;
+    float:left;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.volume-up, .volume-down {
+    width:30px;
+    height:30px;
+    background:#c92f2f;
+    margin: 10px 5px 5px 5px;
+    float:left;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.fullscreen {
+    width:40px;
+    height:40px;
+    background:#c92f2f;
+    margin: 5px 5px 5px 5px;
+    float:left;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

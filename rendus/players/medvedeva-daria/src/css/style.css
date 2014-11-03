@@ -1,0 +1,42 @@
+body{
+    background-image: url("../img/wallpaper.jpg");
+    background-repeat: repeat;
+    margin: 0;
+}
+
+/* video */
+.clip{
+   text-align: center;
+   margin-top: 3%;      
+}
+
+video{
+  box-shadow: -1px 2px 6px 1px rgba(0, 0, 0, 0.6); 
+}
+
+/* buttons container and buttons*/
+.buttons{
+    margin-left: 410px;
+    text-align: center;
+    width: 1100px;
+    height: 40px;
+    margin-top: 10px;
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.2) inset;
+    clear: both;
+}
+
+.buttons .left_buttons{
+    float: left;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.buttons .right_buttons{
+    float: right;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+input:focus {
+    outline:  none;
+}

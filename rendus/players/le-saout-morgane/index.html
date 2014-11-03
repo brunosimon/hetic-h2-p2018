@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Player</title>
+	<link rel="stylesheet" href="src/css/reset.css">
+	<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+<h1> <a href="http://brutonstroube.com/#59"> Breakfast Interrupted </a> </h1>
+
+<div class="container-video">
+	<video id="video" poster="src/img/breakfast_interrupted_01.jpg" ontimeupdate="update(this)" >
+		<source src="src/media/videos/VIDEOFILE.mp4"></source>
+		<source src="src/media/videos/VIDEOFILE.oggtheora.ogv"></source>
+	</video>
+
+</div>	
+	<div class="button">
+			
+			<button class="toggle" value="play"> <img src="src/img/icon_5206.png" alt="">  </button>
+				<div class="bar">
+			<div class="current"></div>
+				</div>	
+		<button class="volume-down" value="-"><img src="src/img/icon_5054.png" alt=""></button>
+		<button class="volume-up" value="+"><img src="src/img/icon_5056.png" alt=""></button>
+		<button class="pause" onclick="resume('video')"> <img src="src/img/icon_8307.png" alt=""> </button>
+		<button class="fullscreen" value="Fullscreen" onclick="toggleFullScreen()" > <img src="src/img/icon_27845.png" alt=""></button>
+	</div>
+</div>
+
+<div>
+  <div id="progressBarControl">
+    <div id="progressBar"></div>
+  </div>
+</div>
+	<script src="src/js/script.js"></script>
+
+</body>
+</html>

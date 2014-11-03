@@ -1,0 +1,86 @@
+html{
+	background-color: #F8FFF7;
+}
+
+h1{
+font-family:  sans-serif;
+text-align: center;
+margin-top: 30px;
+margin-bottom: 30px;
+font-size: 40px;
+text-decoration: none;
+letter-spacing: 10px;
+text-transform: uppercase;
+}
+
+h1 a{
+	text-decoration: none;
+	color:#151f3f;
+}
+
+/*lien vers les autres vidéos sur le site de la chaîne en hover */
+h1 a:hover{
+	color: #CE1510;
+}
+
+.bar{
+	display: inline-block;
+	background: #151f3f; 
+	width: 600px; 
+	height: 20px; 
+	margin: 0 auto;
+	border-radius: 10px;
+	vertical-align: middle;
+}
+
+.bar .current{
+	margin: 0 auto;
+	display: inline-block;
+	height: 20px;
+	width:20px;
+	display: inline-block;
+	background-color: #f9f2ff;
+	border-radius: 100%;
+}
+
+.container-video{
+	margin: 0 auto;
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+	margin: auto;
+} 
+
+#video {
+	width: 100%; 
+	height: auto;
+}
+
+
+.button{
+	display: inline-block;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 50px;
+	font-size: 13px;
+	text-decoration: none;
+	margin-left: 242px;
+	vertical-align: middle;
+}
+
+/* Essaie d'enlever le cadre avec le bg-color:transparent; mais ca ne amrche pas */
+.button img {
+	background-color:transparent;
+	vertical-align: middle;
+	text-decoration: none;
+	border:0;
+	height: 20px;
+}
+
+#progressBar{
+	margin: 0 auto;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" href="src/css/reset.css">
+		<link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+
+
+<div class="container">	
+
+	<!--Video link-->
+
+	<div class="container-video">
+		<video id="video" width="1300">
+			<source src="src/media/dance.mp4" type="video/mp4"></source>
+			<source src="src/media/dance.ogv" type="video/ogg"></source>
+		</video>
+	</div>
+
+
+
+	<!--Player elements-->
+	<div class="container-player">
+
+			<!--Play/pause button-->
+			<button class="toggle button">
+				<img src="src/img/play.png" alt="">
+			</button>
+
+
+			<!--Bar and cursor-->
+			<div class="bar button" >
+				<div class="cursor button" ></div>
+			</div>
+
+
+			<!--Volume settings-->
+			
+			<button class="toggle-mute button">
+				<img src="src/img/mute.png">
+			</button>
+
+			<button class="volume-down button">
+				<img src="src/img/volume-down.png">
+			</button>
+
+			<button class="volume-up button">
+				<img src="src/img/volume-up.png">
+			</button>
+
+
+			<!--Fullscreen-->
+			<button class="fullscreen button">
+				<img src="src/img/fullscreen.png" onclick="toggleFullScreen()">
+			</button>
+
+
+			<!--Diesel website link-->		
+			<a href="http://www.diesel.com/" target="blank" class="logo">
+				<img src="src/img/diesel-logo-little.png">
+			</a>
+
+	</div>
+
+</div>
+
+<script src="src/js/script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,154 @@
+body {
+	background:#eee;
+	font-family:Helvetica,Arial;
+	font-size:14px;
+}
+
+#video{
+	margin-left: 25%;
+	margin-top: 50px;
+}
+
+.bar{
+	width: 640px; 
+	background: red; 
+	height: 30px;
+	margin-left: 25%;
+	margin-top: 50px;
+}
+
+.bar .cursor{
+	width: 640px; 
+	height: 30px; 
+	background: black;
+	margin-top: 10px;
+}
+
+.bar .cursor:hover{
+	opacity: 0;
+}
+
+.toggle{
+	height: 100px;
+	width: 100px;
+	margin-left: 35%;
+	margin-top: 50px;
+}
+
+.volume-down{
+	height: 100px;
+	width: 100px;
+	margin-top: 10px;
+}
+
+.volume-up{
+	height: 100px;
+	width: 100px;
+	margin-top: 10px;
+}
+
+.full{
+	height: 100px;
+	width: 100px;
+	margin-top: 10px;
+}
+
+
+/* transition pour le bouton play-pause */
+
+.transition {
+	width: 100px; 
+	height: 100px; 
+	background: #b0b;
+	margin: 0 0 20px 0;
+	transition: all 1s;
+	opacity: 1;
+}
+
+.transition-1{
+	position: absolute;
+	background: #FF9600;
+	left: 0%;
+	top: 0%;
+	margin-left: 35%;
+	margin-top: 462px;
+}
+
+.transition-1:hover{
+	left: -100px;
+}
+
+
+/* transition pour les bouton + et - */
+
+.transition-2 {
+	width: 205px; 
+	height: 100px; 
+	background: #b0b;
+	margin: 0 0 20px 0;
+	transition: all 1s;
+	opacity: 1;
+}
+
+.transition-3{
+	position: absolute;
+	background: #FF9600;
+	left: 0%;
+	top: 0%;
+	margin-left: 43%;
+	margin-top: 462px;
+}
+
+.transition-3:hover{
+	opacity: 0;
+	top: 100px;
+}
+
+
+/* transition pour le bouton fullscreen */
+
+.transition-4 {
+	width: 100px; 
+	height: 100px; 
+	background: #b0b;
+	margin: 0 0 20px 0;
+	transition: all 1s;
+	opacity: 1;
+}
+
+.transition-5{
+	position: absolute;
+	background: #FF9600;
+	left: 0%;
+	top: 0%;
+	margin-left: 59.3%;
+	margin-top: 462px;
+}
+
+.transition-5:hover{
+	left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="src/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="src/css/style.css">
+</head>
+<body>
+	
+		<video class="video">
+			<source id="source" src="src/media/videos/Minions-240p.mp4" type="video/mp4"></source>
+			<source id="source_webm" src="src/media/videos/Minions-240p.webm" type="video/webm">
+    		<source id="source_ogv" src="src/media/videos/Minions-240p.ogv" type="video/ogv">
+   			 Your browser doesn't support video API
+		</video>
+
+			<footer>
+				<button class="toggle">play</button>
+				<button class="remove">Remove</button>
+				<button class="volume-down">-</button>
+				<button class="volume-up">+</button> 
+				<button class="volume-mute">mute</button> 
+
+				<div class="time-hover"></div>
+
+				<div class="bar">
+					<div class="cursor"></div>
+				</div>
+
+				<div class="bar-volume">
+					<div class="cursor-volume"></div>
+				</div>
+
+				<button class="full-screen">fullscreen</button>
+				<div class="counter"></div>
+
+				<TR>
+					<TD>
+						<form>
+							<input class="low-quality" type="button" value="240p">
+						</form>
+						<form>
+							<input class="medium-quality" type="button" value="360p" >
+						</form>
+						<form>
+							<input class="hight-quality" type="button" value="720p" >
+						</form>
+					</TD>
+				</TR>
+			</footer>
+
+		<script type="text/javascript" src="src/js/script.js"></script>
+</body>
+</html>

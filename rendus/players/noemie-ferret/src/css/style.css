@@ -1,0 +1,135 @@
+body{ 
+	background-color:#696969;
+	overflow:hidden;}
+
+.titre{ 
+	color:white;
+	font-family:'Roboto';
+	font-size:20px;
+	text-align:center;
+	margin: 20px 20px 20px 20px;
+}
+.toggle{ 
+	border : 3px solid white;
+	background-image: url('../img/play.png');
+	box-shadow: 2px 3px 4px black;
+		-webkit-box-shadow: 2px 3px 4px black;
+			-moz-box-shadow: 2px 3px 4px black;
+	width: 48px;
+	height:29px;
+	font-family:Helvetica;
+	font-size:16px;
+	background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display:inline-block;
+    vertical-align: middle;
+}
+
+#player{ 
+	z-index:100;
+	position:absolute;
+	background-color: #696969;
+	width:100%;
+	height:40px;
+	margin-top:-60px;
+	text-align: center;
+	opacity:0.7;
+}
+
+#player ul li{
+	display:inline-block;
+	vertical-align: middle;}
+
+.bar{ 
+	background-color:#CCCCCC;
+	width:340px;
+	height:10px;
+	border-radius:20px;
+		-webkit-border-radius:20px;
+			-moz-border-radius:20px;
+	
+}
+.bar .cursor{ 
+	height:10px;
+	background-color:#F07800;
+	border-radius:20px;
+		-webkit-border-radius:20px;
+			-moz-border-radius:20px;
+}
+/* En mettant 100% en width, on obtiens un écran responsive, donc pas de difficulté pour le lire
+sur les mobiles */ 
+#video_player{ 
+	width:100%;
+	height:400px;
+	text-align:center;
+	color:white;
+	margin-top:20px;
+}
+
+#video_player:target{ 
+	width:100%;
+	height:100%;
+	margin:auto;
+	}
+#video{ 
+	width:100%;
+	height:100%;
+	
+}
+/* Quand la vidéo est normal A doit d'afficher, et B doit disparaître et inversement en full screen. */ 
+#video_player #full_screen_A, #video_player:target #full_screen_B{
+	display:block;
+}
+
+#video_player:target #full_screen_A, #video_player #full_screen_B{
+	display:none;
+}
+.screen{ 
+	background-color:grey;
+	border:solid 3px white;}
+#full{ 	
+	width:30px;
+	height:25px;
+}
+#full2{ 	
+	width:30px;
+	height:25px;
+}
+
+/* Pour le son */ 
+
+.soundbar{ 
+	background-color:#6E0EC3;
+	width:80px;
+	height:10px;
+	border-radius:14px;
+		-webkit-border-radius:14px;
+			-moz-border-radius:14px;
+	opacity:0.7;
+
+	}
+.cursorsound{ 
+	background-color:#0061F3;
+	height:10px;
+	border-radius:14px;
+		-webkit-border-radius:14px;
+			-moz-border-radius:14px;
+	opacity:0.7;
+	}
+
+/* Amélioration */ 
+#video_player #player{
+	opacity:0;
+
+}
+#video_player:hover #player {
+	opacity:1;
+
+}
+.transition{ 
+	transition: opacity 1s linear 0s;}
+
+
+
+

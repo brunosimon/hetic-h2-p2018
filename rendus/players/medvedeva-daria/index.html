@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Blue Opium</title>
+        <link rel="stylesheet" href="src/css/clear.css">
+        <link rel="stylesheet" href="src/css/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper"> <!-- MAIN CONTAINER-->
+
+            <div class="clip"> <!-- VIDEO CONTAINER-->
+                <video class="video" poster ="src/images/waves.jpg"  width="1100">  <!--poster does not load-->
+                    <source src="src/videos/blue_opium.webm" />
+                    <source src="src/videos/blue_opium.mp4" />
+                    <source src="src/videos/blue_opium.ogg" />
+                </video>
+            </div>
+
+            <div class="buttons"> <!-- CONTROLS CONTAINER-->
+                <div class="left_buttons"> <!--buttons at each side of the bar-->
+                    <input type="image" src="src/img/play.png" class="play"/>
+		            <input type="image" src="src/img/back.png" class="back" alt="back"/>
+				    <input type="image" src="src/img/stop.png" class="stop" alt="stop"/>
+				    <input type="image" src="src/img/forward.png" class="forward" alt="forward"/>
+                </div>
+                <div class="right_buttons">
+				    <input type="image" src="src/img/volume_down.png" class="volume_down" alt="volume_up"/>
+				    <input type="image"src="src/img/volume_up.png" class="volume_up" alt="volume_down"/>
+				    <input type="image" src="src/img/replay.png" class="replay" alt="replay"/>
+                </div>
+            </div>
+
+        </div>
+        <script src="src/js/script.js"></script>
+    </body>
+</html>

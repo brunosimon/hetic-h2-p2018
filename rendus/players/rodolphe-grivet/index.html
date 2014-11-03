@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="src/css/reset.css">
+	<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+	<div id="cine">
+		<div id ="header">
+			<button id="sound">Sound: On</button>
+			<h1> Player video </h1>
+		</div>
+		<div class="border_block"></div>
+		<video id="lecteur">
+			<source src="src/media/videos/Les_monos_de_ski.mp4"></source>
+			<source src="src/media/videos/video-copilote-spin.ogv"></source>
+			<source src="src/videos/video-copilote-spin.webm"></source>
+		</video>
+		<footer id ="footer">
+			<ul>
+				<li><button id="play">Play</button></li>
+				<li><button id="plus">+ 30 s</button></li>
+				<li><button id="moins">- 30 s</button></li>
+				<li><button id="cache"> Cacher le contour ?</button></li>
+				<li><p class="hide"></p></li>
+			</ul>
+		</footer>
+		<div id="footerbis">
+			<ul>
+				<li><button id ="cinema">Passer en mode cinéma</button></li>
+				<li><button id ="reset">Reset</button></li>
+			</ul>
+		</div>
+	</div>
+		<script src="src/js/script.js"></script>
+</body>
+</html>

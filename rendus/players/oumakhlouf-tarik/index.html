@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 VIDEO PLAYER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="wrapper">
+
+
+		<h1>Reebok Football</h1>
+		
+		
+		<video id="player" src="video/Reebokfootball.mp4" type="video/mp4" controls poster="img/cover.jpg"></source>
+		</video>					
+		
+		
+		<div id="info">
+			<div id="current_time"></div>
+			<div id="duration"></div>
+		</div>
+		
+
+		<div id="controls">
+			<div id="bar">
+				<div id="bar_inner"></div>
+			</div>
+			<button id="play_pause" class="pause">
+				<img src="img/btn_play.jpg" alt="play" id="play"/>
+				<img src="img/btn_pause.jpg" alt="pause" id="pause"/>
+			</button>
+			<button id="rewind">
+				<img src="img/btn_rewind.jpg" alt="rewind"/>
+			</button>
+			<button id="forward">
+				<img src="img/btn_forward.jpg" alt="forward"/>
+			</button>
+			<button id="stop">
+				<img src="img/btn_stop.jpg" alt="stop"/>
+			</button>
+			<button id="fullscreen">Full Screen</button>
+			<div id="volume">
+				<div id="volume_bar">
+					<div id="volume_inner"></div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

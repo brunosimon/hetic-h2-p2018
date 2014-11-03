@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="src/css/stylevideoplayer.css">
+	<link rel="stylesheet" href="src/css/reset.css">
+</head>
+<body>
+	<section id="container">
+		<!-- Sources de la vidéo -->
+		<video id="video" width="640px" height="360px" preload poster ='src/img/poster.jpg'>
+			<source src="src/video/video-copilote-spin.mp4" type="video/mp4"></source>
+			<source src="src/video/video-copilote-spin.ogv" type="video/ogv"></source>
+			<source src="video/video-copilote-spin.webm" type="video/webm"></source>
+		</video>
+			<nav>
+				<!--togggle play/pause -->
+				<div id="buttons">
+					<button type="button" id="toggle">Play</button>
+				</div>
+				<!-- barre cliquable -->
+				<div class="bar"></div>
+				<div id="progressBar"></div>
+				<!-- toggle mute et boutons -->
+				<button class="mute">Muet</button>
+				<button class="volume-down">-</button>
+				<button class="volume-up">+</button>
+				<button class='replay'>Replay</button>
+				<button class='stop'>Stop</button>
+				<button class='avancer'>Avancer</button>
+				<button class='reculer'>Reculer</button>
+				<div style="clear:both"></div>
+			</nav>	
+	</section>
+	<script src="src/js/script.js"></script>
+</body>
+</html>
