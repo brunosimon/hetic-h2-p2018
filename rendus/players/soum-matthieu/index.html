@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="src/css/style.css" alt="csscode">
+	<link rel="stylesheet" href="src/css/reset.css" alt="csscode">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<title>Player</title>
+</head>
+<body>
+	<header>	
+		<div id="myHeader">
+		<img id="logo" src="src/videos/play.png" alt="logo"/><span id="nameLogo">LUCKY</span>
+			<nav>
+				<ul>
+					<li><a href="#">ACCEUIL</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div id="separator"></div>
+	<div id="player">
+		<video id="video">
+
+			<source src="src/videos/daft-punk-get-lucky.mp4" type="video/mp4"></source>
+			<source src="src/videos/daft-punk-get-lucky.webm" type="video/webm"></source>
+			<source src="src/videos/daft-punk-get-lucky.ogv" type="video/ogv"></source>
+			Votre navigateur ne supporte pas notre player. Veuillez le mettre à jour pour accèder au contenu.
+		</video>
+			<div class="bar">
+				<div class="cursorTime"></div>
+				<div class="playedBar"></div>
+				<div class="cursorPlay"></div>
+			</div>
+			
+			<div class="inline-button">
+				<div class="toggle">
+					<img id='play_btn' src="src/videos/ic_play_arrow_white_18dp.png"/>
+				</div>
+				
+				<div class="volume-down">
+					<img id='downVolume' src="src/videos/ic_remove_white_18dp.png"/>
+				</div>
+				<div class="volume">
+					<img id='volume' src="src/videos/ic_volume_down_white_18dp.png"/>
+				</div>
+				<div class="volume-up">
+					<img id='upVolume' src="src/videos/ic_add_white_18dp.png"/>
+				</div>
+				<!--<button class="play-btn">PLAY / PAUSE</button>-->
+				
+				<div class="restart">
+					<img id="restart" src="src/videos/ic_fast_rewind_white_18dp.png"/>
+				</div>
+				<div id="timeDuration">0</div>
+				<div id="totalDuration">0</div>
+				<div class="fullscreen">
+					<img id="restart" src="src/videos/ic_aspect_ratio_white_18dp.png"/></div>
+				<div class="infos">
+					<img id='infos' src="src/videos/ic_assessment_white_18dp.png"/>	
+				</div>
+			</div>
+			<div class="stats">
+				<div id="message"></div>
+				<div id="percentDuration">0</div>
+			</div>
+	</div>
+	<script src="src/js/script.js"></script>
+</body>
+</html> 

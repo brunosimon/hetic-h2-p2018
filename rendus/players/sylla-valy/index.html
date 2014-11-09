@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valy Video Player</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+</head>
+<body class="bod">
+    <div class='player_container'>
+        <video id='video'>
+            <source src='media/videos/video-copilote-spin.mp4'></source>
+            <source src='media/videos/video-copilote-spin.ogv'></source>
+            <source src='media/videos/video-copilote-spin.webm'></source>
+     <!--    <source src='media/videos/KK.mp4'></source -->
+        </video>
+        <div id='btn_container'>
+            <div class="btn_play" style="display:block">
+                <i id='icon_play' class="fav"></i>
+            </div>
+            <div class="btn_pause" style="display:none"></div>
+    <!-- Play -->
+            <input type="range" value="0" max="100" min="0" step="5" id='pro' class="slider">
+    <!-- Time -->
+            <p class="video_time current">00:00 /</p><p class="video_time duration">00:00</p>
+    <!-- Sound button -->
+            <div class="sound_control" ondblclick="sound_muting();">
+                <i class="fa fa-lg fa-volume-up"></i>
+                <div class="sound_bar">
+                    <table class="sound_status_container">
+                        <tr id='1'class='sound cl cfst' onclick="clack(this);"></tr>
+                        <tr id='2'class='sound cl cs' onclick="clack(this);"></tr>
+                        <tr id='3'class='sound cl ct' onclick="clack(this);"></tr>
+                        <tr id='4'class='sound cl cf' onclick="clack(this);"></tr>
+                        <tr id='5'class='sound cl cfi' onclick="clack(this);"></tr>
+                    </table>
+                    <div class="sound_mute">
+                    <i class="fa fa-volume-off"></i>
+                    </div>
+                </div>
+            </div>
+    <!-- Paramater button -->
+            <div class="parameter_button">
+                <i class="fa fa-lg fa-cog icon_style"></i>
+                <div class="parameter_bar">
+                    <div class="slow_motion" onclick="plaback_speed(0.5);">
+                    </div>
+                    <div class="normal_rate" onclick="plaback_speed(1);">
+                        <i class="fa fa-circle"></i>
+                    </div>
+                    <div class="fast_forward" onclick="plaback_speed(+1.5);">
+                        <i class="fa fa-forward"></i>
+                    </div>
+                    <div class="backward" onclick="playback_step(-5);">
+                        <i class="fa fa-step-backward"></i>
+                    </div>
+                    <div class="forward" onclick="playback_step(+5)">
+                        <i class="fa fa-step-forward"></i>
+                    </div>
+                </div>
+            </div>
+    <!-- Fullscreen button -->
+            <div class="fullscreen" onclick="requestFullScreen(video);">
+                <i class="fa fa-lg fa-arrows-alt icon_style"></i>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercice Player video - AGUADO Nicolas P2018 G2</title>
+	<link rel="stylesheet" href="src/css/reset.css">
+	<link rel="stylesheet" href="src/css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<!--LEFT SIDE-->
+
+<!--MENU-->
+<div id="menu">
+	<img src="src/img/logo.png" alt="">
+	<h1>only the show</h1>
+	
+	<!--'MY SERIES' SECTION-->
+	<div id="myseries">
+		<h2>MY SERIES</h2>
+		<div id="add">add</div>
+	</div>
+	
+	<!--SERIES-->
+	<ul>
+		<li id="breakingbad">BREAKING BAD</li>
+		<li id="truedetective">TRUE DETECTIVE</li>
+		<li id="sherlock">SHERLOCK</li>
+		<li id="luther">LUTHER</li>
+		<li id="blackmirror">BLACK MIRROR</li>
+		<li id="gameofthrones">GAME OF THRONES</li>
+		<li id="dexter">DEXTER</li>
+		<li id="homeland">HOMELAND</li>
+		<li id="skins">SKINS</li>
+		<li id="suits">SUITS</li>
+		<li id="twd">TWD</li>
+		<li id="thekilling">THE KILLING</li>
+		<li id="houseofcards">HOUSE OF CARDS</li>
+		<li id="hannibal">HANNIBAL</li>
+		<li id="vikings">VIKINGS</li>
+		<li id="broadchurch">BROADCHURCH</li>
+	</ul>
+	
+	<!--'NEWS' SECTION-->
+	<h2>NEWS</h2>
+	<!--'CALENDAR' SECTION-->
+	<h2>CALENDAR</h2>
+	<!--'ABOUT' SECTION-->
+	<h2>ABOUT</h2>
+
+	<div class="separator"></div>
+</div>
+
+<!--RIGHT SIDE-->
+
+<!--PLAYER VIDEO-->
+<div id="player">
+	<div id="serie_title">
+		<div class="separator"></div>
+
+		<!--RIGHT SIDE'S TITLE-->
+		<div id="serie">true detective</div>
+		<div class="saison"> > Select</div>
+	</div>
+	
+	<!--SEARCH SECTION-->
+	<div id="search" class="opacity hide">
+		<input type="text" autofocus>
+		<div id="add_serie">ADD</div>
+	</div>
+	
+	<!--SERIE SELECTION SECTION-->
+	<div id="selection">
+		<img src="src/img/logo.png" alt="">
+		<h1>provides</h1>
+
+		<!--CHOICES-->
+		<div id="choix">
+
+			<!--SEASON CHOICE-->
+			<h5>SEASON</h5>
+			<div class="selection_episode">
+				<div id= "prev_season"><img src="src/css/selection_up_hover.png" alt=""></div>
+				<div id= "saison_selected">1</div>
+				<div id= "next_season"><img src="src/css/selection_down_hover.png" alt=""></div>
+			</div>
+
+			<!--EPISODE CHOICE-->
+			<h5>EPISODE</h5>
+			<div class="selection_episode">
+			<div id= "prev_episode"><img src="src/css/selection_up_hover.png" alt=""></div>
+			<div id= "episode_selected">1</div>
+			<div id= "next_episode"><img src="src/css/selection_down_hover.png" alt=""></div>
+		</div>
+	</div>
+
+	<!--LAUNCHER-->
+	<div id="watch">WATCH +</div>
+</div>
+
+<!--VIDEO & DASHBOARD-->
+<div id="container" class="opacity hide">
+	
+	<!--POP-UP  VALUE-->	
+	<div id="value_changed">
+		<div id="parametre">volume</div>
+		<div id="value">100%</div>
+	</div>
+	
+	<!--DASHBOARD-->
+	<div id="dashboard" class="opacity hide">
+
+		<!--TITLE-->
+		<h3 id="dashboard_title">true detective</h3>
+		<h4 id="dashboard_subtitle">s01e01</h4>
+
+		<!--TIMER-->
+		<div id="container_current_time">
+			<span id="current_time">0'00''</span>
+		</div>
+		
+		<!--TIMELINE-->
+		<div id="timeline_container">
+			<div id="timeline_full"></div>
+			<div id="timeline_initial"></div>
+			<div id="timeline_controller"></div>
+		</div>
+		
+		<!--CONTROLLER-->
+		<div id="controller">
+
+			<!--PLAY & PAUSE-->
+			<div id="play_pause"><img src="src/css/play.png" id="play_pause_img"></div>
+
+			<!--SOUND-->
+			<div id="sound">
+				<img src="src/css/son.png" id="sound_img">
+
+				<!--SOUND DOWN-->
+				<div id="sound_down"><img src="src/css/sound_down.png" id="sound_down_img"></div>
+				
+				<!--SOUND UP-->
+				<div id="sound_up"><img src="src/css/sound_up.png" id="sound_up_img"></div>
+			</div>
+			
+			<!--FULLSCREN-->
+			<!--Petit soucis lorsque je quitte le mode fullscreen, je ne peux pas utiliser les différents bouttons, comme s'il y avait un calque créé par le fullscreen qui s'était déposé sur le dashboard et empêchait tout hover ou click. -->
+			<div id="fullscreen" onclick="enterFullscreen(video);"><img src="src/css/fullscreen.png" id="fullscreen_img"></div>
+
+			<!--FAVORITE-->
+			<div id="favorite"><img src="src/css/favorite.png" id="favorite_img"></div>
+
+			<!--MORE-->
+			<!--Je n'ai pas eu le temps de faire cette option. ELle permettait normalement d'avoir accés aux épisodes suivants facilement et rapidement.-->
+			<div id="more"><img src="src/css/plus.png" id="more_img"></div>
+		</div>
+	
+	</div>
+
+	<!--VIDEO-->
+	<video id="video">
+		<div id="video-player"></div>
+		<source src="src/videos/truedetective.mp4"></source>
+	</video>		
+
+</div>
+
+    <script src="src/js/script.js"></script>
+</body>
+</html>

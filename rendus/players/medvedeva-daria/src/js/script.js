@@ -1,4 +1,4 @@
-var video       = document.querySelector('.video');
+var video       = document.querySelector('.video'),
 	toggle	    = document.querySelector('.play'),
 	volume_down = document.querySelector('.volume_down'),
 	volume_up   = document.querySelector('.volume_up'),
@@ -58,6 +58,7 @@ volume_up.onclick = function() {
 loop.onclick = function() {
 	if(video.loop == false) {
 		video.loop = true;
+	}
 };
 
 // Back and Forward buttons

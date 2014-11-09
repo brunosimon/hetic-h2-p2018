@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Description">
+	<meta name="author"      content="Paul Gabriel">
+	<meta name="viewport"    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+
+	<title>VideoContest</title>
+	
+	<link rel="stylesheet" href="src/css/reset.css">
+	<link rel="stylesheet" href="src/css/style.css">
+	<!--<link rel="stylesheet" href="src/css/stylemediaquery.css">-->
+
+	<link href='http://fonts.googleapis.com/css?family=Six+Caps' rel='stylesheet' type='text/css'>
+</head>
+<body onKeyDown='keycode(event);'>
+
+	<div class="header">
+		<div class="pres">Video Contest</div>
+	</div>
+	
+
+	<div class="maincontent">
+		<div class="videoblock">
+			<video class="video" preload="auto" loop>
+				<source src="src/media/videos/video-copilote-spin.mp4" type="video/mp3"></source>
+				<source src="src/media/videos/video-copilote-spin.ogv" type="video/ogg"></source>
+				<source src="src/media/videos/video-copilote-spin.webm" type="video/webm"></source>
+			</video>
+			
+			<video class="video" preload="auto" loop>
+				<source src="src/media/videos/video-copilote-spin.mp4" type="video/mp3"></source>
+				<source src="src/media/videos/video-copilote-spin.ogv" type="video/ogg"></source>
+				<source src="src/media/videos/video-copilote-spin.webm" type="video/webm"></source>
+			</video>
+		</div>
+		
+		
+		
+		
+		<div class="player">
+			
+			
+			<div class="bar">
+				<div class="cursor"></div>
+			</div>
+			<div class="time_elapsed">00:10</div>
+			<div class="duration">00:10</div>
+			<button class="mute">mute</button>
+			<button class='play_pause play'>Play</button>
+			<div class="barvolume">
+				<div class="volcursor"></div>
+			</div>
+		</div>
+	</div>
+
+		<div class="voter">
+			<button class="leftvote votebutton">Voter pour la vidéo de gauche</button>
+			<button class="rightvote votebutton">Voter pour la vidéo de droite</button>
+		</div>
+
+	<script src="src/js/player.js"></script>
+</body>
+</html>

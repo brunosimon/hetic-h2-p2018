@@ -71,7 +71,7 @@ bar.onclick= function (e)
 	var ratio= e.offsetX/ bar.offsetWidth;
 		time= ratio * video.duration;
 	video.currentTime = time;
-	console.log(ratio);
+	// console.log(ratio);
 	bar.querySelector('.current').style.marginLeft= e.offsetX+"px";
 };
 
@@ -116,7 +116,7 @@ function update(video) {
     var percent  = Math.ceil(fraction * 100);
 
     var progress = document.querySelector('#progressBar');
-     
+
     progress.style.width = percent + '%';
     progress.textContent = Math.ceil(time) ;
 }
