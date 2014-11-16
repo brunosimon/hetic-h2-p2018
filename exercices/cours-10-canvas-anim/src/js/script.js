@@ -41,11 +41,11 @@ function create()
 	var particle = {
 		x : mouse.x,
 		y : mouse.y,
-		r : Math.random() * 3,
+		r : Math.random() * 5,
 		c : 'hsl(' + Math.random() * 360 + ',100%,50%)',
 		speed : {
-			x : Math.random() * 2 - 1,
-			y : Math.random() * 2 - 1
+			x : Math.random() * 4 - 2,
+			y : Math.random() * 4 - 2
 		}
 	};
 
