@@ -352,7 +352,12 @@ gradient.addColorStop(1,  'rgb(255,246,155)'); // Arrivée
 
 context.fillStyle = gradient;  // Le dégradé devient le style de remplissage
 
-context.fillRect(0,0,400,400);
+context.fillRect(
+    0,   // X du premier point
+    0,   // Y du premier point
+    400, // X du second point
+    400  // Y du second point
+);
                     </code></pre>
                 </section>
 
@@ -364,11 +369,18 @@ context.fillRect(0,0,400,400);
                 <section>
                     <p>Dégradé Radial</p>
                     <pre><code  data-trim contenteditable class="javascript">
-var gradient = context.createRadialGradient(0,0,50,0,250,350); // cx1, cy1, cr1, cx2, cy2, cr2
+var gradient = context.createRadialGradient(
+    0,   // X du premier cercle
+    0,   // Y du premier cercle
+    50,  // Rayon du premier cercle
+    0,   // X du second cercle
+    250, // Y du second cercle
+    350  // Rayon du second cercle
+);
 
-gradient.addColorStop(0,  'rgb(255,80,0)');    // Départ
-gradient.addColorStop(0.5,'rgb(255,191,0)');   // Milieu
-gradient.addColorStop(1,  'rgb(255,246,155)'); // Arrivée
+gradient.addColorStop(0,  'rgb(255,80,0)');    // Couleur de départ
+gradient.addColorStop(0.5,'rgb(255,191,0)');   // Couleur de milieu
+gradient.addColorStop(1,  'rgb(255,246,155)'); // Couleur de arrivée
 
 context.fillStyle = gradient;  // Le dégradé devient le style de remplissage
 
@@ -428,13 +440,16 @@ context.stroke();            // Dessin du trait
                 <section>
                     <p>Courbe de bézier</p>
                     <pre><code  data-trim contenteditable class="javascript">
-/* Nécessite 6 paramètres correspondant à 3 points */
-/* x1 et y1 pour définir le premier point de tension de la courbe */
-/* x2 et y2 pour définir le deuxième point de tension de la courbe */
-/* x3 et y3 pour définir le point de destination */
 context.beginPath();
-context.moveTo(50,50);
-context.bezierCurveTo(300,100,100,300,300,300); /* x1, y1, x2, y2, x3, y3 */
+context.moveTo(50,50); // X et Y du point de départ
+context.bezierCurveTo(
+    300, // X du premier point de tension
+    100, // Y du premier point de tension
+    100, // X du second point de tension
+    300, // Y du second point de tension
+    300, // X du point d'arrivée
+    300  // Y du point d'arrivée
+);
 context.stroke();
                     </code></pre>
                 </section>
@@ -447,13 +462,14 @@ context.stroke();
                 <section>
                     <p>Courbe de quadratique (de bézier)</p>
                     <pre><code  data-trim contenteditable class="javascript">
-/* Plus simple mais plus limité */
-/* Nécessite 4 paramètres correspondant à 2 points */
-/* x1 et y1 pour définir le point de tension de la courbe */
-/* x2 et y2 pour définir le point de destination */
 context.beginPath();
-context.moveTo(50,50);
-context.quadraticCurveTo(300,100,300,300); /* x1, y1, x2, y2 */
+context.moveTo(50,50); // X et Y du point de départ
+context.quadraticCurveTo(
+    300, // X du seul point de tension
+    100, // Y du seul point de tension
+    300, // X du point d'arrivée
+    300  // Y du point d'arrivée
+);
 context.stroke();
                     </code></pre>
                 </section>
@@ -466,12 +482,15 @@ context.stroke();
                 <section>
                     <p>globalAlpha</p>
                     <pre><code  data-trim contenteditable class="javascript">
-context.globalAlpha = 0.2; /* Réduction de l'opacité */
-context.fillStyle = 'red';
+context.globalAlpha = 0.3; /* Réduction de l'opacité */
+
+context.fillStyle = '#ff0000';
 context.fillRect(50,50,200,200);
-context.fillStyle = 'orange';
+
+context.fillStyle = '#00ff00';
 context.fillRect(100,100,200,200);
-context.fillStyle = 'green';
+
+context.fillStyle = '#0000ff';
 context.fillRect(150,150,200,200);
                     </code></pre>
                 </section>
@@ -482,13 +501,39 @@ context.fillRect(150,150,200,200);
                 </section>
 
                 <section>
+                    <p>La propriété globalCopositeOperation permet de spécifier comment doivent se comporter les tracés en cours (source) par rapport aux tracés initiaux (destination)</p>
+                    <p>Équivalent au pathfinder d'illustrator</p>
+                </section>
+
+                <section>
                     <p>globalCompositeOperation</p>
                     <pre><code  data-trim contenteditable class="javascript">
-/* Permet de spécifier comment doivent se coporter les pixels à venir par rapport aux pixels de destination */
-/* Équivalent au pathfinder d'illustrator (par exemple) */
+context.globalCompositeOperation = 'lighter';
+
+context.fillStyle = '#ff0000';
+context.fillRect(50,50,200,200);
+
+context.fillStyle = '#00ff00';
+context.fillRect(100,100,200,200);
+
+context.fillStyle = '#0000ff';
+context.fillRect(150,150,200,200);
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>globalCompositeOperation</p>
+                    <canvas id="canvas-16" width="600" height="400"></canvas>
+                </section>
+
+                <section>
+                    <p>globalCompositeOperation</p>
+                    <pre><code  data-trim contenteditable class="javascript">
 context.fillStyle = 'red';
 context.fillRect(200,200,200,200);
+
 context.globalCompositeOperation = 'destination-out'; /* source-over | source-in | source-out | source-atop | destination-over | destination-in | destination-out | desination-atop | lighter | copy | xor */
+
 context.beginPath();
 context.fillStyle = 'blue';
 context.arc(200,250,100,0,Math.PI,false);
@@ -498,7 +543,7 @@ context.fill();
 
                 <section>
                     <p>globalCompositeOperation</p>
-                    <canvas id="canvas-16" width="600" height="400"></canvas>
+                    <canvas id="canvas-17" width="600" height="400"></canvas>
                 </section>
 
                 <section>
@@ -550,7 +595,7 @@ image.src = 'image-1.jpg';
                 <section>
                     <p>getImageData / putImageData</p>
                     <p>Ne fonctionne pas en local !</p>
-                    <canvas id="canvas-17" width="600" height="400"></canvas>
+                    <canvas id="canvas-18" width="600" height="400"></canvas>
                 </section>
 
                 <section>
@@ -646,7 +691,7 @@ loop();
 
                 <section>
                     <p>Exemple d'animation</p>
-                    <canvas id="canvas-18" width="600" height="400"></canvas>
+                    <canvas id="canvas-19" width="600" height="400"></canvas>
                 </section>
 
             </div>

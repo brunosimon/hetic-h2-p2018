@@ -4,7 +4,7 @@ window.onload = function()
         context  = null,
         contexts = Array();
 
-    for(var i = 1; i < 19; i++)
+    for(var i = 1; i < 20; i++)
     {
         canvas = document.getElementById('canvas-'+i);
         if(canvas)
@@ -161,32 +161,41 @@ window.onload = function()
     contexts[13].stroke();
 
     /* globalAlpha */
-    contexts[14].globalAlpha = 0.2; /* Réduction de l'opacité */
-    contexts[14].fillStyle = 'red';
+    contexts[14].globalAlpha = 0.3; /* Réduction de l'opacité */
+    contexts[14].fillStyle = '#ff0000';
     contexts[14].fillRect(50,50,200,200);
-    contexts[14].fillStyle = 'orange';
+    contexts[14].fillStyle = '#00ff00';
     contexts[14].fillRect(100,100,200,200);
-    contexts[14].fillStyle = 'green';
+    contexts[14].fillStyle = '#0000ff';
     contexts[14].fillRect(150,150,200,200);
 
     /* globalCompositeOperation */
-    contexts[15].fillStyle = 'red';
-    contexts[15].fillRect(200,150,200,200);
-    contexts[15].globalCompositeOperation = 'destination-out'; /* source-over | source-in | source-out | source-atop | destination-over | destination-in | destination-out | desination-atop | lighter | copy | xor */
-    contexts[15].beginPath();
-    contexts[15].fillStyle = 'blue';
-    contexts[15].arc(200,200,100,0,Math.PI,false);
-    contexts[15].fill();
+    contexts[15].globalCompositeOperation = 'lighter';
+    contexts[15].fillStyle = '#ff0000';
+    contexts[15].fillRect(50,50,200,200);
+    contexts[15].fillStyle = '#00ff00';
+    contexts[15].fillRect(100,100,200,200);
+    contexts[15].fillStyle = '#0000ff';
+    contexts[15].fillRect(150,150,200,200);
+
+    /* globalCompositeOperation */
+    contexts[16].fillStyle = 'red';
+    contexts[16].fillRect(200,150,200,200);
+    contexts[16].globalCompositeOperation = 'destination-out';
+    contexts[16].beginPath();
+    contexts[16].fillStyle = 'blue';
+    contexts[16].arc(200,200,100,0,Math.PI,false);
+    contexts[16].fill();
 
     /* getImageData */
     image = new Image();
     image.onload = function()
     {
         /* Dessiner l'image chargée dans le canvas */
-        contexts[16].drawImage(image,0,0,image.width / 6,image.height / 6);
+        contexts[17].drawImage(image,0,0,image.width / 6,image.height / 6);
 
         /* Récupérer les pixels dans image_data */
-        var image_data = contexts[16].getImageData(0,0,image.width / 6,image.height / 6);
+        var image_data = contexts[17].getImageData(0,0,image.width / 6,image.height / 6);
 
         /* parcourir les pixels 4 par 4 */
         for(var i = 0; i < image_data.data.length; i += 4)
@@ -201,7 +210,7 @@ window.onload = function()
         }
 
         /* Dessiner la nouvelle image par dessus l'ancienne */
-        contexts[16].putImageData(image_data,0,0);
+        contexts[17].putImageData(image_data,0,0);
     };
     image.src = 'src/img/image-1.jpg';
 
@@ -217,11 +226,11 @@ window.onload = function()
             coords.x = -50;
         
         //Redessiner le canvas
-        contexts[17].clearRect(0,0,600,400);
-        contexts[17].beginPath();
-        contexts[17].arc(coords.x,coords.y,50,0,Math.PI*2);
-        contexts[17].fillStyle = 'orange';
-        contexts[17].fill();
+        contexts[18].clearRect(0,0,600,400);
+        contexts[18].beginPath();
+        contexts[18].arc(coords.x,coords.y,50,0,Math.PI*2);
+        contexts[18].fillStyle = 'orange';
+        contexts[18].fill();
     }
     loop();
 };
