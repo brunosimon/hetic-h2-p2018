@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>TRIM 1 - Cours 11 - Javascript Programmation Orienté Objet</title>
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Bruno Simon">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../tools/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="../tools/reveal.js/css/theme/default-orange.css" id="theme">
+        <!-- <link rel="stylesheet" href="../tools/reveal.js/lib/css/zenburn.css"> -->
+        <link rel="stylesheet" href="../tools/reveal.js/lib/css/github.css">
+        <script>
+            document.write( '<link rel="stylesheet" href="../tools/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+        <!--[if lt IE 9]>
+            <script src="../tools/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+            span.highlight {display:inline-block;padding:0 6px;border:1px solid #FF8F00;}
+            li,p{margin-bottom:0.5em !important;}
+            ul.checked-list li {list-style-type:none;}
+            .default{text-transform:none !important;}
+        </style>
+        <!--[if lt IE 9]>
+            <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+            <div id="pagination"></div>
+            <div class="slides">
+                <section>
+                    <h3>H2 - P2018</h3>
+                    <h1>Développement web</h1>
+                    <h3>Cours 11 - 2014-11-24</h3>
+                    <p>github : <a target="_blank" href="https://github.com/brunosimon/hetic-p2018">https://github.com/brunosimon/hetic-p2018</a></p>
+                    <p>site : <a target="_blank" href="http://bruno-simon.com/hetic/p2018/">http://bruno-simon.com/hetic/p2018/</a></p>
+                    <p>contact : <a target="_blank" mailto="bruno.simon@hetic.net">bruno.simon@hetic.net</a> - <a target="_blank" href="https://twitter.com/bruno_simon">@bruno_simon</a></p>
+                </section>
+
+                <section>
+                    <h3>Javascript</h3>
+                    <h1>Programmation orienté objet</h1>
+                </section>
+
+                
+                <section>
+                    <h2>Qu'est-ce que c'est ?</h2>
+                    <p>Appelée <span class="highlight">POO</span> ou <span class="highlight">OOP</span></p>
+                    <p>Méthode de programmation consistant à séparer les différents composants d'une logique en objets</p>
+                    <p>Un objet possède des <span class="highlight">propriétés</span> (ou attributs) et des <span class="highlight">méthodes</span> (ou fonctions)</p>
+                    <p>Utilisé en Java, C#, Objective C, PHP, Ruby, AS3, Javascript, ...</p>
+                </section>
+                
+                <section>
+                    <h2>Qu'est-ce que c'est ?</h2>
+                    <p>Une moto peut être considérée comme un objet en programmation.</p>
+                    <p>Ses propriétés sont par exemple : <span class="highlight">couleur</span>, <span class="highlight">vitesse</span>, <span class="highlight">immatriculation</span>, etc.</p>
+                    <p>Ses méthodes sont par exemple : <span class="highlight">démarrer</span>, <span class="highlight">accélerer</span>, <span class="highlight">freiner</span>, etc.</p>
+                </section>
+                
+                <section>
+                    <h2>Qu'est-ce que c'est ?</h2>
+                    <p>Un exemple javascript : <span class="highlight">Math</span></p>
+                    <p>Ses propriétés : Math.PI, Math.E, etc.</p>
+                    <p>Ses méthodes : Math.cos(), Math.sin(), Math.round(), etc.</p>
+                    <pre><code  data-trim contenteditable class="html">
+console.log(Math.cos(Math.PI)); // -1
+                    </code></pre>
+                </section>
+                
+                <section>
+                    <h2>À quoi ça sert ?</h2>
+                    <p class="fragment">Indépendance des éléments</p>
+                    <p class="fragment">Code plus propre</p>
+                    <p class="fragment">Plus facile à entretenir</p>
+                    <p class="fragment">Plus lisible</p>
+                    <p class="fragment">Plus logique</p>
+                    <p class="fragment">Plus pro</p>
+                </section>
+
+                <section>
+                    <h2>Version statique</h2>
+                    <pre><code  data-trim contenteditable class="html">
+var moto_1 = {
+    color : 'black',
+    speed : 0,
+    accelerate : function()
+    {
+        this.speed += 1;
+    }
+};
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Objet classique</h2>
+                    <p>
+                        <span class="highlight">this</span> à l'intérieur des méthode fait référence à l'objet <span class="highlight">moto_1</span> ou <span class="highlight">moto_2</span>
+                        <br />On appelle ça le context
+                    </p>
+                    <p>Cette méthode fonctionne bien, mais pose problème quand on a plusieurs objets du même type</p>
+                </section>
+
+                <section>
+                    <h2>Objet classique</h2>
+                    <pre><code  data-trim contenteditable class="html">
+// Première moto
+var moto_1 = {
+    color : 'black',
+    speed : 0,
+    accelerate : function()
+    {
+        this.speed += 1;
+    }
+};
+
+// Deuxième moto
+var moto_2 = {
+    color : 'red',
+    speed : 0,
+    accelerate : function()
+    {
+        this.speed += 1;
+    }
+};
+
+// Troisième moto
+var moto_3 = {
+    color : 'red',
+    speed : 0,
+    accelerate : function()
+    {
+        this.speed += 1;
+    }
+};
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Objet avec constructeur</h2>
+                    <pre><code  data-trim contenteditable class="html">
+// Class Moto
+var Moto = function(color)
+{
+    // Propriétés
+    this.color = color;
+    this.speed = 0;
+
+    // Méthodes publiques
+    this.accelerate = function()
+    {
+        this.speed += 1;
+    };
+};
+
+// Initialisation
+var moto_1 = new Moto('black'),
+    moto_2 = new Moto('red'),
+    moto_2 = new Moto('blue');
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Objet avec constructeur</h2>
+                    <p>Un constructeur (on peut parler de Class) se créé à partir d'une fonction</p>
+                    <p>L'initialisation se fait avec <span class="highlight">new</span></p>
+                    <p>Un seul constructeur permet d'instancier plusieurs objets</p>
+                    <p>Cette méthode fonctionne bien, mais pose problème si on souhaite créer une nouvelle classe héritant de notre constructeur</p>
+                </section>
+
+                <section>
+                    <h2>Objet avec constructeur et prototypage</h2>
+                    <pre><code  data-trim contenteditable class="html">
+// Class Moto
+var Moto = function(color)
+{
+    // Propriétés
+    this.color = color;
+};
+
+Moto.prototype = {
+    color      : 'black',
+    speed      : 0,
+    accelerate : function()
+    {
+        this.speed += 1;
+    }
+};
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Objet avec constructeur et prototypage</h2>
+                    <p>Chaque objet possède un prototype</p>
+                    <p>Le propriétés et méthodes du prototype sont utilisées si elles n'existent pas dans l'instance</p>
+                    <p>Cet objet fonctionne exactement comme le précédent sauf que nous allons pouvoir utiliser son protype pour faire de l'héritage</p>
+                </section>
+
+                <section>
+                    <h2>Objet avec héritage</h2>
+                    <pre><code  data-trim contenteditable class="html">
+// Class Moto
+var Moto = function(color)
+{
+    // Propriétés
+    this.color = color;
+};
+
+Moto.prototype = {
+    color      : 'black',
+    speed      : 0,
+    accelerate : function()
+    {
+        this.speed += 1;
+    }
+};
+
+// Class Bandit (héritée de Moto)
+var Bandit = function(){};
+Bandit.prototype = Object.create(Moto.prototype);
+Bandit.prototype.brand = 'Suzuki';
+
+// Initialisation
+var moto_1 = new Moto('red'),
+    moto_2 = new Bandit('blue');
+
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Objet avec héritage</h2>
+                    <p>Nous avons créé un objet <span class="highlight">Bandit</span> qui hérite de l'objet <span class="highlight">Moto</span></p>
+                    <p>La méthode utilisée est <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></p>
+                    <p>La méthode <span class="highlight">instanceof</span> permet de connaître l'héritage</p>
+                    <p><img src="src/img/instanceof.png" alt="" width="300"></p>
+                </section>
+
+                <section>
+                    <h2>Objet avec constructeur et prototypage</h2>
+                    <p>Coder orienté objet peut très bien se faire pour réaliser un site</p>
+                    <p>Exemple : header, menu, page, ou n'importe quel élément</p>
+                    <p>Les différents objets peuvent ensuite être séparés dans des fichiers et classés dans des dossiers</p>
+                </section>
+
+                <section>
+                    <h2>Héritage</h2>
+                    <p><a href="http://ejohn.org/blog/simple-javascript-inheritance/" target="_blank">Héritage selon John Resig</a> (le papa de jQuery)</p>
+                </section>
+
+                <script>
+                    var Moto =
+                    {
+                        color   : 'black',
+                        speed   : 0,
+                        started : false,
+                        start   : function()
+                        {
+                            this.started = true;
+                            console.log('Engine started');
+                        },
+                        accelerate : function()
+                        {
+                            if(this.started)
+                                this.speed += 1;
+                            else
+                                console.log('You must start the engine');
+                        },
+                        break : function()
+                        {
+                            this.speed -= 1;
+                            if(this.speed < 0)
+                                this.speed = 0;
+                        }
+                    };
+
+                    var Suzuki_Bandit_GSF_650         = Object.create(Moto);
+                    Suzuki_Bandit_GSF_650.brand       = 'suzuki';
+                    Suzuki_Bandit_GSF_650.engine_size = 650;
+
+
+                    var Triumph_Bonneville_T100         = Object.create(Moto);
+                    Triumph_Bonneville_T100.brand       = 'triumph';
+                    Triumph_Bonneville_T100.engine_size = 650;
+
+                    var my_moto   = Object.create(Suzuki_Bandit_GSF_650),
+                        your_moto = Object.create(Triumph_Bonneville_T100);
+
+                </script>
+            </div>
+        </div>
+
+        <script src="../tools/reveal.js/lib/js/head.min.js"></script>
+        <script src="../tools/reveal.js/js/reveal.js"></script>
+        <script>
+            Reveal.initialize({
+                controls     : false,
+                progress     : true,
+                history      : true,
+                center       : true,
+                theme        : Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition   : Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                dependencies : [
+                    { src: '../tools/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../tools/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../tools/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../tools/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../tools/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../tools/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+            Reveal.addEventListener('slidechanged',function(e)
+            {
+                document.getElementById('pagination').innerHTML = e.indexh + 1;
+            });
+        </script>
+    </body>
+</html>
