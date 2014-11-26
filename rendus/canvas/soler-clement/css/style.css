@@ -1,0 +1,58 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #3C3C3C;
+}
+#canvas{
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+}
+#box{
+	text-align: center;
+	position: absolute;margin-top: 200px;
+}
+#popin{
+	text-align: center;
+	width: 400px;
+	padding: 5px;
+	background-color:rgba(255,255,255,0.2);
+	margin: auto;
+	display: block;
+	margin-top: 30px;
+	border-radius: 10px;
+	display: none;
+}
+#box h1{
+	color: rgba(255,255,255,0.3);
+	letter-spacing: 5px;
+	font-family: verdana, sans-serif;
+	font-weight: lighter;
+}
+.geometrybtn{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	border: none;
+	background-color: rgba(255,255,255,0.2);
+	transition: all 1s;
+	outline: none;
+}
+.geometrybtn:hover{
+	background-color: transparent;
+}
+.first{
+color: #2ecc71;
+}
+.second{
+color: #3498db;
+}
+.third{
+color: #9b59b6;
+}
+.four{
+color: #34495e;
+}

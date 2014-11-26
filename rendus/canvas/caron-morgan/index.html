@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Audio Surf</title>
+	<link rel="stylesheet" href="src/css/reset.css">
+	<link rel="stylesheet" href="src/css/style.css">
+	<script src="http://connect.soundcloud.com/sdk.js"></script>
+</head>
+<body>
+
+	<canvas id="canvas" width="600px" height="600px"></canvas>
+    <div id="popin" class="hide"><p>Veuillez renseigner une adresse URL <br> Soundcloud dans le formulaire du bas pour jouer. <br> ex. <a href="https://soundcloud.com/" target="_blank">https://soundcloud.com/</a>momotkt/lou <br> <br> Règles : </p>
+    <ul>
+        <li>Avec votre vaisseau bleu ramassez les blocs de couleurs.</li>
+        <li>3 à la suite de même couleur sur une ligne donnent 3 points.</li>
+        <li>Les gris ne donnent aucun point !</li>
+    </ul>
+    </div>
+    <div id="panel">
+        <div id="trackInfoPanel" class="hidden">
+            <img id="infoImage" src="">
+            <div id="infoArtist"></div>
+            <div id="infoTrack"></div>
+        </div>
+        <div id="playerControls">
+            <form id="form">
+                <input id="input" placeholder="Paste Soundcloud URL here (https://soundcloud.com/artist/track)">
+                <button type="submit" id="submit"><i class="icon-play"></i></button><br>
+            </form>
+            <audio id="player" controls="" autoplay="" preload autobuffer></audio>
+        </div>        
+    </div>
+
+</body>
+	<script src="src/js/app.js"></script>
+</html>

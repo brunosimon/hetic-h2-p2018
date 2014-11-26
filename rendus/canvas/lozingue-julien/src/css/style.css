@@ -1,0 +1,17 @@
+body {background: #eee;font-size: 14px;font-family: Helvetica;}
+
+
+.button
+{	
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 50px 0 0 20px;
+
+
+}
+
+#canvas
+{
+	width: 90%
+}

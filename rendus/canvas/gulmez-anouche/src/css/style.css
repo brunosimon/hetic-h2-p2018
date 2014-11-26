@@ -1,0 +1,12 @@
+body{font-family: helvetica,arial;background: #eee;}
+
+#text{
+	text-align: center;
+	color: red; 
+	font-size: 40px; 
+	font-style: italic;
+}
+#canvas{
+display: block;
+margin: auto;  
+}

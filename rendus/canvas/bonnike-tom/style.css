@@ -1,0 +1,16 @@
+body {
+	font-family: Helvetica,Arial;
+	font-size: 14px;
+
+	background: #000;
+}
+
+.container {
+	width: 800px;
+	margin: 20px auto 0 auto;
+}
+
+#canvas {
+	background-color: #000;
+	border: 1px solid #E6E6E6;
+}
