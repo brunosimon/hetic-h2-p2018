@@ -10,8 +10,8 @@ canvas.setAttribute('tabindex', 1);
 var context = canvas.getContext("2d");
 var FPS = 1000 / 60;
 var BG = {
-    Color: '#333'
-    function Paint(){
+    Color: '#333',
+    Paint: function(){
         ctx.fillStyle = this.Color;
         ctx.fillRect(0, 0, Width, Height);
     }
@@ -22,7 +22,7 @@ var Ball = {
     X: 0,
     Y: 0,
     VelX: 0,
-    VelY: 0;
+    VelY: 0
 };
 var position = 'left';
 
@@ -73,10 +73,10 @@ this.Score = 0;
 
 if(position == 'left'){
     this.X = 0;
-};
+}
 else {
 	this.X = Width - this.Width;
-};
+}
 
 
 this.Paint = function(){
@@ -87,25 +87,17 @@ this.Paint = function(){
     if(position == 'left'){
        context.textAlign = "left";
         context.fillText("score: " + Player.Score, 10, 10);
-    };
+    }
     else{
         context.textAlign = "right";
         context.fillText("score: " + Computer.Score, Width - 10, 10);
-    };
+    }
 };
 
 // Collisions
 
 this.IsCollision = function () {
-    if {
-    	(Ball.X - Ball.Radius > this.Width + this.X || this.X > Ball.Radius * 2 + Ball.X - Ball.Radius)
-        return false;
-    }
-    if {
-    	(Ball.Y - Ball.Radius > this.Height + this.Y || this.Y > Ball.Radius * 2 + Ball.Y - Ball.Radius)
-        return false;
-    return true;
-	};
+    return false;
 };
 
 var Computer = new Paddle();
@@ -165,9 +157,6 @@ else if(Player.Score === 10){
     GameOver(true);
 }
 
-Computer.Y = (Computer.Y + Computer.Height/2 < Ball.Y ? Computer.Y + Computer.Vel : Computer.Y - Computer.Vel); 
-
-};
 
 
 
