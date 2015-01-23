@@ -52,11 +52,14 @@
                 </section>
 
                 <section>
-                    <p>Donnée chez le visiteur qui sera envoyé au serveur avec chaque requête</p>
-                    <p>Peut être modifiée par ce serveur en PHP</p>
-                    <p>Peut être modifié par le visiteur</p>
-                    <p>Associé au domaine</p>
-                    <p>Il est impossible de lire les cookies d'un autre domaine</p>
+                    <ul>
+                        <li>Donnée créée par le serveur, mais stockée chez le visiteur</li>
+                        <li>Peut être modifié par ce serveur en PHP</li>
+                        <li>Peut être modifié par le visiteur</li>
+                        <li>Associé au domaine</li>
+                        <li>Il est impossible de lire les cookies d'un autre domaine</li>
+                        <li>Les cookies sont envoyées au serveur à chaque requête</li>
+                    </ul>
                 </section>
 
                 <section>
@@ -73,8 +76,12 @@ setcookie(&#039;mon_cookie&#039;,&#039;ma_valeur_nouvelle_valeur&#039;); // Ne f
 
                 <section>
                     <p>Lorsque le visiteur va accéder à une nouvelle page, il sera possible de récupérer ses cookies dans la variable <a href="http://php.net/manual/fr/features.cookies.php" target="_blank">$_COOKIE</a></p>
-                    <p>Il s'agit d'un tableau</p>
+                    <p>Il s'agit d'un tableau associatif</p>
                     <pre><code contenteditable class="php">
+echo '<pre>';
+print_r($_COOKIE);
+echo '</pre>';
+
 die($_COOKIE[&#039;mon_cookie&#039;]);
                     </code></pre>
                 </section>
@@ -86,19 +93,10 @@ die($_COOKIE[&#039;mon_cookie&#039;]);
 
                 <section>
                     <p>Par défaut, le cookie sera supprimé à la fermeture du navigateur</p>
-                    <p>Il est possible de spécifier une durée de vie</p>
-                    <p>La durée de vie est un <a href="http://fr.wikipedia.org/wiki/Heure_Unix" target="_blank">timestamp unix</a></p>
+                    <p>Il est possible de spécifier une durée de vie en <a href="http://fr.wikipedia.org/wiki/Heure_Unix" target="_blank">timestamp unix</a></p>
                     <p>Si l'utilisateur ferme son navigateur, le cookie perdurera</p>
                     <pre><code contenteditable class="php">
 setcookie(&#039;mon_cookie&#039;,&#039;ma_valeur&#039;,time() + 60 * 60); // Le cookie expirera dans 1h
-                    </code></pre>
-                </section>
-
-                <section>
-                    <p>Enfin, il est possible de spécifier le chemin où le cookie sera disponible</p>
-                    <p>Par défaut, il vaut mieux indiquer <a href="">"/"</a> (partout sur le site)</p>
-                    <pre><code contenteditable class="php">
-setcookie(&#039;mon_cookie&#039;,&#039;ma_valeur&#039;,time() + 60 * 60,&#039;/&#039;);
                     </code></pre>
                 </section>
 
@@ -114,17 +112,23 @@ setcookie(&#039;mon_cookie&#039;,&#039;&#039;,time() -10); // La date d&#039;exp
 
                 <section>
                     <h3>Utilisation</h3>
-                    <p>Savoir si un visiteur est déjà venu sur le site</p>
-                    <p>Enregistrer sa langue</p>
-                    <p>Pré-remplir des données</p>
-                    <p>Empêcher un utilisateur de jouer plusieurs fois à un jeu durant une même période</p>
+                    <ul>
+                        <li>Savoir si un visiteur est déjà venu sur le site</li>
+                        <li>Le suivre durant sa navigation</li>
+                        <li>Enregistrer ses préférences</li>
+                        <li>Empêcher l'utilisateur d'accomplir plusieurs fois une action (vote, jeu, ...)</li>
+                        <li>Avoir un panier d'achat alors que l'on n'a pas encore créé de compte</li>
+                    </ul>
                 </section>
 
                 <section>
                     <h3>A savoir</h3>
-                    <p>Certains utilisateurs désactivent les cookies</p>
-                    <p><a href="http://www.cookielaw.org/the-cookie-law/" target="_blank">Cookie Law</a> : Aux UK, il est nécessaire de demander l'autorisation au visiteur pour sauvegarder des cookies</p>
-                    <p>Comme les cookies sont envoyés avec chaque requête, ces dernières peuvent être ralenties</p>
+                    <ul>
+                        <li>Certains utilisateurs désactivent les cookies</li>
+                        <li><a href="http://www.cookielaw.org/the-cookie-law/" target="_blank">Cookie Law</a> : Aux UK, il est nécessaire de demander l'autorisation au visiteur pour sauvegarder des cookies</li>
+                        <li>Comme les cookies sont envoyés avec chaque requête, ces dernières peuvent être ralenties</li>
+                        <li>Les cookies peuvent être édités en JS</li>
+                    </ul>
                 </section>
 
                 <section>
@@ -132,13 +136,16 @@ setcookie(&#039;mon_cookie&#039;,&#039;&#039;,time() -10); // La date d&#039;exp
                 </section>
 
                 <section>
-                    <p>Utilisation similaire aux cookies mais donnée stockée coté serveur</p>
-                    <p>Va tout de même stocker un cookie appelé <a href="http://us3.php.net/manual/fr/function.session-id.php" target="_blank">session_id</a></p>
-                    <p>Permet de faire le lien avec le visiteur</p>
-                    <p>La session doit-être démarrée avec la méthode <a href="http://www.php.net/manual/fr/function.session-start.php" target="_blank">session_start</a></p>
+                    <ul>
+                        <li>Utilisation similaire aux cookies, mais donnée stockée côté serveur</li>
+                        <li>L'utilisateur ne peut pas les modifier</li>
+                        <li>Va tout de même stocker un cookie appelé <a href="http://us3.php.net/manual/fr/function.session-id.php" target="_blank">session_id</a> permettant de faire le lien avec le visiteur</li>
+                        <li>S'utilise comme les cookies</li>
+                    </ul>
                 </section>
 
                 <section>
+                    <p>Pour pouvoir utiliser les sessions, il faut appeler la fonction <a href="http://www.php.net/manual/fr/function.session-start.php" target="_blank">session_start</a> (avant d'envoyer le moindre code HTML)</p>
                     <pre><code contenteditable class="php">
 session_start();
 $_SESSION['login']    = 'login_visiteur';
