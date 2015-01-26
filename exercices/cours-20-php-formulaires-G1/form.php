@@ -2,8 +2,9 @@
 	/*
 		TODO :
 		[√] Create form
-		[ ] Handle errors
+		[√] Handle errors
 		[ ] Put back data if an error occurred
+		[ ] Handle success
 	 */
 	
 	// Show errors
@@ -53,25 +54,26 @@
 			$_POST['gender'] = '';
 
 		$errors = get_errors($_POST);
+
+		// Success (no errors)
+		if(empty($errors))
+		{
+			// Reset form
+			$_POST['name']   = '';
+			$_POST['age']    = '';
+			$_POST['gender'] = '';
+
+			$success[] = 'Bravo !';
+		}
 	}
 
 	// POST is empty
 	else
 	{
-		
+		$_POST['name']   = '';
+		$_POST['age']    = '';
+		$_POST['gender'] = '';
 	}
-
-	echo '<pre>';
-	print_r($_POST);
-	echo '</pre>';
-
-	echo '<pre>';
-	print_r($errors);
-	echo '</pre>';
-
-
-
-
 
 
 

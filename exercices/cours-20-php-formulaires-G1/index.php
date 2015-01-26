@@ -6,8 +6,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Formulaire</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+	<!-- SUCCESS -->
+	<?php if(!empty($success)){ ?>
+		<div class="success">
+			<?php foreach($success as $_success){ ?>
+				<p>
+					<?php echo $_success; ?>
+				</p>
+			<?php } ?>
+		</div>
+	<?php } ?>
 
 	<!-- ERRORS -->
 	<?php if(!empty($errors)){ ?>
@@ -22,23 +34,23 @@
 
 	<form action="#" method="post">
 	
-		<div>
-		    <input type="text" placeholder="Your name" id="name" name="name">
+		<div class="<?= array_key_exists('name', $errors) ? 'error' : '' ?>">
+		    <input type="text" placeholder="Your name" id="name" name="name" value="<?= $_POST['name'] ?>">
 		    <label for="name">Name</label>
 	    </div>
 	
-		<div>
-		    <input type="number" placeholder="Your age" id="age" name="age">
+		<div class="<?= array_key_exists('age', $errors) ? 'error' : '' ?>">
+		    <input type="number" placeholder="Your age" id="age" name="age" value="<?= $_POST['age'] ?>">
 		    <label for="age">Age</label>
 	    </div>
 
-	    <div>
+		<div class="<?= array_key_exists('gender', $errors) ? 'error' : '' ?>">
 	    	<label>
-	    		<input type="radio" name="gender" value="female">
+	    		<input type="radio" name="gender" value="female" <?= $_POST['gender'] == 'female' ? 'checked' : '' ?>>
 				Female
 	    	</label>
 	    	<label>
-	    		<input type="radio" name="gender" value="male">
+	    		<input type="radio" name="gender" value="male" <?= $_POST['gender'] == 'male' ? 'checked' : '' ?>>
 				Male
 	    	</label>
 	    </div>
