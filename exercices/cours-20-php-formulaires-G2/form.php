@@ -3,8 +3,9 @@
 	/*
 		TODO :
 		[√] Create HTML form
-		[ ] Handle errors
-		[ ] Set data back if errors occured
+		[√] Handle errors
+		[√] Set data back if errors occured
+		[√] Handle success
 	 */
 
 	error_reporting(E_ALL); 
@@ -52,12 +53,24 @@
 
 		// Get errors
 		$errors = get_errors($_POST);
+
+		// Success
+		if(empty($errors))
+		{
+			$success[] = 'Bravo !';
+
+			$_POST['name']   = '';
+			$_POST['age']    = '';
+			$_POST['gender'] = '';
+		}
 	}
 
 	// No data sent
 	else
 	{
-
+		$_POST['name']   = '';
+		$_POST['age']    = '';
+		$_POST['gender'] = '';
 	}
 
 	echo '<pre>';
