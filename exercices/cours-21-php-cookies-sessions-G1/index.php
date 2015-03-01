@@ -1,7 +1,10 @@
+
 <?php
 
-	if(!empty($_COOKIE['name']))
-		$name = $_COOKIE['name'];
+	session_start();
+
+	if(!empty($_SESSION['name']))
+		$name = $_SESSION['name'];
 	else
 		$name = '';
 	
@@ -14,14 +17,14 @@
 		if($action == 'save')
 		{
 			$name = $_POST['name'];
-			setcookie('name',$name,time() + 60 * 60);
+			$_SESSION['name'] = $name;
 		}
 
 		// Delete the name from cookies
 		else
 		{
 			$name = '';
-			setcookie('name','',time() - 10);
+			$_SESSION['name'] = null;
 		}
 	}
 

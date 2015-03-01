@@ -4,7 +4,9 @@
 	error_reporting(E_ALL); 
 	ini_set('display_errors',1);
 
-	$name = !empty($_COOKIE['name']) ? $_COOKIE['name'] : '';
+	session_start();
+
+	$name = !empty($_SESSION['name']) ? $_SESSION['name'] : '';
 
 	if(!empty($_POST))
 	{
@@ -13,11 +15,11 @@
 		if($action === 'save')
 		{
 			$name = $_POST['name'];
-			setcookie('name',$name,time() + 60 * 10);
+			$_SESSION['name'] = $name;
 		}
 		else
 		{
-			setcookie('name','',time() - 10);
+			$_SESSION['name'] = null;
 			$name = '';
 		}
 	}
