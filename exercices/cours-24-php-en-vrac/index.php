@@ -7,5 +7,3 @@ $files = glob($dir.'/*');
 echo '<pre>';
 print_r($files);
 echo '</pre>';
-                    
-                    
