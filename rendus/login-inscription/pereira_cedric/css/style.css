@@ -1,0 +1,320 @@
+::-webkit-input-placeholder { color:#E0E0E0; font-style: italic; letter-spacing: 1px;}
+::-moz-placeholder { color:#E0E0E0; font-style: italic; letter-spacing: 1px;} 
+:-ms-input-placeholder { color:#E0E0E0; font-style: italic; letter-spacing: 1px;}
+input:-moz-placeholder { color:#E0E0E0; font-style: italic; letter-spacing: 1px;}
+
+body {
+	background: url('../img/bg.jpg') no-repeat center center fixed;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline !important;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+.home {
+	margin: auto;
+	width: 260px;
+	height: auto;
+	margin-top: 10%;
+}
+
+p.unlogged {
+	font-size: 14px;
+	text-align: center;
+	color: #F0F0F0;
+	font-weight: 300;
+	margin: 0 0 50px 0;
+}
+
+.signin, .resetpassword {
+	margin: auto;
+	width: 260px;
+	height: auto;
+	margin-top: 10%;
+}
+
+.private {
+	margin: auto;
+	width: 300px;
+	height: auto;
+	margin-top: 3%;
+}
+
+a.calltoaction, a.backhome {
+	display: block;
+	background-color: rgba(0,0,0,0.4);
+	font-size: 20px;
+	color: #F0F0F0;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #F0F0F0;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin: 20px 0 0 0;
+	-webkit-transition: background-color 0.3s ease-in-out;
+  	-moz-transition: background-color 0.3s ease-in-out;
+  	-o-transition: background-color 0.3s ease-in-out;
+  	transition: background-color 0.3s ease-in-out;
+}
+
+a.calltoaction:hover, a.backhome:hover {
+	text-decoration: none !important;
+	background-color: #019875;
+}
+
+a.disconnect {
+	height: 30px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.6);
+	text-align: center;
+	font-size: 14px;
+	color: #F0F0F0;
+	padding: 8px 0 0 0;
+	text-transform: uppercase;
+	display: block;
+	border-bottom: 2px solid #c0392b;
+	-webkit-transition: background-color 0.3s ease-in-out;
+  	-moz-transition: background-color 0.3s ease-in-out;
+  	-o-transition: background-color 0.3s ease-in-out;
+  	transition: background-color 0.3s ease-in-out;
+}
+
+a.disconnect:hover {
+	text-decoration: none !important;
+	background-color: rgba(192, 57, 43,1.0);
+}
+
+img.privatecontent {
+	width: 300px;
+	height: auto;
+}
+
+h1 {
+	text-transform: uppercase;
+	text-align: center;
+	color: #F0F0F0;
+	font-size: 40px;
+	letter-spacing: 5px;
+	margin: 0 0 5px 0;
+	text-shadow: 1px 1px 5px #707070;
+}
+
+h2 {
+	text-align: center;
+	color: #F0F0F0;
+	font-size: 24px;
+	margin: 0 0 30px 0;
+	font-weight: 300;
+}
+
+form.form_signin input[type=text], form input[type=password], form.form_resetpassword input  {
+	width: 260px;
+	height: 30px;
+	margin: 0 0 10px 0;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #F0F0F0;
+	background-color: transparent;
+	color: #F0F0F0;
+	padding-left: 4px;
+}
+
+form.form_signin label[for=rememberme] {
+	color: #F0F0F0;
+	font-weight: 300;
+	vertical-align: middle;
+	margin: 0 0 0 3px;
+	font-size: 14px;
+}
+
+.createaccount {
+	font-size: 16px;
+	color: #F0F0F0;
+	font-weight: 300;
+	margin: 55px 0 0 0;
+}
+
+.createaccount a {
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin: 2px 0 0 0;
+	color: #019875;
+}
+
+a.resetpassword {
+	position: absolute;
+	color: #F0F0F0;
+	font-weight: 300;
+	font-size: 14px;
+	margin: 10px 0 0 0;
+	text-decoration: none;
+}
+
+form.form_signin input[type=submit], form.form_resetpassword input[type=submit] {
+	display: block;
+	margin: 30px 0 0 0;
+	background-color: rgba(0,0,0,0.4);
+	text-transform: uppercase;
+	width: 260px;
+	height: 35px;
+	outline: 0;
+	border: 1px solid #F0F0F0;
+	color: #F0F0F0;
+	font-size: 14px;
+	-webkit-transition: background-color 0.3s ease-in-out;
+  	-moz-transition: background-color 0.3s ease-in-out;
+  	-o-transition: background-color 0.3s ease-in-out;
+  	transition: background-color 0.3s ease-in-out;
+}
+
+form.form_signin input[type=submit]:hover, form.form_signup input[type=submit]:hover, form.form_resetpassword input[type=submit]:hover {
+	background-color: #019875;
+}
+
+form.form_signin input.error {
+	border-bottom: 2px dotted rgba(192, 57, 43,1.0);
+}
+
+p.errors {
+	color: #DE3F2F;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0 0 10px 0;
+}
+
+.signup {
+	margin: auto;
+	width: 400px;
+	height: auto;
+	margin-top: 3%;
+}
+
+p.backtosignin {
+	font-size: 12px;
+	color: #F0F0F0;
+	font-weight: 300;
+	margin: 0 0 10px 0;
+}
+
+p.backtosignin a {
+	color: #019875;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+p.backtosignin span {
+	margin: 0 0 0 74px;
+}
+
+form label {
+	font-size: 14px;
+	color: #F0F0F0;
+	font-weight: 300;
+}
+
+form.form_signup input {
+	height: 30px;
+	margin: 2px 0 14px 0;
+	outline: none;
+	border: 1px solid #B8B8B8;
+	background-color: transparent;
+	color: #F0F0F0;
+	padding-left: 4px;
+}
+
+form.form_signup input[type=text]:focus, form.form_signup input[type=password]:focus {
+	border: 1px solid #F0F0F0;
+}
+
+form.form_signup input[type=submit] {
+	display: block;
+	margin: 2px 0 30px 0;
+	background-color: rgba(0,0,0,0.4);
+	width: 260px;
+	height: 35px;
+	outline: 0;
+	border: 1px solid #F0F0F0;
+	color: #F0F0F0;
+	font-size: 14px;
+	text-transform: uppercase;
+	-webkit-transition: background-color 0.3s ease-in-out;
+  	-moz-transition: background-color 0.3s ease-in-out;
+  	-o-transition: background-color 0.3s ease-in-out;
+  	transition: background-color 0.3s ease-in-out;
+}
+
+form.form_signup input.semi {
+	width: 185px;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+form.form_signup input.full {
+	width: 382px;
+}
+
+form.form_signup label[for=password] input + p {
+	font-size: 12px;
+	font-weight: 300;
+	margin: -10px 0 10px 0;
+	color: #BEBEBE;
+}
+
+form.form_signup label[for=postalcode] input + p {
+	position: absolute;
+	margin: -61px 0 0 198px;
+}
+
+form.form_signup label[for=gender_male] {
+	margin: 0 20px 0 0;
+}
+
+form.form_signup label[for=gender_male] input, form.form_signup label[for=gender_female] input, form.form_signup label[for=terms] input[type=checkbox] {
+	display: inline-block;
+	vertical-align: middle;
+	margin: -5px 10px 0 0;
+}
+
+form.form_signup label[for=terms] {
+	display: block;
+	margin: 12px 0 0 0;
+}
+
+label.error {
+	color: #DE3F2F;
+}
+
+input.error {
+	border: 1px solid #DE3F2F !important;
+}
+
+.hide {
+	display: none;
+	visibility: hidden;
+}
+
+p.good {
+	color: #27ae60;
+	font-size: 14px;
+	margin: 40px 0 0 0;
+}

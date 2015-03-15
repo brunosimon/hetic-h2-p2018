@@ -1,0 +1,56 @@
+body {
+	background: #eee;
+	background-image: url(../img/space.jpg);
+	background-size: cover;
+	font-size:14px;
+	font-family: Helvetica, Verdana;
+	text-align: center;
+}
+
+
+
+.errors{color:red;}
+.error{color:red;}
+.error input {color:red;border:1px solid red;}
+
+/*form{background: #000;}*/
+
+form{
+
+	background-color: #fefefe;
+	/*opacity: .5;*/
+	line-height: 25px;
+	border:1px solid black;
+	position: absolute;
+	top:50%;
+	left:50%;
+	width:400px;
+	height:auto;
+	margin-left:-200px; 
+	margin-right: 1400px;
+	margin-top:-200px;
+	padding: 10px;
+	text-align: left;
+
+
+}
+
+h1{
+	font-size: 60px;
+}
+
+h2{
+	font-size: 30px;
+}
+
+
+
+#value{
+	color: red;
+}
+
+.inputf {
+	
+}
+
+.success{color:green;}

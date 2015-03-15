@@ -1,0 +1,9 @@
+php_value display_startup_errors Off
+php_value display_errors Off
+
+RewriteEngine On
+RewriteRule "(^|/)\." - [F]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+RewriteRule ^ /index.php [NC,NS,L]

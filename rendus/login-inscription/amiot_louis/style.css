@@ -1,0 +1,302 @@
+/* GENERAL STYLE */ 
+
+body {
+	background-image: url(src/img/1344899.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+	font-family: 'Lato', sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	color: inherit;
+}
+
+.connect_box {
+	width: 360px;
+	margin: auto;
+	text-align: center;
+	position: relative;
+	height: 420px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -210px;
+	margin-left: -180px;
+}
+
+.register_box {
+	width: 380px;
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -260px;
+	margin-left: -190px;
+}
+
+.forgot_box {
+	width: 360px;
+	margin: auto;
+	text-align: center;
+	position: relative;
+	height: 420px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -210px;
+	margin-left: -180px;
+}
+
+.forgot_box input {
+	border-radius: 5px;
+}
+
+.forgot_box input[type="submit"] {
+	background-image: url(src/img/arrow_logo.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+	top: 221px;
+	position: absolute;
+	border: none;
+	background-color: rgba(0,0,0,0.01);
+	left: 300px;
+	cursor: pointer;
+}
+
+.forgot_box h2, .connect_box h2 {
+	color: red;
+	font-size: 17px;
+	font-weight: 200;
+}
+
+h1 {
+	font-weight: 400;
+	color: white;
+	text-align: center;
+	margin-top: -10px;
+	margin-bottom: 30px;
+}
+
+input {
+	background-color: rgba(229,229,229,0.9);
+	-webkit-font-smoothing: subpixel-antialiased;
+	color: #333333;
+	font-size: 19px;
+	padding: 10px;
+	border: 1px solid rgba(0,0,0,0.27);
+	width: 340px;
+	box-sizing: border-box;
+	font-weight: 300;
+	outline: none;
+	font-family: 'Lato', sans-serif;
+}
+
+.connect_box input[type='text'], #np {
+	border-radius: 5px 5px 0px 0px;
+}
+
+.connect_box input[type='password'] {
+	border-radius: 0px 0px 5px 5px;
+	margin-top: -5px;
+}
+
+.connect_box input[type='submit'] {
+	background-image: url(src/img/arrow_logo.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+	top: 261px;
+	position: absolute;
+	border: none;
+	background-color: rgba(0,0,0,0.01);
+	left: 300px;
+	cursor: pointer;
+}
+
+.register_box input[type='submit'] {
+	cursor: pointer;
+	background-image: url(src/img/arrow_logo_hover.png);
+	background-size: 10%;
+	background-repeat: no-repeat;
+	background-position: 98% center;
+	text-align: center;
+	background-color: rgba(219,219,219,0.9);
+	margin-left: -3px;
+}
+
+.register_box input[type='submit']:hover {
+	background-image: url(src/img/arrow_logo.png);
+	background-color: rgba(219,219,219,0.7);
+}
+
+.connect_box input[type='submit']:hover {
+	background-image: url(src/img/arrow_logo_hover.png);
+	cursor: pointer;
+}
+
+.connect_box input[type='checkbox'] {
+	width: 20px;
+	height: 20px;
+	background-color: rgba(229,229,229,0.9);
+	vertical-align: middle;
+}
+
+.connect_box label {
+	color: white;
+	font-weight: 300;
+	white-space: nowrap;
+	font-size: 17px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.connect_box p {
+	border-top: 1px solid rgba(255,255,255,0.9);
+	color: #fff;
+	font-weight: 300;
+	font-style: 12px;
+	width: 90%;
+	margin: auto;
+	margin-top: 30px;
+	padding-top: 10px;
+}
+
+.connect_box p a {
+	color: #fff;
+	font-weight: 400;
+}
+
+.register_box form p {
+	color: red;
+	text-align: left;
+	width: 340px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+.error {
+	border-color: red;
+}
+
+.go_connection {
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	background-color: rgba(255,255,255,0.9);
+	color: black;
+	top: 0px;
+	left: 0px;
+	font-weight: 700;
+	line-height: 40px;
+	text-align: center;
+}
+
+.go_connection a {
+	color: black;
+}
+
+.fp {
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	width: 99%;
+	color: #fff;
+	font-weight: 300;
+	color: rgba(255,255,255,1);
+	text-shadow: #3a1800 0px 3px 25px;
+}
+
+.fp span {
+	color: rgba(255,255,255,0.8);
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+	transition: all 0.4;
+}
+
+.fp span a {
+	text-decoration: none;
+}
+
+.fp span:hover {
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+
+/* ANIMATION */ 
+
+@-webkit-keyframes errorAnim {
+	0% { margin-left:-180px; }
+	10% { margin-left:-195px; }
+	20% { margin-left:-165px; }
+	30% { margin-left:-195px; }
+	40% { margin-left:-165px; }
+	50% { margin-left:-195px; }
+	60% { margin-left:-165px; }
+	70% { margin-left:-195px; }
+	80% { margin-left:-165px; }
+	90% { margin-left:-195px; }
+	100% { margin-left:-180px; }
+}
+
+/* INDEX PAGE */
+
+.menu_up {
+	position: absolute;	
+	color: #000;
+	font-size: 20px;
+	font-weight: 200;
+	background-color: rgba(255,255,255,0.8);
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height: 40px;
+	line-height: 40px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: left;
+	z-index: 10;
+}
+
+.menu_up span {
+	float: right;
+	font-weight: 400;
+}
+
+.menu_up span a {
+	text-decoration: none;
+	color: rgba(0,0,0,0.6);
+}
+
+.menu_up span a:hover {
+	color: rgba(0,0,0,1);
+}
+
+.video-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	padding-top: 30px; height: 0; 
+	overflow: hidden; 
+	z-index: 9;
+}
+
+.video-container iframe, .video-container object, .video-container embed { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%;
+	height: 97%; 
+}

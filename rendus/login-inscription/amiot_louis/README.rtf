@@ -1,0 +1,81 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red164\green8\blue0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs28 \cf0 FICHIERS\
+
+\b0\fs24 - 7 pages php\
+- 1 feuille de style\
+- 4 images\
+
+\b\fs28 \cf2 - 1 fichier sql contenant les 2 tables et les \'e9v\'e8nements pr\'e9sent dans le dossier racine qui s\'92appelle database.sql \'e0 ajouter \'e0 PHPMyAdmin
+\b0\fs24 \cf0 \
+
+\b NB: Les liens qui sont envoy\'e9s dans les mails \'e0 l\'92utiisateur pourraient \'eatre amen\'e9s \'e0 ne plus marcher si vous changez le nom du dossier racine.
+\fs28 \
+\
+FEATURES
+\b0\fs24 \
+\
+
+\b PAGE LOGIN 
+\b0 \
+- Fonction \'ab\'a0Rester connect\'e9\'a0\'bb\
+- Fonction \'ab\'a0Mot de passe\'a0oubli\'e9\'a0\'bb\
+- V\'e9rification que le mail et le Mot de passe soit bon, sinon animation d\'92erreur.\
+- V\'e9rification que le compte ai \'e9t\'e9 confirm\'e9 par mail, sinon animation d\'92erreur.\
+- Si d\'e9j\'e0 connect\'e9, redirection vers la page cach\'e9e.\
+- Si plus de 10 connexions ont \'e9chou\'e9s, l\'92utilisateur ne peut pas se log pendant 3 heures.\
+\
+
+\b PAGE INSCRIPTION
+\b0 \
+- Inscription avec champs Pr\'e9nom, Nom, Age, Email et Mot de Passe (2x)\
+- V\'e9rification que le pr\'e9nom est bien un pr\'e9nom (au moins 1 lettre)\
+- V\'e9rification que le nom est bien un nom (au moins 1 lettre)\
+- V\'e9rification que l\'92\'e2ge est bien un \'e2ge possible (compris entre 1 et 125 ans)\
+- V\'e9rification que l\'92email est un email valide\
+- V\'e9rification que l\'92email n\'92est pas dans la base de donn\'e9e\
+- Mot de passe doit obligatoirement contenir une majuscule, un chiffre et un caract\'e8re sp\'e9cial et doit faire au moins 8 caract\'e8res avec un REGEX\
+- Les deux mots de passe doivent matcher\
+- Affichage des erreurs pr\'e9cises en cas d\'92erreur\
+- Si pas d\'92erreur, affichage d\'92un message qui dit qu\'92un mail a \'e9t\'e9 envoy\'e9 afin de v\'e9rifier le compte.\
+- Si pas d\'92erreur, envoi d\'92un mail pour valider le compte\
+\
+
+\b PAGE VERIFICATION MAIL\
+
+\b0 - Accessible via un token\
+- Si pas de token ou si compte d\'e9j\'e0 valid\'e9, affichage d\'92un message d\'92erreur.\
+- Sinon affichage d\'92un message \'ab\'a0compte valid\'e9\'a0\'bb.\
+\
+
+\b PAGE MDP OUBLIE\
+
+\b0 - V\'e9rification que le mail est bien inscrit dans la base de donn\'e9e\
+- Envoi par mail d\'92un lien avec un token unique qui expire \'e0 minuit via les EVENEMENTS SQL\
+- Message de confirmation de l\'92envoie du mail\
+\
+
+\b PAGE RESET MDP
+\b0 \
+- V\'e9rification que l\'92utilisateur poss\'e8de bien un token qui est associ\'e9 \'e0 son mail\
+- V\'e9rification que le mot de passe rentr\'e9 respecte les r\'e8gles (au moins Une majuscule, un chiffre, un caract\'e8re sp\'e9cial, au moins 8 caract\'e8res)\
+- V\'e9rification que les deux mots de passe marche\
+- Mise \'e0 jour du mot de passe.\
+- Expiration du token si mot de passe mis \'e0 jour\
+\
+
+\b PAGE ACCESSIBLE PAR CONNEXION\
+
+\b0 - Possibilit\'e9 de se d\'e9connecter\
+- Si pas connect\'e9, redirection vers la page de redirection. \
+\
+
+\b\fs28 PROBL\'c8MES REP\'c9R\'c9S\
+
+\b0\fs24 \
+- R\'e9ception des mails dans les courriers ind\'e9sirables\
+}

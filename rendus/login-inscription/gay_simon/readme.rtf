@@ -1,0 +1,35 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720
+
+\f0\fs40 \cf0 \expnd0\expndtw0\kerning0
+Bonjour monsieur, \uc0\u8232 \u8232 La plupart des features ont \'e9t\'e9 faites, j\'92ai seulement rencontr\'e9 un probl\'e8me au niveau de l\'92envoi des mails via mamp, j\'92ai pourtant test\'e9 avec une condition en if si le mail s\'92envoyait, celle-ci me retourne que le mail \'e0 \'e9t\'e9 envoy\'e9 mais je ne re\'e7ois rien dans ma boite mail, m\'eame en ind\'e9sirable. Il m\'92a donc \'e9t\'e9 compliqu\'e9 de v\'e9rifier si mon code fonctionnais au niveau des pages 
+\i \expnd0\expndtw0\kerning0
+verify.php
+\i0 \expnd0\expndtw0\kerning0
+ qui est une page cens\'e9 r\'e9cup\'e9rer le mail et la cl\'e9 de connexion via la m\'e9thode GET pour ensuite changer le champ de la colonne 
+\i \expnd0\expndtw0\kerning0
+activate 
+\i0 \expnd0\expndtw0\kerning0
+de 0 \'e0 1, ce qui signifie que l\'92utilisateur est connect\'e9. De m\'eame, la page 
+\i \expnd0\expndtw0\kerning0
+login.php 
+\i0 \expnd0\expndtw0\kerning0
+ainsi que la page 
+\i \expnd0\expndtw0\kerning0
+verifpassword.php n\'92
+\i0 \expnd0\expndtw0\kerning0
+ont elles aussi pas pu \'eatre valid\'e9es partiellement. \uc0\u8232 \u8232 Les tests d\'92envoie de mail \'e0 \'e9t\'e9 fait via 3 adresses diff\'e9rentes, sur gmail, la poste ainsi qu\'92orange et \'e0 chaque fois le mail \'e9tait impossible \'e0 trouver. \
+\
+Il manque me manque la fonction qui restraint le nombre de connexion car je n\'92ai pas eu le temps de la faire, le reste des fonctionnalit\'e9s sont l\'e0 et fonctionnent. \
+\
+j\'92aurais aussi souhait\'e9 a\'e9rer d\'92avantage mon code, pour cela j\'92aurais du faire des fonctions pour chaque v\'e9rification mais je ne savais pas comment faire passer une variable $pdo dans la fonction, car si je faisais une fonction sans m\'92en soucier, php me renvoyait une fatal error. J\'92ai appris Vendredi soir comment y rem\'e9dier , il faut passer pdo en global soit :\uc0\u8232 global = $pdo; et passer les variables tels que $mail ou $password en param\'e8tre. Malheureusement j\'92\'e9tait trop avancer dans mon code pour tout changer sans risquer que plus rien ne marche. \
+\
+Derni\'e8re petite pr\'e9cision, les sessions pour se rappeler de l\'92utilisateur log\'e9 fonctionnent (login.php), mais pour que la sessions s\'92enclenche il faut que l\'92utilisateur ai activer son compte via le mail d\'92activation. Et comme dit plus haut, aucun mail ne s\'92envoie. \
+\
+Bien cordialement, \
+\
+Gay Simon }

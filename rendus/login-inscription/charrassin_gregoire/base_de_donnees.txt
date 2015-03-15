@@ -1,0 +1,68 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.10
+-- http://www.phpmyadmin.net
+--
+-- Client :  localhost
+-- Généré le :  Dim 08 Mars 2015 à 23:48
+-- Version du serveur :  5.5.38
+-- Version de PHP :  5.6.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de données :  `exercice_formulaire_php`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+`id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `age` int(11) NOT NULL,
+  `gender` enum('Male','Female') NOT NULL,
+  `mail` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `age`, `gender`, `mail`, `password`) VALUES
+(1, 'Greg', 19, 'Male', 'gregoire.charrassin@gmail.com', '76214effd354b6983f149787aa5133e577d33f31385a094ee1f87ef575087ea2'),
+(2, 'Bruno', 25, 'Male', 'bruno@orange.fr', '76ac8e3e58e44086e5e569bed7bc4c0d086e169b29796198b2f0a3e3a9592772'),
+(3, 'Margaux', 47, 'Female', 'margaux@sfr.fr', '2490c240166bc4a5184f51ee788109f255f55771e0855f598667f020fc988828'),
+(4, 'Alice', 98, 'Female', 'alice@free.fr', '92a6504e5cc680a796c29b49a7c737c5720688d91348d92aaf88ffb7217f77cd'),
+(5, 'Maxime', 35, 'Male', 'maxime@gmail.com', '29e62b669dca76a8899752b2389a2aa5f13b86a62f7d02a1bb3fd18f8b394f7c'),
+(6, 'Amelie', 72, 'Female', 'amelie@orange.com', '17b779fbc400da1d576f3f3275500ed29a89f203e17b2c120a935f55dbadac15'),
+(7, 'Leo', 10, 'Male', 'leo@gmail.com', '061c7c548aab456e4400f73efdd7109ab06963468d0901b45d4cfa3a087da17e'),
+(8, 'Lea', 12, 'Female', 'lea@yahoo.com', '7de930bbc3420c62c81af68bca2e599c1c0e4411fb743ca8b1490009e60d89ba'),
+(9, 'Julien', 114, 'Male', 'julien@sfr.com', '57a66ce76d27091d2dd1969c551cbba41b9c5254bf052ef7dbe226fa42a2c0a8'),
+(10, 'Julia', 80, 'Female', 'julia@yahoo.com', '7f1761b1ece4f6a19c2a9ff979844ec04c7f75c31fb732d0be28b7b57683f2fe'),
+(11, 'Mathilde', 51, 'Female', 'mathilde@hotmail.fr', 'a2f08197b8e853974611442b68e02def8d481aac7a37d8a93e59de2c05c7cd27'),
+(12, 'Mathias', 103, 'Male', 'mathias@gmail.com', '9fcee08681b1d623d46e2821f0bfad7ba1ab0a00841a9ec4937806a88e107850');
+
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `mail` (`mail`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;

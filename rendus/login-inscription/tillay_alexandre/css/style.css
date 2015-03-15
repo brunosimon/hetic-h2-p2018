@@ -1,0 +1,36 @@
+.input-group {
+	margin-bottom:15px;
+}
+
+.switch-link {
+	float:right;
+	margin-top:15px;
+}
+
+.w100 {
+	width:100%;
+}
+
+.top10 {
+	margin-top:10px;
+}
+
+.top30 {
+	margin-top:30px;
+}
+
+.alert-small {
+	padding:10px;
+}
+
+body {
+	background-color:#333;
+	margin-bottom:20px;
+}
+
+.site-title {
+	color:#f1f1f1;
+	text-align:center;
+	margin-top:30px;
+	margin-bottom:30px;
+}

@@ -1,0 +1,141 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+html{
+	background-color: #4DB6AC;
+}
+
+body{
+	width: 1024px;
+	margin: 0 auto;
+}
+
+p{
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	color: #FFFFFF;
+	padding: 10px;
+	border: solid 2px #F57C00;
+	background-color: #FFA726;
+	width: 50%;
+	margin : 10px auto;
+}
+
+h1{
+	font-family: 'Raleway', sans-serif;
+	font-size: 40px;
+	font-weight: 900;
+	color: #00796B;
+	text-transform: uppercase;
+	margin-top: 40px;
+}
+
+form{
+	text-align: center;
+	margin-top: 5%;
+}
+
+fieldset{
+	border: solid 4px #00796B;
+	padding: 20px;
+	text-align: left;
+	font-family: 'Raleway', sans-serif;
+	font-size: 40px;
+	font-weight: 900;
+	color: #00796B;
+	text-transform: uppercase;
+}
+
+legend{
+	padding: 0 20px 0 20px;
+}
+
+input{
+	padding: 10px;
+	background-color:#B2DFDB;
+	border: none;
+	border-bottom: solid 4px #00796B;
+	margin: 0 0 20px 0;
+	width: 100%;
+	font-size: 24px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	color: #009688;
+}
+
+input::-webkit-input-placeholder {
+	font-weight: 200;
+	color: #009688;
+}
+input::-moz-placeholder {
+	font-weight: 200;
+	color: #009688;
+}
+input:-moz-placeholder {   /* Older versions of Firefox */
+	font-weight: 200;
+	color: #009688;
+}
+input:-ms-input-placeholder { 
+	font-weight: 200;
+	color: #009688;
+}
+
+input[type=submit]{
+	background-color: #009688;
+	width : 12%;
+	border-bottom: solid 4px #B2DFDB;
+	color: #B2DFDB;
+	margin: 1px 0 0 0;
+}

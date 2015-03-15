@@ -1,0 +1,97 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+*{
+	padding: 0; 
+	margin: 0; 
+}
+
+body{
+	background: #F9F9F9; 
+	font: 14px "Montserrat", sans-serif;  
+	color: #464646; 
+  position: relative;
+}
+
+.ok{
+  color:#464646;
+  width:615px;
+  height:35px;
+  margin-bottom:15px;
+  text-align:center;
+  line-height:35px;
+  background:#f9f9f9;
+  border: solid 1px #DFDFDF;
+}
+
+.erreurid{
+  color:#f55;
+  width:615px;
+  height:35px;
+  margin-bottom:15px;
+  text-align:center;
+  line-height:35px;
+  background:#f9f9f9;
+  border: solid 1px #DFDFDF;
+}
+
+#login{
+  float:right;
+}
+
+#login a{
+  color:#464646;
+  text-decoration:underline;
+}
+
+#login a:hover{
+  color:#777;
+  text-decoration:none;
+}
+
+p{
+	margin: 10px 0px 10px 0px;
+}
+
+.error{
+  color:#f55;
+}
+
+label{
+  display:block;
+  margin-top:5px;
+}
+
+#wrap{
+	background: #FFFFFF; 
+	width: 615px; 
+	left:30%; 
+	margin-top: 50px; 
+	padding: 10px; 
+	border: 1px solid #DFDFDF; 
+	text-align: center;
+  position: absolute;
+}
+
+#wrap h3{
+	font: italic 22px sans-serif; 
+}
+
+
+form{
+	margin-top: 10px; 
+}
+
+form .submit_button{
+	background: #F9F9F9; 
+	border: 1px solid #DFDFDF; 
+	margin:auto;
+  display:block;
+  margin-top:20px;
+}
+
+input{
+	font: normal 16px sans-serif; 
+	border: 1px solid #DFDFDF; 
+	padding: 8px; 
+  margin-top:5px;
+}

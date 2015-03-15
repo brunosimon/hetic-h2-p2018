@@ -1,0 +1,14 @@
+[
+	{
+		"name" : "toto",
+		"age"  : 25
+	},
+	{
+		"name" : "tata",
+		"age"  : 20
+	},
+	{
+		"name" : "tutu",
+		"age"  : 40
+	}
+]

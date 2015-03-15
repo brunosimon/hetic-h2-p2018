@@ -1,0 +1,133 @@
+/********** GENERAL *********/
+
+
+@font-face {
+    font-family: "diablo_3";
+    src: url('../font/EXH_____.TTF');
+}
+
+
+
+input{
+	width:200px;
+	margin-bottom: 15px;
+}
+
+select{
+	width: 200px;
+	margin-bottom: 15px;
+}
+
+
+.error input,.error select {border:2px solid rgba(225, 0, 0, 0.3);background-color:rgba(255, 220, 220, 0.9);}
+
+.valid input,.valid select {border:2px solid rgba(0, 255, 0, 0.3);background-color:rgba(220, 255, 220, 0.9);}
+
+label{
+	width: 230px;
+	float: left;
+	color:white;
+}
+
+.alert{
+	font-weight: bold;
+	color:rgba(255, 0, 0, 0.85);
+}
+
+input[type=submit] {
+	width:100px;
+	height:30px;
+	margin:40px 0 0 330px;
+}
+
+input:-moz-placeholder {
+    color: #555;
+}
+ 
+input::-webkit-input-placeholder {
+    color: #222;
+}
+
+body{
+	background-color:black;
+	background-repeat:no-repeat;
+	font-size: 18px;
+}
+
+h1{
+	margin:210px 0 75px 190px;
+	color:white;
+	font-family: "diablo_3", Helvetica, Arial, sans-serif;
+}
+
+h2{
+	margin:210px 0 10px 435px;
+	color:white;
+}
+
+form{
+	margin-left:100px;
+}
+
+
+
+
+
+/*********** INSCRIPTION  *********/
+
+.body-registration{
+	background-image:url('../img/king2.png');
+	background-position:70% 0%;	
+}
+
+.agreement-label{
+	width: 280px;
+	float:none;
+	margin:0px;
+}
+
+.agreement-input{
+	width: 20px;
+}
+
+
+
+
+
+/******  LOGIN ********/
+
+.body-login{
+	background-image:url('../img/diablo3.png');
+	background-position:70% 0%;
+}
+
+.label-login{
+	width: 120px;
+}
+
+input[type=submit].valid-login{
+	width:100px;
+	height:30px;
+	margin:40px 0 0 220px;
+}
+
+.alert-login{
+	width: 230px;
+	margin:0 0 25px 180px;
+}
+
+
+
+
+
+/******  HOME **********/
+
+.body-home{
+	background-image:url('../img/home.png');
+	background-position:70% 0%;
+}
+
+input[type=submit].input-session{
+	width: 200px;
+	margin: 40px 0 0 190px;
+}

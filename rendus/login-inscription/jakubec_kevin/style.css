@@ -1,0 +1,60 @@
+*{
+	color:#FEFEFE;
+	font-family: 'Open Sans', sans-serif;
+}
+body{
+	background-color:#2E3E4F;
+}
+#formulaire{
+	width:500px;
+	height:350px;
+	margin:auto;
+	margin-top:200px;
+	background-color:#374A5D;
+
+}
+#formulaire h1{
+	text-align:center;
+}
+input{
+	clear:both;
+	width:210px;
+	height:20px;
+	margin-top:20px;
+	margin-left:80px;
+	color:#0c0c0c;
+}
+label{
+	margin-left:40px;
+}
+#submit{
+	background-color:#64C271;
+	border:none;
+	width:200px;
+	height:30px;
+	margin-top:50px;
+	margin-left:150px;
+	color:#FEFEFE;
+	cursor:pointer;
+}
+#connect{
+	width:500px;
+	height:300px;
+	margin:auto;
+	margin-top:50;
+	background-color:#FF0000;
+}
+h1{
+	width:500px;
+	height:40px;
+	margin-top:50%;
+	text-align:center;
+}
+#deconnect{
+	width:500px;
+	height:300px;
+	margin:auto;
+	margin-top:50;
+	background-color:#0f0f0f;
+}
+

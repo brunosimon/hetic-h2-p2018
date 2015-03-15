@@ -1,0 +1,76 @@
+body {
+	background: #2CB6B3;
+	font-family:Helvetca,Arial;
+	font-size: 14px;
+}
+
+form {
+	text-align: center;
+}
+
+input {
+	margin-bottom: 5px;
+}
+
+.errorMsg {
+
+}
+
+.border {
+	border: 3px solid;
+}
+
+.branding {
+	margin-top: 5%;
+	background: none;
+	border-bottom: none;
+	min-height: 64px;
+	text-align: center;
+}
+
+fieldset {
+	margin-left: 40%;
+	margin-right: 40%;
+	background: #ffb6c1;
+	padding: 10px;
+	border: 5px solid #CCC;
+	margin-bottom: 20px;
+}
+
+legend {
+	text-align: left;
+	background: #ffb6c1;
+	padding: 5px;
+	border: 5px solid #CCC;
+}
+
+.pass {
+	background: #CCC;
+	position: absolute;
+	top:0px;
+	left:0px;
+	margin-left: 50%;
+	margin-top: 50%;
+}
+
+.message {
+	text-align: center;
+	background: #BAC7B6;
+	padding: 5px;
+	margin-left: 40%;
+	margin-right: 40%;
+	border: 3px solid;
+}
+
+.back {
+	margin-left: 10%;
+	width: 40px;
+	height: 14px;
+	background: #ffb6c1;
+	padding: 5px;
+	border: 2px solid #CCC;
+}
+
+.back a {
+	text-decoration: none;
+}

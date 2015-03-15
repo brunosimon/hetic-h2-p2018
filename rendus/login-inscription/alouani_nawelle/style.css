@@ -1,0 +1,79 @@
+body {
+	background:#bcc4d8;
+	font-family: Helvetica;
+	font-size: 15px;
+}
+
+body fieldset {
+	position:relative;
+	display:block;
+	border:none;
+	padding: 30px;
+	margin:150px;
+}
+
+fieldset legend {
+	text-align: center;
+	font-size: 20px;
+}
+
+#form {
+	text-align: center;
+}
+
+#form input {
+	margin: 5px;
+	border-radius: 3px;
+	border: none;
+	width:200px;
+	height:20px;
+}
+
+#form label {
+	display: inline-block;
+	padding-right: 20px;
+	width:150px;
+	text-align: left;
+}
+
+button {
+	margin-top: 10px; 
+	border-radius: 2px;
+	border:none;
+	width:100px;
+	height:30px;
+	background:#e3e9f7;
+}
+
+#form #remember {
+	font-size: 15px;
+	width:110px;
+	margin-right: 0px;
+	margin-left: 15px;
+	padding: 0px;
+	margin-top:0px; 
+}
+
+input[type="checkbox"] {
+	display:inline-block;
+	width:13px;
+	height:13px;
+	padding-left:0px;
+	margin:auto;
+}
+
+.log {
+	display:block;
+	margin-left: 250px;
+}
+
+p {
+	margin-top:40px;
+	font-size: 12px;
+}
+
+.register {
+	margin:0px;
+	width:100px;
+	height:20px;
+}

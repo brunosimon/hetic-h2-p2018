@@ -1,0 +1,33 @@
+body {background:#eee;font-size:16px;font-family:Helvetica,Arial; width: 100%; color:#F4EEEE;
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #1e5799 0%, #2989d8 50%, #7db9e8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+background: -o-linear-gradient(-45deg,  #1e5799 0%,#2989d8 50%,#7db9e8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  #1e5799 0%,#2989d8 50%,#7db9e8 100%); /* IE10+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+h1{font-size: 3em; color: #FEFEFE;}
+
+div.intro {text-align: center; margin-top: 50px;}
+
+p.errors {text-align: center;color: #FF0303;background-color: white;padding: 8px;}
+
+
+div.connect-container{position: relative; width:700px; height: 430px; margin:auto; margin-top: 50px;}
+div.connect-menu, div.form-container { float: left;}
+div.login-container, div.register-container{display: inline-block; width: 46%; float:left; margin: 0% 2%; }
+div.form-container{width: 75%;}
+
+div.connect-menu{width: 21%;padding: 0% 2%;height: 100%; font-size: 1.5em; color: white;}
+div.form-container h2 { color:#fefefe; margin-top: 50px; text-align: end; border-bottom: 15px solid #fefefe;}
+
+form.connect-form{ width: 100%;}
+form.connect-form legend { font-weight: bold; font-size: 1.2em;}
+form.connect-form label {display: block; line-height: 1.6em;	}
+form.connect-form label input {height: 30px; width: 100%; margin: 2px; margin-bottom: 4px;}
+form.connect-form label input[type=checkbox] {width: 30px;}
+form.connect-form input[type="submit]{float: right; bottom:0; position: absolute;}
+
+form input[type=submit]{width: 90px; height : 30px; border: 2px solid white; background: none; border-radius: ; outline : none; color:#fff; transition: background-color 0.2s; }
+form input[type=submit]:hover{background-color: rgba(255,255, 255, 0.1);}
