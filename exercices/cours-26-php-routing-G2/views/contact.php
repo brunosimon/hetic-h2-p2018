@@ -1,0 +1,4 @@
+<?php 
+	$title = 'contact';
+?>
+Contact

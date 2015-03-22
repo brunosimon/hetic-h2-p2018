@@ -6,20 +6,30 @@
 
 	if(empty($q))
 	{
-		die('Home');
+		$view = 'home';
 	}
 	else if(preg_match('/^contact\/?$/', $q))
 	{
-		die('Contact');
+		$view = 'contact';
 	}
 	else if(preg_match('/^news\/?$/', $q))
 	{
-		die('News');
+		$view = 'news';
 	}
 	else if(preg_match('/^news\/\d+\/?$/', $q))
 	{
-		die('News single');
+		$view = 'news-single';
+	}
+	else
+	{
+		$view = 'not-found';
 	}
 
+	ob_start();
+	include 'views/'.$view.'.php';
+	$result = ob_get_clean();
 
+	include 'partials/header.php';
+	echo $result;
+	include 'partials/footer.php';
 

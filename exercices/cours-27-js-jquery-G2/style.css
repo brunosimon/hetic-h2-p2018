@@ -1,0 +1,15 @@
+body {
+	background:#eee;
+	font-size:14px;
+	font-family:Helvetica,Arial;
+}
+
+.result {
+	padding:20px;
+	margin:20px;
+	background:#ddd;
+}
+
+.result.error {
+	color:#f00;
+}
