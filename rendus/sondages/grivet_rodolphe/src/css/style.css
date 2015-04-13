@@ -1,0 +1,29 @@
+.container{ height: 100%;width: 100%;}
+.container header{ width: 100%; height: 50px;margin-bottom: 20px; background: #eee; border-bottom: 1px solid black;}
+.container .titre{ text-align: center; font-size: 1.5em; margin-bottom: 20px;}
+.container .ajout_cour{ width: 610px; margin: auto;}
+.container .ajout_cour .name, .date{ width: 300px; height: 35px;}
+.container .ajout_cour .date{ float: right;}
+.container .ajout_cour .resumer{ width: 610px; height: 50px; margin-top: 10px;}
+.container .ajout_cour .submit{ margin-left: 250px; width: 100px; margin-top: 10px;}
+.container .sondage_resumer p{ width: 450px;}
+.container .nom_result{ font-size: 1.2em; width: 550px; margin-bottom: 5px;}
+.container .sondage_cour{ margin-top: 50px;}
+.container .nb_vote{ margin-bottom: 10px;}
+.container .result{ display: inline-block; margin-right: 200px; width: 500px; margin: auto;}
+.container .results{ width: 80%;margin: auto;}
+.sondage_cour, .sondage_date, .sondage_resumer, .sondage_note, .nb_vote{ margin-bottom: 5px;}
+
+
+.container .get_errors{ width: 610px; margin: auto;  color: red;}
+.container .get_errors p{ margin-top: 10px; color: black;}
+
+.container .next_page{ color: black;text-decoration: underline;font-size: 0.9em;float: right;margin-right: 40px;}
+header .tri{ padding-top: 15px;padding-left: 10px;}
+
+
+.recherche{ width: 200px;}
+.recherche_form{ width: 10%; margin: auto;}
+.recherche_form .submit{ margin-left: 60px;margin-top: 10px;}
+.found{ text-align: center;margin-top: 10px;color: red;}
+h2{ padding-top: 15px;padding-left: 10px;}

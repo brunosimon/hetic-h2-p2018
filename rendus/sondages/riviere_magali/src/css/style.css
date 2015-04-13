@@ -1,0 +1,400 @@
+/********** GLOBAL *********/
+
+html { 
+  margin:0;
+  padding:0;
+  background: url(../img/bg.jpg) no-repeat center fixed; 
+  background-size: cover;
+}
+
+body{
+	font-size: 18px;
+	color:white;
+}
+
+input{
+	width:200px;
+	margin-bottom: 15px;
+}
+
+select{
+	width: 200px;
+	margin-bottom: 15px;
+}
+
+.error input,.error select, .error fieldset {
+	border:2px solid rgba(225, 0, 0, 0.3);
+	background-color:rgba(255, 220, 220, 0.9);
+}
+
+.valid input,.valid select {
+	border:2px solid rgba(0, 255, 0, 0.3);
+	background-color:rgba(220, 255, 220, 0.9);
+}
+
+.alert{
+	font-weight: bold;
+	color:rgba(255, 0, 0, 0.85);
+}
+
+input[type=submit] {
+	width:100px;
+	height:30px;
+	margin:40px 0 0 330px;
+}
+
+input:-moz-placeholder {
+    color: #555;
+}
+ 
+input::-webkit-input-placeholder {
+    color: #222;
+}
+
+label{
+	width: 230px;
+	float: left;
+	color:white;
+}
+
+h1{
+	margin:210px 0 75px 190px;
+	color:white;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h2{
+	margin:210px 0 10px 435px;
+	color:white;
+}
+
+form{
+	margin-left:200px;
+}
+
+.logo-header{
+	border:0px white solid;
+	position: fixed;
+	left:80%;
+	top:80%;
+}
+
+
+
+/*********** INSCRIPTION  *********/
+
+.agreement-label{
+	width: 280px;
+	float:none;
+	margin:0px;
+}
+
+.agreement-input{
+	width: 20px;
+}
+
+
+/******  LOGIN ********/
+
+.label-login{
+	width: 120px;
+}
+
+input[type=submit].valid-login{
+	width:100px;
+	height:30px;
+	margin:40px 0 0 220px;
+}
+
+.alert-login{
+	width: 230px;
+	margin:0 0 25px 180px;
+}
+
+
+
+/******  HOME **********/
+
+input[type=submit].input-session{
+	width: 200px;
+	margin: 40px 0 0 190px;
+}
+
+.img div .name{
+	position:absolute;
+	top:10px;
+	left:50px;
+	z-index:400;
+	font-size: 17px;
+	font-weight:bold;
+	opacity: 0;
+}
+
+.img div:hover .name{
+	-webkit-animation: fadein 3s;
+       -moz-animation: fadein 3s;
+         -o-animation: fadein 3s; 
+            animation: fadein 3s;
+}
+
+.img div .icons{
+	border:0px white;
+	position:absolute;
+	top:0px;
+	left:60px;
+	z-index:400;
+	font-size: 40px;
+	font-weight:bold;
+	-webkit-animation: fadein 2s;
+       -moz-animation: fadein 2s;
+         -o-animation: fadein 2s;
+            animation: fadein 2s;
+}
+
+.img div .category{
+	top:100px;
+	left:0px;
+}
+
+.img div .game{
+	top:100px;
+	left:95px;
+}
+
+
+
+/********* NAV **********/
+
+.nav-container{
+	margin:auto;
+}
+
+.menu_principal{
+	list-style:none;
+	height:35px;
+	width: 505px;
+	background-color:#101115;
+	margin:0px;
+	padding:0px;
+	z-index:1000;
+}
+
+.menu_principal li{
+	float:left;
+	position:relative;
+}
+
+.menu_principal li a{
+	text-decoration:none;
+	color:#00b6ff;
+	padding-top:5px;
+	padding-left:20px;
+	padding-right:20px;
+	height:30px;
+	border-right: 1px solid #FFF;
+	display:block;
+	font-size:18px;
+}
+
+.menu_principal li:last-child a{
+	border-right: 0px solid #FFF;
+}
+
+
+/********* QCM *********/
+
+.qcm-container label{
+	float:none;
+}
+
+.qcm-container .qcm {
+	border-style  : solid;
+	border-color  : #FFFFFF;
+	border-width  : 2px;
+	margin-top : 10px;
+	padding-left  : 25px;
+	width:1020px;
+	display:block;
+	float:none;
+}
+
+.qcm-container .qcm p{
+	width:1020px;
+	height: 20px;
+}
+
+.qcm-container .qcm legend{
+	font-weight:bold;
+	padding:0 15px 0 15px;
+}
+
+.qcm-container fieldset{
+	margin:0 10px 0 10px;
+	border-radius:30px;
+
+}
+
+.qcm-container .qcm input{
+	width: 15px;
+	height: 15px;
+}
+
+.qcm-container .qcm input[type="radio"], .qcm-container .qcm input[type="checkbox"] {
+	margin : 0 25px;
+}
+
+
+/********** RESULTATS ***********/
+
+.results-container{
+	width: 500px;
+	height: 100%;
+	float: right;
+	position:absolute;
+	top: 0%;
+	left: 1300px;
+	z-index:5;
+    -webkit-animation: fadein 2s;
+       -moz-animation: fadein 2s; 
+         -o-animation: fadein 2s;
+            animation: fadein 2s;
+}
+
+@-webkit-keyframes fadein {
+	0%   {opacity:0;}
+	40%  {opacity:0.5;}
+	70%  {opacity:1;}
+}
+@-moz-keyframes fadein {
+	0%   {opacity:0;}
+	40%  {opacity:0.5;}
+	70%  {opacity:1;}
+}
+@-o-keyframes fadein {
+	0%   {opacity:0;}
+	40%  {opacity:0.5;}
+	70%  {opacity:1;}
+}
+@keyframes fadein {
+	0%   {opacity:0;}
+	40%  {opacity:0.5;}
+	70%  {opacity:1;}
+}
+
+.img-qcm{
+	display:inline-block;
+	width: 75px;
+	height: 75px;
+	vertical-align: middle;
+	margin-top:50px;
+}
+
+.name-a{
+	text-decoration: none;
+	color:#00b6ff;
+}
+
+
+
+/**************** STATS ***************/
+
+.img {
+    margin: 0px 25px 0px 25px;
+    padding: 5px;
+    height: auto;
+    width: 1200px;
+    float: left;
+    text-align: center;
+    display: inline;
+}
+
+.img img {
+    display: inline;
+    margin: 45px 5px 5px 15px;
+    border: 1px solid #ffffff;
+}
+
+.img div{
+	display:inline-block;
+	position:relative;
+}
+
+.img div .stat-vote{
+	position:absolute;
+	top:0px;
+	left:60px;
+	z-index:400;
+	font-size: 40px;
+	font-weight:bold;
+	-webkit-animation: fadein 2s; 
+       -moz-animation: fadein 2s; 
+         -o-animation: fadein 2s; /
+            animation: fadein 2s;
+}
+
+@-webkit-keyframes turn_left {
+0%   {-webkit-transform: rotateY(0deg); }
+100% {-webkit-transform: rotateY(360deg); }
+}
+@-moz-keyframes turn_left {
+	0%   {-moz-transform: rotateY(0deg); }
+	100% {-moz-transform: rotateY(360deg); }
+}
+@-o-keyframes turn_left {
+	0%   {-o-transform: rotateY(0deg); }
+	100% {-o-transform: rotateY(360deg); }
+}
+@keyframes turn_left {
+	0%   {transform: rotateY(0deg); }
+	100% {transform: rotateY(360deg); }
+}
+	 
+.rotate:hover{
+	-webkit-animation: turn_left 2s;
+       -moz-animation: turn_left 2s;
+         -o-animation: turn_left 2s;
+            animation: turn_left 2s;
+
+}
+
+.rotate{
+	-webkit-transform:rotateY(0deg);
+	  -moz-transform:rotateY(0deg);
+		-o-transform:rotateY(0deg);
+		  transform:rotateY(0deg);
+
+}
+
+.user-vote{
+	font-size: 24px;
+	position:absolute;
+	top:150px;
+	left:1300px;
+}
+
+.heroes-vote{
+	font-size: 24px;
+	position:absolute;
+	top:250px;
+	left:1300px;
+}
+
+
+/************** FOOTER **************/
+
+.disconnect{
+	position:fixed;
+	top:87%;
+	width: 200px;
+	left:-12%;
+	z-index: 8000;
+}
+
+
+
+/********** 404 *****************/
+
+.error-404{
+	margin-left:250px;
+	margin-top:100px;
+}

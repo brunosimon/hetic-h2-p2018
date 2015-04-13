@@ -2,7 +2,7 @@
 
 echo uniqid().'<br>';
 
-if(preg_match('/\w\s\w/','foo bar'))
+if(preg_match('/^Fo{3}$/','Foooooo'))
 	die('vrai');
 else
 	die('faux');

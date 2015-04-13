@@ -1,0 +1,49 @@
+body {background-image: url("../img/background.jpg"); :;font-size: 14 px;}
+
+#nav, #team {
+	padding: 0; margin: 0;
+	text-align: center; /* centrer le texte */
+}
+#nav li , #team li{
+	display: inline;
+	list-style: none;
+}
+#nav a, #team a {
+	display:inline-block;
+	margin: 0 30px;
+}
+
+.formu{
+	position: absolute;
+	left: 45%;
+	bottom: 50%;
+}
+
+caption{
+	font-style: italic;
+}
+
+td, th {
+	border: 1px; 
+	padding: 0.5em;
+}
+
+td{
+	border: 1px dashed #aaa;
+}
+
+th{
+	background: #cade5b;
+}
+table{
+	position: relative;
+	left: 35%;
+	top: 10%;
+}
+
+footer {
+		position			: fixed;
+		bottom				: 10px;
+		left				: 45%;
+		height				: 5%;
+}

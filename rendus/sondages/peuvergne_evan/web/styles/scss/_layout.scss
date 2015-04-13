@@ -1,0 +1,113 @@
+
+/* 
+	CONTAINER
+*/
+
+.container{
+
+	width:1024px;
+	height:100%;
+	margin:auto;
+	padding:0 32px;
+
+	&.flex-container{
+
+		display: flex;
+		flex-direction:column;
+
+		&.v-centered-container{
+			
+			align-items:center;
+
+		}
+
+	}
+
+	&.h-centered-container{
+
+		text-align:center;
+		justify-content: center;
+
+		.row{
+
+			text-align: center;
+			justify-content:center;
+
+		}
+
+	}
+
+
+	/* RESPONSIVE */
+
+	@media screen and (max-width:1023px){
+
+		width:100%;
+
+	}
+
+}
+
+
+
+/* 
+	ROW
+*/
+
+.row{
+
+	display: flex;
+	width:100%;
+
+}
+
+
+
+/* 
+	COLUMNS
+*/
+
+[class^="col-"], .col{
+
+	display: block;
+	padding-right:20px;
+	text-align:left;
+
+	&:last-child{
+
+		padding-right:0;
+
+	}
+
+	&.no-margin{
+
+		position: relative;
+		left:-20px;
+		right:-20px;
+
+	}
+
+}
+
+.f-col{
+
+	flex:1;
+	padding-right:20px;
+
+	&:last-child{
+
+		padding-right:0;
+
+	}
+
+}
+
+@for $i from 1 to 13{
+
+	.col-#{$i}{
+
+		width:(100%/12)*$i;
+
+	}
+
+}

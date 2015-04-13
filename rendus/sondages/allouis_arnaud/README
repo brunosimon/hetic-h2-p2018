@@ -1,0 +1,25 @@
+------------
+----------
+Arnaud Allouis
+H2 P2018
+
+Fonctionalitées:
+	- Voter pour des gens de la promotion
+	- récupération des information sur graph de facebook
+	- voir le top
+	- ajax sans Jquery
+
+Améliorations possible (entre autres):
+	- Mettre en place une protection pour éviter de trop voter
+	- Voir ceux qui sont monter ou ceux qui sont descendu du classement
+	- Avoir une page par personne afin de voir ses différentes place suivant les jours
+
+Hummm: 
+	- Les datas sont un peu planter, en écrivant dans la base de donnée j'ai eu des bug, donc certaines personnes sont en doublons, je n'ai pas eu la foi de les enlever
+	- Je n'ai pas utiliser ce que j'avais coder la dernière fois, j'ai prefere coder de facons moins propre mais plus rapide, je comptais pas vous le rendre jusqu'as ce soir mais j'ai eu cette idée.
+
+
+if (day)
+	echo 'bonne journée'
+else
+	echo 'bonne soirée'

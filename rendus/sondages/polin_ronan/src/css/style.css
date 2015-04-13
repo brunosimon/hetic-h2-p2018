@@ -1,0 +1,65 @@
+html, body{
+	color : #171A29;
+	background-color: #efefef;
+}
+
+.content{
+	width: 1000px;
+	display: block;
+	margin: auto;
+	margin-top: 50px;
+}
+.content>div{
+}
+.titleSite{
+	font-size: 50px;
+	display: block;
+	margin-left: 250px;
+}
+
+.textInfo{
+	font-size: 35px;
+}
+
+.question{
+	margin-top: 80px;
+}
+
+.submit{
+	margin-top: 100px;
+	margin-left: 450px;
+}
+
+.second-question label{
+	font-size: 20px;
+	border: 1px solid #171A29;
+	margin-top: 20px;
+	display: inline-block;
+	padding: 5px;
+}
+
+
+
+.third-question label, .finalMovie label{
+	font-size: 20px;
+	border: 1px solid #171A29;
+	margin-top: 20px;
+	display: inline-block;
+	padding: 5px;
+}
+
+
+.submit{
+	margin-top: 10px;
+}
+
+.final{
+	display: block;
+	margin: 50px;
+}
+
+.wait{
+	width: 0px;
+	height: 50px;
+	background: black;
+}

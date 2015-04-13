@@ -1,0 +1,269 @@
+/* General */
+
+body
+{
+
+  background:#fff;
+  font-family: 'Dosis', sans-serif;
+  font-size:14px;
+  font-weight:normal;
+  color:#888888;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  background-image: url(images/01.png);
+      
+}
+
+h1
+{
+
+  color:#f1c40f;
+
+}
+
+p
+{
+
+  font-size: 18px;
+  color: #fff;
+
+}
+
+.titre
+{
+
+  margin-left: 550px;
+  font-size:25px;
+  color:#e74c3c;
+  font-family:'Dosis';
+  text-transform:uppercase;
+  font-weight: bold;
+
+}
+
+
+/* Header */
+
+.container
+{
+
+  height: 100px;
+
+}
+
+.nav ul li a:hover
+{
+
+  color:#8e44ad;
+
+}
+
+.nav ul li
+{
+
+  padding: 30px;
+  list-style: none;
+  display: inline-block;
+
+}
+
+.nav ul li:first-child
+{
+
+  padding-left: 0px;
+  list-style: none;
+  display: inline-block;
+
+}
+
+
+.nav ul a:last-child
+{
+
+color:#2ecc71;
+
+}
+
+.navigation_bar{
+
+  padding-left: 0px;
+  margin:40px;
+}
+
+.navigation_bar a
+{
+
+  display:inline-block;
+  font-size:18px;
+  color:#ffffff;
+  font-family:'Dosis';
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight: bold;
+  transition:all 0.2s ease-in-out;
+  -moz-transition:all 0.2s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+
+
+/* Anecdote */
+
+.anecdote{
+
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-bottom: 50px;
+  
+
+}
+
+.anecdote a
+{
+
+  text-decoration: none;
+  font-family: 'Dosis';
+  display:block;
+  font-size:12px;
+  color:#ffffff;
+  background:#49b5e7;
+  width:100px;
+  height:30px;
+  line-height:30px;
+  border-radius:3px;
+  text-align:center;
+  font-family:''Dosis'';
+  text-transform:uppercase;
+  font-weight: 600;
+  transition:all 0.2s ease-in-out;
+  -moz-transition:all 0.2s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+
+}
+
+.anecdote a:hover
+{
+
+background:#222222;
+color:#49b5e7;
+
+}
+
+  /* Vote */
+
+.vote 
+{
+
+width: 150px;
+position:relative;
+float: right; 
+
+}
+
+
+.vote form 
+{
+
+  display: inline-block; 
+
+}
+
+
+.vote_bar 
+{
+
+  width: 100%;
+  height: 4px;
+  background-color: #f2504b; 
+
+}
+
+.vote_loading 
+{
+
+  display: none; 
+
+}
+
+.vote_progress 
+{
+
+  height: 4px;
+  width: 0%;
+  background-color: #63b96b;
+  -webkit-transition: width 0.3s;
+          transition: width 0.3s; 
+
+}
+
+.vote_btns 
+{
+
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  text-align: right; 
+
+}
+
+.vote_btn 
+{
+
+  border: none;
+  padding: 0;
+  display: inline-block;
+  margin: 0 0 0 10px;
+  cursor: pointer;
+  background: transparent;
+  -webkit-transition: color 0.3s;
+          transition: color 0.3s; 
+
+}
+
+.vote_like:hover, .is-liked .vote_like 
+{
+
+  color: #63b96b; 
+
+}
+
+.vote_dislike:hover, .is-disliked .vote_dislike 
+{
+
+  color: #f2504b;
+
+}
+
+.vote_like 
+{
+
+  color: #ecf0f1; 
+
+}
+
+.vote_dislike 
+{
+
+  color: #ecf0f1;
+
+}
+
+#like_count
+{
+
+  font-family:'Dosis';
+  margin-right: 10px;
+  font-size: 30px;
+
+}
+
+#dislike_count
+{
+
+  font-family:'Dosis';
+  margin-right: 0px;
+  font-size: 30px;
+  
+}
+
+

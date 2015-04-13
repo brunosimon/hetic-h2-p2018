@@ -1,0 +1,12 @@
+body { font-size: 14px; font-family: arial;}
+
+.container { margin-top:  50px;text-align: center; }
+
+.container .img { width: 300px;height: auto; }
+
+.container .responses { position: relative;display: inline-block;width: 300px;vertical-align: top;margin : 50px }
+
+.container .text { padding: 20px; margin-right :10px;}
+
+
+

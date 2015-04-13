@@ -1,0 +1,59 @@
+-----------------------------
+JUSTE OUVRIR LA PAGE SONDAGE
+-----------------------------
+
+
+CONCEPT
+-------
+Vote pour ou contre 125//MOTO (avec une identification). 
+
+
+FEATURES
+--------
+- Inscription
+- Connect
+- Votes
+- Resultat
+
+
+IDEAS
+-----
+- Une seul bdd. 
+- Possibilité a chacun de creer un pour ou contre (photo dans 	  le bdd).
+- Creer un logo. 
+- Sur les pages connect et index : creer un pneu pour le 		cercle du login. 
+- Image de fond.
+- Faire un fleche de validation pour voir que l'on a bien voté 		sur la bonne image.
+- Le resultat s'affiche sur la meme page que le vote 
+- Adresse ip pour voter 1 fois.
+
+
+PROBLEMES
+---------
+- Probleme de logique lors de la creation de la BDD = Ok.
+
+- Probleme avec le dashed pour le faire en pointillé sur le 	cercle "login" et que cela donne l'apparence d'etre une 	roue de moto.
+
+- Probleme de position du footer.
+
+- Lorsque je charge la page sondage le header n'en fait qu'a 	sa tete.
+
+- Faire en sorte que mes images soient "cliquable" = OK.
+
+- Je ne comprends pas pourquoi sur la page il y a un bandeau 	blanc avec le footer.
+
+- Je ne sais pas comment afficher les reultats des votes sur 	le même page.
+
+- Suprimer les pages home et connect : ca ne sert a rien pour 	le vote.
+
+- Le header er footer ne prennent pas 100% de la largeur de 	l'ecran. 
+
+- Tout se decale quand les scores apparaissent. 
+
+
+
+
+
+
+
+

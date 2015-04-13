@@ -21,10 +21,11 @@ search.on( 'keyup', function()
 		// Ajax worked
 		success  : function( res )
 		{
-			var infos = res.name;
+			var infos = res.name,
+				img   = '<img src="https://graph.facebook.com/' + value + '/picture?type=large" >';
 
 			// Add to DOM
-			result.html( infos );
+			result.html( infos + '<br>' + img );
 
 			ajax = null;
 		},

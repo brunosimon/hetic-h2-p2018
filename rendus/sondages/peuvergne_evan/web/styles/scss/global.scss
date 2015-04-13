@@ -1,0 +1,41 @@
+@import 'reset';
+@import 'config';
+@import 'layout';
+@import 'nav';
+@import 'modules';
+
+
+
+
+/* 
+	INTERFACE
+*/
+
+html, body{
+
+	width:100%;
+	height:100%;
+	font-size:13px;
+	font-family: Montserrat;
+
+}
+
+main{
+	
+	width:100%;
+	height:100%;
+	padding:4rem 0rem;
+
+}
+
+h1{
+	
+	font-family: Raleway;
+	font-weight:700;
+	font-size:3rem;
+	text-align:center;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	margin-bottom:5rem;
+
+}

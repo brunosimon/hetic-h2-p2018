@@ -1,0 +1,108 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: #cecece;
+}
+
+.visible{
+	display: block;
+	-webkit-animation: appear 400ms cubic-bezier(.66,.31,.56,1.38);
+	-moz-animation: appear 400ms cubic-bezier(.66,.31,.56,1.38);
+	-o-animation: appear 400ms cubic-bezier(.66,.31,.56,1.38);
+	animation: appear 400ms cubic-bezier(.66,.31,.56,1.38);
+}
+
+.hidden{
+	display: none;
+}
+
+.container{
+	float: left;
+}
+
+.sondage {
+	float: right;
+	max-width: 40%;
+}
+
+.sondage .description h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 42px;
+}
+
+.sondage .description p{
+	font-weight: 300;
+	font-style: italic;
+}
+
+.sondage .paysSondage{
+	margin-top: 50px;
+	border: 1px solid #000;
+	font-family: 'Lato', sans-serif;
+	padding: 5px;
+	background-color: #ddd;
+	border-radius: 15px;
+}
+
+.sondage .paysSondage h2{
+	text-align: center;
+	font-weight: 100;
+	font-size: 28px;
+}
+
+.sondage .paysSondage ul{
+	list-style: none;
+}
+
+.sondage .paysSondage ul li:nth-child(2n) span{
+	font-size: 32px;
+}
+
+.sondage .paysSondage ul li a{
+	text-decoration: none;
+	color: red;
+	margin-left: 25px;
+}
+
+.sondage .paysSondage ul li a:first-child{
+	color:green;
+}
+
+.sondage .paysSondage ul li img{
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+}
+
+.error{
+	color:red;
+	font-family: 'Lato',sans-serif;
+	font-weight: 400;
+}
+
+
+/* Webkit, Chrome and Safari */
+
+@-webkit-keyframes appear {
+	from{transform:scale(0,0);opacity: 0;}
+	to{transform:scale(1,1);opacity: 1;}
+}
+
+/* Mozilla Firefox 15 below */
+@-moz-keyframes appear {
+	from{transform:scale(0,0);opacity: 0;}
+	to{transform:scale(1,1);opacity: 1;}
+}
+
+/* Opera 12.0 */
+@-o-keyframes appear {
+	from{transform:scale(0,0);opacity: 0;}
+	to{transform:scale(1,1);opacity: 1;}
+}
+
+/* W3, Opera 12+, Firefox 16+ */
+@keyframes appear {
+	from{transform:scale(0,0);opacity: 0;}
+	to{transform:scale(1,1);opacity: 1;}
+}

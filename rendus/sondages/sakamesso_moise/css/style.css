@@ -1,0 +1,8 @@
+body{font-family: "helvetica"; margin: auto; text-align: center; }
+
+.divs{overflow:hidden; padding: 20px; background: #00A9B2; color: white; border-radius: 10px; margin-bottom: 10px; box-shadow:0 5px 2px rgba(0,0,0,0.43)}
+.div_end{overflow:hidden; background: silver;}
+a {color: white;}
+.wrapper{width:90vw; margin: auto;}
+.percent_girls, .percent_boys{margin: auto; overflow:hidden; width: 0%; padding: 30px; background: #00A9B2; color: white; border-radius: 10px; margin-bottom: 10px; box-shadow:0 5px 2px rgba(0,0,0,0.43)}
+}

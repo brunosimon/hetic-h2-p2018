@@ -1,0 +1,5 @@
+Options +FollowSymlinks -Indexes
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^[0-9]+$ /individual.php?id=$0 [L,QSA]

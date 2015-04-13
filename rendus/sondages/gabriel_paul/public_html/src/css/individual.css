@@ -1,0 +1,90 @@
+.return{
+
+	position:absolute;
+	top:0;
+	left:0;
+
+	padding:20px;
+
+	display:inline-block;
+
+	text-align:center;
+	color:white;
+
+	background-color:#E53935;
+
+	text-decoration:none;
+
+}
+
+.overview{
+	width:355px;
+	font-family: 'Roboto';
+	color:white;
+
+	text-align:left;
+	
+	background-color:#EF5350;
+
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.overview li {
+	font-size:22px;
+
+	margin-left:5px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.overview .scores {
+
+	padding-top:15px;
+	padding-bottom:15px;
+
+}
+
+.overview span {
+	float:right;
+	margin-right:25px;
+}
+
+.history{
+	font-family:'Roboto';
+	font-size:22px;
+	display:inline-block;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.present{
+	background-color: #EF5350;
+	padding-top:20px;
+	padding-bottom:20px; 
+	color:#FFF;
+}
+
+.history .entry {
+	
+	display:inline;
+	margin:10px 10px 10px 10px;
+	padding-left:10px;
+	padding-right:10px;
+	
+	color:#FFF;
+	background-color :rgba(244, 67, 54, 0.6);
+
+}
+.scores {
+	position:relative;
+}
+
+.entry {
+	padding-top:5px;
+	vertical-align:bottom;
+}
+
+.no_entry {
+	margin: 20px;
+}

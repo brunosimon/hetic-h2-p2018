@@ -1,0 +1,179 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;box-sizing:border-box}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {
+	font-family: 'Open Sans', Helvetica,Arial;
+	font-size: 16px;
+	background: #FFF;
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+a.result {
+	transition: all 0.5s;
+}
+
+a.result:hover {
+	color: #C82929;
+}
+
+.container {
+	width: 960px;
+	min-height: 380px;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 0 0 10px 0;
+	background: #00243D;
+	border-radius: 10px;
+}
+
+.error {
+	color: #D41E1E;
+	margin-bottom: 10px !important;
+}
+
+.header .menu {
+	text-align: center;
+}
+
+.header .menu li {
+	display: inline-block;
+	padding: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+.header .menu li.active {
+	background: #C82929;
+}
+
+.header .menu li:hover {
+	background: #C82929;
+	cursor: pointer;
+}
+
+.container .content {
+	margin: 40px 30px 40px 30px;
+}
+
+.container .last-polls {
+	margin: 10px 0 0 40px;
+	list-style: square;
+}
+
+.container .content p {
+	margin-bottom: 5px;
+}
+
+.container .content li {
+	margin-bottom: 10px;
+}
+
+.container .poll-container {
+	width: 500px;
+	margin-top: 30px;
+}
+
+.container .content h1 {
+	margin-bottom: 20px;
+	font-size: 45px;
+}
+
+.container .poll-container label {
+	display: block;
+	cursor: pointer;
+}
+
+.container .poll-container .more-button {
+	display: block;
+	width: 500px;
+	margin: 0 auto;
+	background: #125AD0;
+	color: #FFF;
+	border: none;
+	cursor: pointer;
+	padding: 5px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	outline: none;
+}
+
+.container .poll-container input:not([type=checkbox]):not([type=radio]){
+	height: 35px;
+	width: 500px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 600;
+	border: none;
+	color: #C82929;
+}
+
+
+.container .poll-container input[type=checkbox]{
+	width: 15px;
+	height: 15px;
+	margin-bottom: 5px;
+}
+
+.container .poll-container input[type=submit]{
+	display: block;
+	margin: 20px auto;	
+	width: 250px!important;
+	background: #C82929;
+	color: #FFF!important;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	cursor: pointer;
+	letter-spacing: 1px;
+	font-size: 20px!important;
+  	transition: -webkit-transform 0.2s;
+  	transition: 		transform 0.2s;
+  	outline: none;
+}
+
+.container .poll-container input[type=submit]:hover {
+	-webkit-transform: scale(1.2);
+	        transform: scale(1.2);
+}
+
+.poll-form-answering {
+	width: 800px;
+}
+
+.poll-form-answering label {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+.container .poll-container .poll-form-answering input[type=submit]{
+	display: inline-block;
+	margin-left: 35px;
+}
+
+.result-button {
+	margin: 20px auto;	
+	width: 250px!important;
+	background: #C82929;
+	color: #FFF!important;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	cursor: pointer;
+	letter-spacing: 1px;
+	font-size: 20px!important;
+  	transition: -webkit-transform 0.2s;
+  	transition: 		transform 0.2s;
+  	outline: none;
+  	border: none;
+  	float: right;
+}
+
+.result-button:hover {
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+}

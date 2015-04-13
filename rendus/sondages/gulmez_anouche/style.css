@@ -1,0 +1,333 @@
+html {
+	color 					: #FFFFFF;
+	background 				: url('img/bg.jpg') no-repeat right top fixed;
+	-webkit-background-size : cover;
+	   -moz-background-size : cover;
+		 -o-background-size : cover;
+			background-size : cover;
+}
+
+.blackboard {
+	width      : 100%;
+	height     : 100%;
+	position   : fixed;
+	top 	   : 0;
+	left 	   : 0;
+	background : rgba(0,0,0,0.7);
+	z-index    : -1;
+}
+
+a, a:link {
+	color 			: #FFFFFF;
+	text-decoration : none;
+	cursor 			: pointer;
+}
+	a:hover {
+		text-decoration : underline;
+}
+
+nav {
+	position   : fixed;
+	z-index    : 2;
+	bottom     : 0;
+	left 	   : 0;
+	width 	   : 100%;
+	background : rgba(0,0,183,1);
+	border-top : solid 2px rgba(80,0,183,1);
+	padding    : 0px;
+	font-size  : 0;
+}
+nav a {
+	padding 		   : 15px 25px;
+	margin 			   : 0;
+	font-size 		   : 20px;
+	display 		   : inline-block;
+	-webkit-transition : background .5s ease 0s;
+	   -moz-transition : background .5s ease 0s;
+		 -o-transition : background .5s ease 0s;
+			transition : background .5s ease 0s;
+}
+nav a:hover {
+	background 		: rgba(80,0,183,1);
+	text-decoration : none;
+}
+
+.container {
+	margin 		  : 2.5% 5%;
+	margin-bottom : 75px;
+}
+.container h1,
+.container h2 {
+	font-size     : 36pt;
+	font-weight   : bold;
+	margin-bottom : 50px;
+}
+.container h2 {
+	margin-top : 50px;
+}
+.container h3 {
+	margin-top 	  : 30px;
+	margin-bottom : 30px;
+	font-size     : 24pt;
+	font-weight   : bold;
+	margin-left   : 50px;
+}
+.container p {
+	margin-bottom : 12.5px;
+	font-size     : 13pt;
+	line-height   : 19.4pt;
+}
+.container ul {
+	list-style  : disc;
+	margin-left : 50px;
+	font-size   : 12pt;
+	line-height : 18pt;
+}
+.container form .elements {
+	border-style : solid;
+	border-color : #FFFFFF;
+	border-width : 0 0 0 2px;
+	padding-left : 25px;
+}
+.container form .elements p {
+	font-size   : 14pt;
+	font-weight : bold;
+}
+.container form .elements p label {
+	float 		: left;
+	width 		: 250px;
+	font-weight : bold;
+}
+.container form .elements p input {
+	width 	   : 250px;
+	text-align : center;
+}
+.container form .elements input {
+	border  : none;
+	padding : 5px 0;
+}
+.container form .elements span {
+	margin-left  : 12.5px;
+	color  		 : red;
+	font-variant : small-caps;
+}
+.container form p input[type="submit"],
+.container form p input[type="reset"] {
+	color 		: #000;
+	width 		: 100px;
+	margin-left : 425px;
+	margin-top  : 12.5px;
+	cursor 		: pointer;
+	font-size 	: 18pt;
+}
+.container .informations {
+	position: relative;
+	float 			: left;
+	width 			: 500px;
+	padding-left 	: 25px;
+	margin-right 	: 50px;
+	margin-bottom 	: 50px;
+	border-left 	: solid 2px #FFF;}
+	.container .informations:last-child{
+	margin-bottom : 100px;}
+	.container .informations h2 {
+		font-size 	: 16pt;
+		margin 		: 12.5px 0;}
+	.container .informations p {
+		font-size : 13pt;}
+		.container .informations p span {
+			float : left;
+			width : 200px;
+}
+.container .validate {
+	font-size 			: 13pt;
+	line-height 		: 19.5pt;
+	position 			: fixed;
+	top 				: 0;
+	right 				: 0;
+	width 				: 400px;
+	background  		: #000;
+	padding 			: 10px 25px;
+	box-sizing 			: border-box;
+	-webkit-transition  : all 1s ease 0s;
+	   -moz-transition  : all 1s ease 0s;
+		 -o-transition  : all 1s ease 0s;
+			transition  : all 1s ease 0s;
+}
+.container .user_result img {
+	float 		 : left;
+	margin-right : 25px;
+	width 		 : 100px;
+	height 		 : 100px;
+}
+
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+0000000000 QUESTIONNAIRES 0000000000000
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+
+.container .qcm {
+	border-style  : solid;
+	border-color  : #FFFFFF;
+	border-width  : 0 0 0 2px;
+	margin-bottom : 25px;
+	padding-left  : 25px;
+}
+.container .qcm:nth-child(2n) {
+	margin-left : 25px;
+}
+.container .qcm input[type="radio"] {
+	margin : 0 25px;
+}
+
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+0000000000000 ERROR 404 000000000000000
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+
+.container .quote {
+	margin-top 		: 50px;
+	margin-bottom 	: 50px;
+	margin-left 	: 50px;
+	width 			: 500px;
+	font-size 		: 13pt;}
+	.container .quote q {
+    display: block;
+}
+
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+ AFFICHAGE DU CHOIX DES QUESTIONNAIRES
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+
+.block {
+	width 		   : 350px;
+	position 	   : relative;
+	border 		   : solid 1px #000;
+	padding-bottom : 25px;
+	float 		   : left;
+	margin 		   : 0px 25px 25px 0px;
+}
+.block:last-child {
+	margin-bottom : 100px;
+}
+.block img {
+	width  : 100%;
+	height : 200px;
+}
+.block .content {
+	margin : 25px 25px 0 25px;
+}
+.block .content h3 {
+	font-size : 18pt;
+	margin    : 0;
+}
+.block .content p {
+	font-size : 13pt;
+}
+.block p label {
+	width : 120px;
+	float : left;
+}
+.block .content a,
+.block .content a:link {
+	float 	  : right;
+	font-size : 13pt;
+}
+
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+00000000000 NOTIFICATIONS 0000000000000
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+
+.notifications {
+	position 		: fixed;
+	right 			: 20px;
+	top 			: 20px;
+	width 			: 500px;
+	border-radius 	: 6px;
+	font 			: normal 12px HelveticaNeue Helvetica Arial sans-serif;
+	color 			: #000;
+	z-index 		: 1;
+	background 		: #fff;
+	box-shadow 		: 0px 4px 30px rgba(0,0,0,0.5);
+	background 		: -moz-linear-gradient(top, #ffffff 0%, #dbdbdb 100%); /* FF3.6+ */
+	background 		: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dbdbdb)); /* Chrome,Safari4+ */
+	background 		: -webkit-linear-gradient(top, #ffffff 0%,#dbdbdb 100%); /* Chrome10+,Safari5.1+ */
+	background 		: -o-linear-gradient(top, #ffffff 0%,#dbdbdb 100%); /* Opera 11.10+ */
+	background 		: -ms-linear-gradient(top, #ffffff 0%,#dbdbdb 100%); /* IE10+ */
+	background 		: linear-gradient(to bottom, #ffffff 0%,#dbdbdb 100%); /* W3C */
+}
+ .notifications_qcm {
+position 		: fixed;
+right 			: 20px;
+top 			: 20px;
+width 			: 250px;
+border-radius 	: 6px;
+font 			: normal 12px HelveticaNeue Helvetica Arial sans-serif;
+color 			: #000;
+z-index 		: 1;
+background 		: #fff;
+box-shadow 		: 0px 4px 30px rgba(0,0,0,0.5);
+background 		: -moz-linear-gradient(top, #ffffff 0%, #dbdbdb 100%); /* FF3.6+ */
+background 		: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dbdbdb)); /* Chrome,Safari4+ */
+background 		: -webkit-linear-gradient(top, #ffffff 0%,#dbdbdb 100%); /* Chrome10+,Safari5.1+ */
+background 		: -o-linear-gradient(top, #ffffff 0%,#dbdbdb 100%); /* Opera 11.10+ */
+background 		: -ms-linear-gradient(top, #ffffff 0%,#dbdbdb 100%); /* IE10+ */
+background 		: linear-gradient(to bottom, #ffffff 0%,#dbdbdb 100%); /* W3C */
+}
+.notifications .notification,
+.notifications_qcm .notification {
+position 		: relative;
+cursor 			: pointer;
+border-bottom 	: solid 1px #C1C1C1;
+box-shadow 		: 0px 1px 0px #ffffff;
+padding 		: 0 25px;}
+.notifications .notification:last-child,
+.notifications_qcm .notification:last-child {
+	border-bottom 	: none;
+	box-shadow 		: 0px 0px 0px transparent;
+}
+.notifications .notification h2,
+.notifications_qcm .notification h2 {
+font-size 		: 14pt;
+font-weight 	: bold;
+margin 			: 0;
+padding 		: 10px 0;
+}
+.notifications .notification p,
+.notifications_qcm .notification p {
+margin 			: 0;
+padding 		: 0;
+padding-bottom 	: 10px;
+}
+
+.notifications .notification .left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 40px;
+	padding: 0 10px;
+	border-right: solid 1px rgba(0,0,0,0.2);
+}
+
+.notifications .notification .left .icon {
+	font-family: "Entypo";
+	font-size : 40px;
+	text-shadow : 0px 1px 0px #FFFFFF;
+	margin-top: 10px;
+	margin-left: -5px;
+	text-align : center;
+}
+
+.notifications .notification .left .img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-position: 50% 50%;
+	background-size: auto 100%;
+	box-shadow : rgba(0,0,0,0.4) -1px 0px 16px inset;
+}
+
+.notifications .notification .right {
+	margin-left: 80px;
+}

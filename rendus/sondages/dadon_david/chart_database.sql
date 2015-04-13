@@ -1,0 +1,216 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Client :  127.0.0.1
+-- Généré le :  Dim 29 Mars 2015 à 22:13
+-- Version du serveur :  5.6.17
+-- Version de PHP :  5.5.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de données :  `chart_database`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `googlechart`
+--
+
+CREATE TABLE IF NOT EXISTS `googlechart` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `vote` text CHARACTER SET utf8 NOT NULL,
+  `sex` text CHARACTER SET utf8 NOT NULL,
+  `city` text CHARACTER SET utf8 NOT NULL,
+  `age` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=170 ;
+
+--
+-- Contenu de la table `googlechart`
+--
+
+INSERT INTO `googlechart` (`id`, `date`, `vote`, `sex`, `city`, `age`) VALUES
+(1, '2015-03-28', 'Obama', 'Male', 'Paris', 22),
+(2, '2015-03-28', 'Obama', 'Male', 'Paris', 48),
+(3, '2015-03-29', 'Romney', 'Female', 'Marseille', 29),
+(4, '2015-03-29', 'Obama', 'Female', 'Pau', 29),
+(5, '2015-03-29', 'Obama', 'Female', 'Paris', 18),
+(6, '2015-03-29', 'Romney', 'Male', 'Lille', 62),
+(7, '2015-03-29', 'Romney', 'Male', 'Lille', 62),
+(8, '2015-03-29', 'Romney', 'Male', 'Lille', 62),
+(9, '2015-03-29', 'Romney', 'Male', 'Lille', 62),
+(10, '2015-03-29', 'Romney', 'Male', 'Lille', 62),
+(11, '2015-03-29', 'Romney', 'Male', 'Lille', 62),
+(12, '2015-03-29', 'Romney', 'Male', 'Lille', 62),
+(13, '2015-03-29', 'Romney', 'Male', 'Lille', 62),
+(14, '2015-03-29', 'Romney', 'Male', 'Lille', 62),
+(15, '2015-03-29', 'Romney', 'Male', 'Lille', 62),
+(16, '2015-03-29', 'Obama', 'Male', 'Paris', 20),
+(17, '2015-03-29', 'Obama', 'Male', 'Paris', 20),
+(18, '2015-03-29', 'Obama', 'Male', 'Paris', 20),
+(19, '2015-03-29', 'Obama', 'Male', 'Paris', 20),
+(20, '2015-03-29', 'Romney', 'Male', 'Paris', 20),
+(21, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(22, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(23, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(24, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(25, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(26, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(27, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(28, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(29, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(30, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(31, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(32, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(33, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(34, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(35, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(36, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(37, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(38, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(39, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(40, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(41, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(42, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(43, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(44, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(45, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(46, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(47, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(48, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(49, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(50, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(51, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(52, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(53, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(54, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(55, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(56, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(57, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(58, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(59, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(60, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(61, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(62, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(63, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(64, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(65, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(66, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(67, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(68, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(69, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(70, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(71, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(72, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(73, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(74, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(75, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(76, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(77, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(78, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(79, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(80, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(81, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(82, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(83, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(84, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(85, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(86, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(87, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(88, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(89, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(90, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(91, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(92, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(93, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(94, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(95, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(96, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(97, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(98, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(99, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(100, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(101, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(102, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(103, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(104, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(105, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(106, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(107, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(108, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(109, '2015-03-29', 'Obama', 'Male', 'Paris', 34),
+(110, '2015-03-29', 'Obama', 'Female', 'Nancy', 54),
+(111, '2015-03-29', 'Obama', 'Female', 'Nancy', 54),
+(112, '2015-03-29', 'Obama', 'Female', 'Nancy', 54),
+(113, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(114, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(115, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(116, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(117, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(118, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(119, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(120, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(121, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(122, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(123, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(124, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(125, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(126, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(127, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(128, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(129, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(130, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(131, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(132, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(133, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(134, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(135, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(136, '2015-03-29', 'Romney', 'Female', 'Paris', 20),
+(137, '2015-03-29', 'Romney', 'Male', 'Paris', 20),
+(138, '2015-03-29', 'Romney', 'Male', 'Paris', 20),
+(139, '2015-03-29', 'Romney', 'Male', 'Paris', 20),
+(140, '2015-03-29', 'Romney', 'Male', 'Paris', 20),
+(141, '2015-03-29', 'Romney', 'Male', 'Paris', 20),
+(142, '2015-03-29', 'Romney', 'Male', 'Nancy', 20),
+(143, '2015-03-29', 'Romney', 'Male', 'Nancy', 20),
+(144, '2015-03-29', 'Romney', 'Male', 'Nancy', 20),
+(145, '2015-03-29', 'Romney', 'Male', 'Nancy', 20),
+(146, '2015-03-29', 'Romney', 'Female', 'Nancy', 20),
+(147, '2015-03-29', 'Obama', 'Female', 'Nancy', 20),
+(148, '2015-03-29', 'Obama', 'Female', 'Nancy', 20),
+(149, '2015-03-29', 'Obama', 'Female', 'Nancy', 20),
+(150, '2015-03-29', 'Obama', 'Female', 'Nancy', 20),
+(151, '2015-03-29', 'Obama', 'Female', 'Nancy', 20),
+(152, '2015-03-29', 'Obama', 'Female', 'Nancy', 20),
+(153, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(154, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(155, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(156, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(157, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(158, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(159, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(160, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(161, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(162, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(163, '2015-03-29', 'Obama', 'Female', 'Paris', 20),
+(164, '2015-03-29', 'Romney', 'Male', 'Marseille', 20),
+(165, '2015-03-29', 'Romney', 'Male', 'Marseille', 20),
+(166, '2015-03-29', 'Romney', 'Male', 'Marseille', 20),
+(167, '2015-03-29', 'Romney', 'Male', 'Marseille', 20),
+(168, '2015-03-29', 'Romney', 'Male', 'Marseille', 20),
+(169, '2015-03-29', 'Romney', 'Male', 'Marseille', 20);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

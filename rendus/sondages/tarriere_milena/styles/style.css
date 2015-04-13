@@ -1,0 +1,76 @@
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #F0F0F0;
+}
+
+#header {
+	width: 100%;
+	height: 70px;
+	background-color: #293540;
+
+}
+
+#title {
+	padding-top: 20px;
+	font-size: 30px;
+	font-family: Helvetica, serif;
+	color: #79BDE0;
+	text-align: center;
+}
+
+.serie {
+	display: inline-block;
+	width: 19%;
+	padding: 0 2%;
+}
+
+.show_name{
+	font-family: Helvetica, serif;
+	color: #79BDE0; 	
+}
+
+img {
+	
+}
+
+#container{
+	margin: 30px auto;
+	width: 960px;
+}
+
+a{
+
+	text-decoration: none;
+	color: #FC4349;
+	font-family: Helvetica, serif;
+}
+
+h2 a img{
+	font-weight: bold;
+}
+
+.pages {
+	font-size: 20px;
+}
+.show_name, .people, .voting, .pages, .results {
+	font-family: Helvetica, serif;
+	font-weight: bold;
+}
+
+.show_name {
+	font-size: 20px;
+}
+
+.results {
+	padding-top: 20px;
+	color: #FC4349;
+}
+
+.people, .voting {
+	font-size: 14px;
+}
+
+#footer, .results {
+	text-align: center;
+}

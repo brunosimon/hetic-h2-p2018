@@ -1,0 +1,163 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,300,700,800);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Bree Serif', serif;
+}
+
+.container  {
+  letter-spacing: -0.25em;
+  width: 100%;
+}
+
+header {
+  height: 90px;
+  border-bottom: 1px solid #363636;
+}
+header h1 {
+  line-height: 90px;
+  color: #303030;
+  margin-left: 20px;
+  font-size: 26px;
+  letter-spacing: 3px;
+  display: inline-block;
+  float: left;
+}
+header ul {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 90px;
+  float: left;
+  margin-left: 20px;
+}
+header ul li {
+  display: inline-block;
+}
+header ul li a {
+  margin-left: 20px;
+  color: #434343;
+  font-weight: 600;
+  text-decoration: none;
+}
+header h5 {
+  display: inline-block;
+  float: right;
+  line-height: 90px;
+  margin-right: 20px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+header h5 span {
+  color: #F22E33;
+}
+
+article {
+  letter-spacing: normal;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: calc(100% / 4);
+  height: 220px;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  position: relative;
+}
+article .over {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+article h2 {
+  color: #F2F2F2;
+  z-index: 100;
+  font-size: 22px;
+  letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  position: relative;
+}
+article span {
+  color: #4FFF9E;
+  font-size: 42px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  position: relative;
+  z-index: 100;
+  margin-top: 40px;
+  font-family: 'Bree Serif', serif;
+}
+article:hover span:after {
+  content: ' + 1';
+  color: rgba(79, 255, 158, 0.5);
+}
+article.ranked:hover span:after {
+  display: none;
+}
+
+/*# sourceMappingURL=app.css.map */

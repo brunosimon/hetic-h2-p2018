@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Segoeuil;
+    src: url(./segoeuil.ttf);
+}
+
+.container{
+font-family: Segoeuil;
+position:absolute;
+width:1220px;
+height:800px;
+text-align:center;
+top:50%;
+margin-top : -400px;
+left:50%;
+margin-left: -610px;
+}
+.chart{
+width:400px;
+height:250px;
+border : 1px solid #EEEEEE;
+float:left;
+}

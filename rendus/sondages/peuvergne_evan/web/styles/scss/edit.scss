@@ -1,0 +1,205 @@
+@import 'config';
+
+
+
+/* 
+	CONTROLS
+*/
+
+
+.controls{
+
+	margin-bottom:8rem;
+
+}
+
+
+
+/* 
+	ISSUE
+*/
+
+.issue{
+
+	width:100%;
+	position:relative;
+	margin-bottom:15rem;
+
+	h2{
+		
+		width:80%;
+		margin:auto;
+		font-size:2rem;
+		text-transform: uppercase;
+		margin-bottom:3rem;
+
+	}
+
+	h3{
+		
+		text-transform: uppercase;
+		font-family:Raleway;
+		font-size:1rem;
+		font-weight:400;
+		margin-bottom:1rem;
+
+	}
+
+	&:after{
+
+		display: block;
+		content:'';
+		width:40%;
+		position:absolute;
+		bottom:-9rem;
+		left:30%;
+		height:2px;
+		background-color:$dark;
+
+	}
+
+	&:last-child:after{
+
+		display: none;
+
+	}
+
+}
+
+
+
+
+/* 
+	PROPOSALS
+*/
+
+
+.proposals{
+
+	.f-col{
+		
+		display: flex;
+		flex-direction:column;
+		position:relative;
+		margin-right:20px;
+		padding:0;
+		background-size:cover;
+		background-position:center;
+
+		&:last-child{
+
+			margin-right:0;
+
+		}
+
+		h4{
+			
+			flex:1;
+			text-transform: uppercase;
+			font-size:2rem;
+			color:darken($dark, 50%);
+			padding:4rem 0;
+			background-color:rgba($blanc, 0.5);
+
+		}
+
+	}
+
+	.btn{
+		
+		width:5rem;
+		font-size:0.8rem;
+		padding:1.3rem 1.5rem;
+
+	}
+
+}
+
+
+
+
+/* 
+	NEW ISSUE
+*/
+
+.new-issue{
+	
+	width:100%;
+	margin-bottom:5rem;
+
+	h2{
+		
+		text-align:left;
+		font-size:1.3rem;
+		text-transform: uppercase;
+
+	}
+
+	h3{
+		
+		text-align:left;
+		text-transform: uppercase;
+		margin-bottom:2rem;
+
+		a{
+
+			margin-left:1rem;
+			font-size:0.8rem;
+			text-transform: none;
+			text-decoration: none;
+			color:$opposite;
+			transition:all 0.3s ease;
+
+			&:hover{
+
+				color:darken($opposite, 20%);
+
+			}
+
+		}
+
+	}
+	
+	.new-proposals{
+
+		width:100%;
+
+	}
+
+	.proposal{
+
+		.proposal-number{
+
+			padding-top:3rem;
+
+			span{
+
+				display: block;
+				width:2rem;
+				height:2rem;
+				background-color:$opposite;
+				border-radius:1rem;
+				color:$blanc;
+				padding:0.5rem 0;
+				text-align:center;
+
+			}
+
+		}
+
+	}
+
+	.form{
+
+		margin-top:3rem;
+		margin-bottom:3rem;
+
+	}
+
+	.btn{
+
+		margin-top:3rem;
+
+	}
+
+}

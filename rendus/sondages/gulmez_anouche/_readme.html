@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Readme</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="blackboard"></div>
+	<div class="container">
+		<h1>Readme File</h1>
+
+		<h3>Informations pratiques</h3>
+
+		<ul>
+			<li>Un compte administrateur est créé de base et occupe la permière entrée de la table "users"</li>
+			<ul>
+				<li>Pseudo : admin</li>
+				<li>Password : admin</li>
+			</ul>
+		</ul>
+
+		<h3>Actions possibles</h3>
+
+		<ul>
+			<li>Connexion et inscription</li>
+			<li>Remplir le questionnaire si connecté</li>
+			<li>Voir la liste des membres si administrateur</li>
+			<li>Consulter son compte et changer son mot de passe</li>
+		</ul>
+
+		<h3>Problèmes éventuels</h3>
+
+		<ul>
+			<li>Dans la table users, la ligne 1 est celle de l’administrateur, je n’ai pas réussi faire une selection sur ma table si le rang est différent de la valeur "admin" donc je fais une selection sur toutes mes lignes d’id supérieur à la première ligne</li>
+			<li>Le style css n'est plus pris en compte quand on met un "/" à la fin de l'url. Par exemple : ./sign/</li>
+		</ul>
+
+		<h3>Quelques explications</h3>
+
+		<ul>
+			<li>Chemin suivi lors de la connexion</li>
+			<ul>
+				<li>redirection automatique sur la page d’administrateur</li>
+				<li>si on est pas au rang d’admin alors on sera redirigé sur la page de compte.</li>
+			</ul>
+			<li>Si on est déjà connecté et qu’on tente d’accéder à la page de connexion/inscription, on est redirigé sur la page de compte</li>
+		</ul>
+	</div>
+</body>
+</html>
