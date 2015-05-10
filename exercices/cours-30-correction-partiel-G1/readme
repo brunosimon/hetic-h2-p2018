@@ -1,0 +1,18 @@
+Bonjour,
+J'ai créé une page unique listant les dépenses
+
+Features :
+ - Orienté objet
+ - Front avec bootstrap
+ - Gestion d'erreurs
+ - Statistiques
+ - ..
+
+Problèmes rencontrés :
+ - Erreur à l'ajout
+ - Cross domain error (cf console)
+ - ...
+
+Instruction :
+ - Dans config, changer la constante URL
+ 

@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>TRIM 3 - Cours 34 - Silex Templating</title>
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Bruno Simon">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="../tools/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="../tools/reveal.js/css/theme/default-orange.css" id="theme">
+        <!-- <link rel="stylesheet" href="../tools/reveal.js/lib/css/zenburn.css"> -->
+        <link rel="stylesheet" href="../tools/reveal.js/lib/css/github.css">
+        <script>
+            document.write( '<link rel="stylesheet" href="../tools/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+        <!--[if lt IE 9]>
+            <script src="../tools/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+            span.highlight {display:inline-block;padding:0 6px;border:1px solid #FF8F00;}
+            p {margin-bottom:0.6em !important;}
+            li{margin-bottom:0.6em !important;}
+            ul.checked-list li {list-style-type:none;}
+            .default{text-transform:none !important;}
+            img.no-style {border:none !important;background:none !important;-webkit-box-shadow:none !important;-moz-box-shadow:none !important;box-shadow:none !important;}
+            table.visible {border:1px solid #fff;width:100%;}
+            table.visible td,table.visible th {border:1px solid #fff;margin:0;padding:10px 20px;text-align:center;color:#fff;}
+            table.visible td {color:#aaa;}
+            u {border-bottom:0.13em solid #FF8F00 !important;text-decoration:none;}
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div id="pagination"></div>
+            <div class="slides">
+                <section>
+                    <h3>H2 - P2018</h3>
+                    <h1>Développement web</h1>
+                    <h3>Cours 34 - 2015-05-04</h3>
+                    <p>github : <a target="_blank" href="https://github.com/brunosimon/hetic-p2018">https://github.com/brunosimon/hetic-p2018</a></p>
+                    <p>site : <a target="_blank" href="http://bruno-simon.com/hetic/p2018/">http://bruno-simon.com/hetic/p2018/</a></p>
+                    <p>contact : <a target="_blank" mailto="bruno.simon@hetic.net">bruno.simon@hetic.net</a> - <a target="_blank" href="https://twitter.com/bruno_simon">@bruno_simon</a></p>
+                </section>
+
+                <section>
+                    <h1>Silex</h1>
+                    <h2>Templating</h2>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Actuellement, les contenus sont renvoyés dans le <span class="highlight">return</span> des fonctions alors qu'on aimerait avoir de vraies pages HTML</li>
+                        <li>Nous allons utiliser un moteur de templating</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Jusqu'à présent, pour rajouter du contenu PHP dans une page, il fallait ouvrir et fermer PHP (<span class="highlight">&lt;?php ?&gt;</span>) puis faire un echo de la variable.<br>De même pour les boucles</li>
+                        <li>PHP est un language de templating, mais il est loin d'être parfait et la page devient rapidement confuse</li>
+                        <li>C'est pourquoi il existe des moteurs de templating (template engine) dédiés à cette tâche</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p><a href="http://en.wikipedia.org/wiki/Comparison_of_web_template_engines" target="_blank">Liste de moteurs de templating</a></p>
+                    <p>Puisque Silex est conçu pour fonctionner facilement avec Twig, nous allons utiliser ce dernier : <a href="http://twig.sensiolabs.org/" target="_blank">http://twig.sensiolabs.org/</a></p>
+                </section>
+
+                <section>
+                    <p>La première chose à faire est de configurer son éditeur de code pour qu'il supporte la syntaxe de Twig</p>
+                </section>
+
+                <section>
+                    <p>Sur Sublime Text</p>
+                    <ul>
+                        <li>Si ce n'est pas déjà fait, installez <a href="https://sublime.wbond.net/installation" target="_blank">Package Control</a></li>
+                        <li>Ouvrez le panneau de commandes<br>(<span class="highlight">CMD + SHIFT + P</span> ou <span class="highlight">CTRL + SHIFT + P</span>)</li>
+                        <li>Tapez "<span class="highlight">Install Package</span>"</li>
+                        <li>Faites <span class="highlight">ENTRER</span></li>
+                        <li>Tapez "<span class="highlight">Twig</span>"</li>
+                        <li>Faites <span class="highlight">ENTRER</span></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p><img src="src/img/screen-sublime-twig-1.png" alt=""></p>
+                    <p><img src="src/img/screen-sublime-twig-2.png" alt=""></p>
+                </section>
+
+                <section>
+                    <p>Il faut ensuite rajouter le service Twig à Silex</p>
+                    <ul>
+                        <li>Allez dans <span class="highlight">index.php</span></li>
+                        <li>Rajoutez le code suivant juste avant les routes</li>
+                        <li>Créez un dossier <span class="highlight">views</span> à côté de <span class="highlight">index.php</span></li>
+                    </ul>
+                    <pre><code contenteditable data-trim class="php">
+// Twig
+$app->register(new Silex\Provider\TwigServiceProvider(), array(
+    'twig.path' => __DIR__.'/views',
+));
+                    </code></pre>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>La méthode <span class="highlight">->register()</span> permet de rajouter un service à Silex</li>
+                        <li>Le premier paramètre est une <span class="highlight">instance de ce service</span></li>
+                        <li>
+                            Le second paramètre correspond aux <span class="highlight">éventuelles options</span>
+                            <ul>
+                                <li>Il s'agit d'un tableau associatif</li>
+                                <li>Il faut se référer à la documentation de chaque service pour savoir quoi mettre</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>Nous venons de rajouter Twig à Silex et nous avons créé un dossier qui va contenir nos <span class="highlight">vues</span> (ou <span class="highlight">HTMLs</span>, ou <span class="highlight">templates</span>)</p>
+                    <p>Il faut maintenant créer ces vues et indiquer aux routes de les utiliser</p>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Créez un fichier <span class="highlight">example.twig</span> dans le dossier <span class="highlight">views</span></li>
+                        <li>
+                            Ajoutez-y le code suivant
+                            <pre><code contenteditable data-trim class="php">
+Value : {{value}}
+                            </code></pre>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>
+                            Dans index.php, rajoutez ou remplacez la route pour la home par
+                            <pre><code contenteditable data-trim class="php">
+$app->get('/',function()
+{
+    global $app;
+
+    $data = array(
+        'value' => 'Toto'
+    );
+
+    return $app['twig']->render('example.twig',$data);
+});
+                            </code></pre>
+                        </li>
+                        <li>Rendez-vous sur la home du site</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>Dans index.php</p>
+                    <ul>
+                        <li>Nous avons utilisé <span class="highlight">global</span> pour récupérer <span class="highlight">$app</span> dans la fonction</li>
+                        <li>Nous avons créé un tableau associatif</li>
+                        <li>
+                            Nous avons appelé la méthode <span class="highlight">->render()</span> sur <span class="highlight">$app['twig']</span>
+                            <ul>
+                                <li>Le premier paramètre correspond au chemin de la vue</li>
+                                <li>Le second paramètre correspond aux données</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>Dans example.twig</p>
+                    <ul>
+                        <li><span class="highlight">{{</span><span class="highlight">}}</span> permet d'afficher le contenu d'une variable</li>
+                        <li>C'est l'équivalent d'un <span class="highlight">echo</span></li>
+                        <li>Le nom de la variable correspond à la clé dans le tableau <span class="highlight">$data</span></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>Alternative au <span class="highlight">global</span></p>
+                    <pre><code contenteditable data-trim class="php">
+$app->get('/',function() use ($app)
+{
+    /* ... */
+});
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Quelques exemples d'utilisation de Twig</p>
+                    <p>(Pour aller plus loin, utilisez la <a href="http://twig.sensiolabs.org/documentation" target="_blank">documentation Twig</a>)</p>
+                </section>
+
+                <section>
+                    <h2>echo</h2>
+                </section>
+
+                <section>
+                    <p>Faire un echo d'une variable et d'un tableau indexé</p>
+                    <p>index.php</p>
+                    <pre><code contenteditable data-trim class="php">
+$data = array(
+    'value' => 'Toto',
+    'lorem' => array(
+        'foo' => 'bar'
+    )
+);
+return $app['twig']->render('example.twig',$data);
+                    </code></pre>
+                    <p>example.twig</p>
+                    <pre><code contenteditable data-trim class="">
+{{value}}
+&lt;br&gt;{{lorem.foo}}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>filters</h2>
+                </section>
+
+                <section>
+                    <p>Il est possible d'appliquer des filtres</p>
+                    <p>index.php</p>
+                    <pre><code contenteditable data-trim class="php">
+$data = array(
+    'value' => '    Toto'
+);
+return $app['twig']->render('example.twig',$data);
+                    </code></pre>
+                    <p>example.twig</p>
+                    <pre><code contenteditable data-trim class="">
+{{value|trim}}
+<br>{{value|upper}}
+<br>{{value|replace('O','A')|reverse}}
+<br>{{value|reverse}}
+<br>{{value|trim|upper|replace('O','A')|reverse}}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Les filtres sont séparés par des pipes <span class="highlight">|</span> et appliqués dans l'ordre de gauche à droite</li>
+                        <li>La liste des filtres est disponible dans la <a href="http://twig.sensiolabs.org/documentation">documention Twig</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Conditions</h2>
+                </section>
+
+                <section>
+                    <p>Il est possible d'utiliser des conditions (<span class="fragment">if</span>)</p>
+                    <p>index.php</p>
+                    <pre><code contenteditable data-trim class="php">
+$data = array(
+    'value' => false
+);
+return $app['twig']->render('example.twig',$data);
+                    </code></pre>
+                    <p>example.twig</p>
+                    <pre><code contenteditable data-trim class="">
+{% if value %}
+    Vrai !
+{% else %}
+    Faux !
+{% endif %}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Pour un if et tout ce qui n'implique pas de faire un echo, nous n'utilisons pas la double accolade mais <span class="highlight">{%&nbsp;</span> if ... <span class="highlight">&nbsp;%}</span></p>
+                </section>
+
+                <section>
+                    <h2>Boucler</h2>
+                </section>
+
+                <section>
+                    <p>Il est possible de boucler sur un tableau (<span class="fragment">foreach</span>)</p>
+                    <p>index.php</p>
+                    <pre><code contenteditable data-trim class="php">
+$data = array(
+    'values' => array(
+        'key1' => 'a',
+        'key2' => 'b',
+        'key3' => 'c',
+        'key4' => 'd',
+        'key5' => 'e',
+    )
+);
+return $app['twig']->render('example.twig',$data);
+                    </code></pre>
+                    <p>example.twig</p>
+                    <pre><code contenteditable data-trim class="">
+{% for item in values %}
+    <br>{{item}}
+{% endfor %}
+                    </code></pre>
+                </section>
+
+
+                <section>
+                    <p>En gardant les clés</p>
+                    <p>example.twig</p>
+                    <pre><code contenteditable data-trim class="">
+{% for key, item in values %}
+    <br>{{key}} = {{item}}
+{% endfor %}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Tout comme il est possible de faire un <span class="highlight">for</span> classique</p>
+                    <p>example.twig</p>
+                    <pre><code contenteditable data-trim class="">
+{% for i in range(0,3) %}
+    {{i}}
+{% endfor %}
+                    </code></pre>
+                    <pre><code contenteditable data-trim class="">
+{% for i in range(low = 2, high = 10, step = 2) %}
+    {{i}}
+{% endfor %}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Set</h2>
+                </section>
+
+                <section>
+                    <p>Il est possible de définir une variable</p>
+                    <p>example.twig</p>
+                    <pre><code contenteditable data-trim class="">
+{% set foo = 'bar' %}
+{{foo}}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Fichiers sources (CSS, JS, Images, ...)</h2>
+                </section>
+
+                <section>
+                    <p>Si vous souhaitez faire un lien vers un fichier, il est nécessaire de l'écrire en absolu</p>
+                    <p>Vous pouvez récupérer l'URL du site de cette manière</p>
+                    <pre><code contenteditable data-trim class="html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;{{app.request.basepath}}/src/css/style.css&quot;&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Include</h2>
+                </section>
+
+                <section id="include">
+                    <p>Il est possible d'inclure d'autres templates Twig</p>
+                    <p>example.twig</p>
+                    <pre><code contenteditable data-trim class="html">
+{{include('partials/header.twig',{title:'example'})}}
+{{include('partials/footer.twig')}}
+                    </code></pre>
+                    <p>partials/header.twig</p>
+                    <pre><code contenteditable data-trim class="html">
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;{{title}}&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;src/css/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+                    </code></pre>
+                    <p>partials/footer.twig</p>
+                    <pre><code contenteditable data-trim class="html">
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Extends / Block</h2>
+                </section>
+
+                <section>
+                    <p>Enfin, Twig propose des systèmes d'<a href="http://twig.sensiolabs.org/doc/tags/extends.html" target="_blank">extends</a> et de <a href="http://twig.sensiolabs.org/doc/tags/extends.html" target="_blank">blocks</a> qui font la force du moteur</p>
+                    <ul>
+                        <li><a href="http://twig.sensiolabs.org/doc/tags/extends.html" target="_blank">Extends</a> permet à un template d'hériter d'un autre template</li>
+                        <li><a href="http://twig.sensiolabs.org/doc/tags/extends.html" target="_blank">Block</a> permet de définir un morceau du template hérité qui pourra être écrasé par l'hériteur</li>
+                    </ul>
+                    <p>Idéal pour définir un layout</p>
+                </section>
+
+                <section>
+                    <p>Il existe encore d'autres fonctionnalités qu'il est possible de retrouver dans le <a href="http://twig.sensiolabs.org/documentation">documentation</a></p>
+                </section>
+
+                <!-- <section>
+                    <ul>
+                        <li>Créez les différents templates</li>
+                        <li>Créez les fichiers header.twig et footer.twig dans un dossier "inc" comme dans l'<a href="#include">exemple des includes</a> et remplissez-les</li>
+                        <li>Dans header.twig, mettez un &lt;title&gt; dynamique et renseignez-le dans les différentes routes</li>
+                        <li>Modifiez index.php de manière à utiliser ces templates</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>Le fichier index.php devrait ressembler à quelque chose comme ça</p>
+                    <pre><code contenteditable data-trim class="php">
+&lt;?php
+
+require_once __DIR__.&#039;/../vendor/autoload.php&#039;;
+
+$app = new Silex\Application();
+
+// Twig
+$app-&gt;register(new Silex\Provider\TwigServiceProvider(), array(
+    &#039;twig.path&#039; =&gt; __DIR__.&#039;/views&#039;,
+));
+
+// Home
+$app-&gt;get(&#039;/&#039;,function(Silex\Application $app)
+{
+    $data = array(
+        &#039;title&#039; =&gt; &#039;Home&#039;
+    );
+    return $app[&#039;twig&#039;]-&gt;render(&#039;home.twig&#039;,$data);
+});
+
+// Pages
+$app-&gt;get(&#039;page/{page}&#039;,function(Silex\Application $app, $page)
+{
+    $data = array(
+        &#039;title&#039; =&gt; &#039;Page &#039;.$page,
+        &#039;page&#039;  =&gt; $page
+    );
+    return $app[&#039;twig&#039;]-&gt;render(&#039;page.twig&#039;,$data);
+})
+-&gt;assert(&#039;page&#039;,&#039;\d+&#039;); // Number
+
+// Categories
+$app-&gt;get(&#039;category/{category}&#039;,function(Silex\Application $app, $category)
+{
+    $data = array(
+        &#039;title&#039;    =&gt; &#039;Category : &#039;.$category,
+        &#039;category&#039; =&gt; $category
+    );
+    return $app[&#039;twig&#039;]-&gt;render(&#039;category.twig&#039;,$data);
+})
+-&gt;assert(&#039;category&#039;,&#039;[a-z0-9-]+&#039;); // Slug
+
+$app-&gt;run();
+
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>La structure de fichiers à l'intérieur du dossier web devrait ressembler à ça</p>
+                    <pre><code contenteditable data-trim class="php">
+├── .htaccess
+├── index.php
+└── views/
+    └── home.twig
+    └── page.twig
+    └── category.twig
+    └── inc/
+        └── header.twig
+        └── footer.twig
+                    </code></pre>
+                </section> -->
+
+                <section>
+                    <p>Nous allons avoir besoin de créer des liens entre les différentes pages</p>
+                    <p>Nous pourrions écrire le lien en brut mais nous allons plutôt utiliser un Service adapté</p>
+                    <p><a href="http://silex.sensiolabs.org/doc/providers/url_generator.html" target="_blank">UrlGeneratorServiceProvider</a></p>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>
+                            Rajoutez le service dans index.php (comme pour Twig)
+                            <pre><code contenteditable data-trim class="php">
+// Url Generator
+$app->register(new Silex\Provider\UrlGeneratorServiceProvider());
+                            </code></pre>
+                        </li>
+                        <li>
+                            Appliquez la méthode bind() sur chacune des vues pour leur donner des identifiants (noms)
+                            <pre><code contenteditable data-trim class="php">
+/* ... */
+->bind('home');
+
+/* ... */
+->bind('page');
+
+/* ... */
+->bind('category');
+                            </code></pre>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>URL Generator fonctionne parfaitement avec Twig</p>
+                    <p>Les fonctions sont <a href="">url()</a> (pour une URL absolue) et <a href="">path()</a> (pour un chemin relatif)</p>
+                    <p>home.twig</p>
+                            <pre><code contenteditable data-trim class="html">
+{% include &#039;inc/header.twig&#039; %}
+
+&lt;a href=&quot;{{url(&#039;home&#039;)}}&quot;&gt;Home&lt;/a&gt;
+&lt;br /&gt;
+{% for i in range(1,5) %}
+    &lt;a href=&quot;{{url(&#039;page&#039;,{page:i})}}&quot;&gt;Page {{i}}&lt;/a&gt;
+{% endfor %}
+
+&lt;br /&gt;Home
+
+{% include &#039;inc/footer.twig&#039; %}
+                            </code></pre>
+                </section>
+
+                <section>
+                    <p>Nous pouvons désormais lier les différents pages entre elles et créer le contenu de ces pages</p>
+                    <p>Il est temps de créer et récupérer les données</p>
+                </section>
+
+                <!-- <section id="step-5">
+                    <h2>5 - Récupérer les données depuis la BDD</h2>
+                </section>
+
+                <section>
+                    <p>Il existe une infinité de façons de gérer les données,<br>la plus adapté à Silex étant via <a href="https://doctrine-orm.readthedocs.org/en/latest/" target="_blank">Doctrine</a></p>
+                    <p>Doctrine est un ORM (Object Relational Mapping) et permet de gérer les données comme des entités</p>
+                    <p>Ce concept étant assez complexe, nous allons continuer d'utiliser la méthode classique et fiable avec PDO</p>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Créez une base de données</li>
+                        <li>Créez la table "snippets" avec comme colonnes : id, id_category, title, content</li>
+                        <li>Créez la table "categories" avec comme colonnes : id, slug, title</li>
+                        <li>Rajoutez quelques contenus</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Créez l'habituel config.php dans le même dossier qu'index.php</li>
+                        <li>Configurez-le et enlevez la partie "error_reporting"</li>
+                        <li>Incluez-le dans index.php</li>
+                        <li>Transférez-y l'autoload, la création de Silex et sa configuration</li>
+                        <li>Actualisez le site pour vous assurer que tout fonctionne</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>config.php</p>
+                    <pre><code contenteditable data-trim class="php">
+&lt;?php
+
+require_once __DIR__.&#039;/../vendor/autoload.php&#039;;
+
+// Configs
+define(&#039;DB_HOST&#039;,&#039;localhost&#039;);
+define(&#039;DB_NAME&#039;,&#039;hetic-p2017-silex-snippets&#039;);
+define(&#039;DB_USER&#039;,&#039;root&#039;);
+define(&#039;DB_PASS&#039;,&#039;root&#039;);
+
+// Pdo
+try
+{
+    $pdo = new PDO(&#039;mysql:dbname=&#039;.DB_NAME.&#039;;host=&#039;.DB_HOST,DB_USER,DB_PASS);
+    $pdo-&gt;setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_NAMED);
+}
+catch (PDOException $e)
+{
+    die(&#039;error&#039;);
+}
+
+// Silex
+$app = new Silex\Application();
+
+// Twig
+$app-&gt;register(new Silex\Provider\TwigServiceProvider(), array(
+    &#039;twig.path&#039; =&gt; __DIR__.&#039;/views&#039;,
+));
+
+// Url Generator
+$app-&gt;register(new Silex\Provider\UrlGeneratorServiceProvider());
+
+// Models
+include &#039;models/snippets.class.php&#039;;
+$snippets_model = new Snippets_Model($pdo);
+
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>index.php</p>
+                    <pre><code contenteditable data-trim class="php">
+                    &lt;?php
+
+require_once &#039;config.php&#039;;
+
+// Home
+$app-&gt;get(&#039;/&#039;, function()
+{
+    /* ... */
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>SQL</p>
+                    <pre><code contenteditable data-trim class="sql">
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+CREATE TABLE `snippets` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_category` int(11) NOT NULL,
+  `title` varchar(254) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+INSERT INTO `snippets` (`id`, `id_category`, `title`, `content`) VALUES
+(1, 2, 'Class PHP', 'Contenu snippet 1'),
+(2, 2, 'Config', 'Contenu snippet 2'),
+(3, 3, 'Template HTML5', 'Contenu snippet 3'),
+(4, 4, 'Animation CSS3', 'Contenu snippet 4'),
+(5, 4, 'Transition CSS3', 'Contenu snippet 5'),
+(6, 1, 'Timeout / Interval', 'Contenu snippet 6'),
+(7, 1, 'Geolocation', 'Contenu snippet 7'),
+(8, 3, 'Audio / Video', 'Contenu snippet 8'),
+(9, 2, 'PDO prepare', 'Contenu snippet 9');
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>
+                        Il serait intéressant de rajouter les requêtes dans un autre fichier
+                        <br>Nous allons créer un "Model"
+                    </p>
+                    <p>Le Model est en charge de gérer un type de données. Ce sera une classe PHP qui va gérer les snippets à l'aide d'une série de méthodes</p>
+                    <p>C'est une technique courante de séparation des métiers</p>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Créez un dossier "models" à côté de index.php</li>
+                        <li>Créez-y un fichier "snippets.class.php"</li>
+                        <li>Écrivez une class appelée "Snippets_Model"</li>
+                        <li>
+                            Rajoutez-lui 4 méthodes :
+                            <br>__construct($pdo)
+                            <br>get()
+                            <br>get_by_page($page = 1, $limit = 4)
+                            <br>get_by_category_slug($slug)
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>snippets.class.php</p>
+                    <pre><code contenteditable data-trim class="php">
+&lt;?php
+
+/**
+* Snippets Model
+*/
+class Snippets_Model
+{
+
+    function __construct($pdo)
+    {
+
+    }
+
+    function get()
+    {
+
+    }
+
+    function get_by_page($page = 1, $limit = 4)
+    {
+
+    }
+
+    function get_by_category_slug($slug)
+    {
+
+    }
+}
+
+                    </code></pre>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>
+                            Incluez cette classe dans config.php
+                            <pre><code contenteditable data-trim class="php">
+                                include 'models/snippets.class.php';
+                            </code></pre>
+                        </li>
+                        <li>
+                            Initialisez-la dans une variable <a href="">$snippets_model</a> (toujours dans config.php)
+                            <pre><code contenteditable data-trim class="php">
+                                $snippets_model = new Snippets_Model($pdo);
+                            </code></pre>
+                        </li>
+                        <li>Utilisez "global $snippets_model" dans les différentes routes de index.php pour pouvoir utiliser le Model</li>
+                        <li>Appelez les différentes méthodes selon chaque route</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>index.php</p>
+                    <pre><code contenteditable data-trim class="php">
+&lt;?php
+
+require_once &#039;config.php&#039;;
+
+// Home
+$app-&gt;get(&#039;/&#039;, function()
+{
+    global $app;
+    global $snippets_model;
+
+    // Data
+    $data = array(
+        &#039;title&#039;    =&gt; &#039;Home&#039;,
+        &#039;snippets&#039; =&gt; $snippets_model-&gt;get()
+    );
+
+    // Return
+    return $app[&#039;twig&#039;]-&gt;render(&#039;home.twig&#039;,$data);
+})
+-&gt;bind(&#039;home&#039;);
+
+// Page
+$app-&gt;get(&#039;/page/{page}&#039;,function($page)
+{
+    global $app;
+    global $snippets_model;
+
+    // Data
+    $data = array(
+        &#039;title&#039;    =&gt; &#039;Page&#039;,
+        &#039;snippets&#039; =&gt; $snippets_model-&gt;get_by_page($page)
+    );
+
+    // Return
+    return $app[&#039;twig&#039;]-&gt;render(&#039;page.twig&#039;,$data);
+})
+-&gt;assert(&#039;page&#039;,&#039;\d+&#039;)
+-&gt;bind(&#039;page&#039;);
+
+// Category
+$app-&gt;get(&#039;/category/{category}&#039;,function($category)
+{
+    global $app;
+    global $snippets_model;
+
+    // Data
+    $data = array(
+        &#039;title&#039;    =&gt; &#039;Category&#039;,
+        &#039;snippets&#039; =&gt; $snippets_model-&gt;get_by_category_slug($category)
+    );
+
+    // Return
+    return $app[&#039;twig&#039;]-&gt;render(&#039;category.twig&#039;,$data);
+})
+-&gt;assert(&#039;category&#039;,&#039;[a-z0-9-]+&#039;)
+-&gt;bind(&#039;category&#039;);
+
+$app-&gt;run();
+
+
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Actuellement, ces méthodes ne renvoient rien. Il va falloir les compléter</p>
+                    <p>La méthode "__construct()" est appelée à l'initialisation "new Snippets_Model($pdo)"</p>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>
+                            Dans __construct() enregistrez $pdo dans les propriétés de la classe
+                            <pre><code contenteditable data-trim class="php">
+function __construct($pdo)
+{
+    $this->pdo = $pdo;
+}
+                            </code></pre>
+                        </li>
+                        <li>Complétez la méthode get_by_page() afin quelle "return" les snippets pour telle page</li>
+                        <li>Complétez la méthode get_by_category_slug() afin quelle "return" les snippets pour tel slug de categorie</li>
+                        <li>Complétez la méthode get() qui va simplement appeler get_by_page() avec les paramètres par défaut</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>snippets.class.php</p>
+                    <pre><code contenteditable data-trim class="php">
+&lt;?php
+
+/**
+* Snippets Model
+*/
+class Snippets_Model
+{
+
+    function __construct($pdo)
+    {
+        $this-&gt;pdo = $pdo;
+    }
+
+    function get()
+    {
+        // Return first page snippets (default)
+        return $this-&gt;get_by_page();
+    }
+
+    function get_by_page($page = 1, $limit = 4)
+    {
+        // Limit values
+        $page -= 1;
+        $start = $page * $limit;
+
+        // Sql
+        $prepare = $this-&gt;pdo-&gt;prepare(&#039;
+            SELECT
+                s.title,
+                s.content,
+                c.title AS category_title,
+                c.slug AS category_slug
+            FROM
+                snippets AS s
+            LEFT JOIN
+                categories AS c
+            ON
+                s.id_category = c.id
+            LIMIT
+                :start,:limit
+        &#039;);
+
+        // Bind values
+        $prepare-&gt;bindValue(&#039;start&#039;,$start,PDO::PARAM_INT);
+        $prepare-&gt;bindValue(&#039;limit&#039;,$limit,PDO::PARAM_INT);
+
+        // Execute / Fetch
+        $prepare-&gt;execute();
+        $snippets = $prepare-&gt;fetchAll();
+
+        // Return
+        return $snippets;
+    }
+
+    function get_by_category_slug($slug)
+    {
+        // Sql
+        $prepare = $this-&gt;pdo-&gt;prepare(&#039;
+            SELECT
+                s.title,
+                s.content,
+                c.title AS category_title,
+                c.slug AS category_slug
+            FROM
+                snippets AS s
+            LEFT JOIN
+                categories AS c
+            ON
+                s.id_category = c.id
+            WHERE
+                c.slug = :slug
+        &#039;);
+
+        // Bind slug value
+        $prepare-&gt;bindValue(&#039;slug&#039;,$slug);
+
+        // Execute / Fetch
+        $prepare-&gt;execute();
+        $snippets = $prepare-&gt;fetchAll();
+
+        // Return
+        return $snippets;
+    }
+}
+
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Nous recupérons bien les snippets et nous les envoyons aux templates</p>
+                    <p>Il faut, désormais, compléter les différents templates pour faire apparaitre les snippets</p>
+                    <p>Comme le format des snippets ne change pas entre les différentes pages, nous pouvons faire un include Twig</p>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Dans le dossiers views/inc/, créez un fichier "snippets.php"</li>
+                        <li>Incluez ce fichier dans chacune des pages entre le head et le footer</li>
+                        <li>Complétez-le de manière à afficher le titre du snippet, son contenu et sa catégorie en lien vers la page de catégorie</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>Il ne reste qu'à rajouter la pagination</p>
+                    <p>Celle-ci doit apparaître dans les pages "home" et "page"</p>
+                    <p>Nous allons donc pouvoir créer un include twig</p>
+                    <p>Nous pouvons aussi créer une méthode dans le Model qui renverra les différentes pages</p>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>Dans le dossiers views/inc/, créez un fichier "pagination.twig"</li>
+                        <li>Incluez ce fichier dans les templates home.twig et page.twig</li>
+                        <li>Créez une méthode "get_pages($current = 1, $limit = 4)" dans snippets.class.php</li>
+                        <li>Complétez cette méthode afin qu'elle "return" un tableau de tableaux des pages. Chaque page contiendra le numéro ainsi que valeur "current" précisant si c'est la page courante</li>
+                        <li>
+                            Complétez les routes dans index.php afin d'envoyer ce tableau dans les templates twig
+                            <pre><code contenteditable data-trim class="html">
+
+        'pages' => $snippets_model->get_pages($page)
+                            </code></pre>
+                        </li>
+                        <li>Complétez pagination.twig afin d'afficher la pagination</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>pagination.twig</p>
+                    <pre><code contenteditable data-trim class="html">
+&lt;section&gt;
+    {% for page in pages %}
+        {% if page.current %}
+            Page {{page.number}}
+        {% else %}
+            &lt;a href=&quot;{{url(&#039;page&#039;,{page:page.number})}}&quot;&gt;Page {{page.number}}&lt;/a&gt;
+        {% endif %}
+    {% endfor %}
+&lt;/section&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>home.twig et page.twig</p>
+                    <pre><code contenteditable data-trim class="html">
+{% include 'inc/header.twig' %}
+{% include 'inc/snippets.twig' %}
+{% include 'inc/pagination.twig' %}
+{% include 'inc/footer.twig' %}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>snippets.class.php</p>
+                    <pre><code contenteditable class="php">
+    /* ... */
+
+    function get_pages($current = 1, $limit = 4)
+    {
+        $query  = $this->pdo->query('SELECT COUNT(*) AS count FROM snippets');
+        $result = $query->fetch();
+        $count  = ceil($result['count'] / $limit);
+        $pages  = array();
+
+        for($i = 1; $i <= $count; $i++)
+        {
+            $pages[] = array(
+                'number'  => $i,
+                'current' => $current == $i
+            );
+        }
+
+        return $pages;
+    }
+}
+                    </code></pre>
+                </section>
+
+                <section id="step-6">
+                    <h2>6 - Gérer les erreurs</h2>
+                </section>
+
+                <section>
+                    <p>Lorsqu'une erreur se produit, Silex va essayer de la catcher et de renvoyer un message propre comme "Sorry, the page you are looking for could not be found."</p>
+                    <p>Il est possible d'afficher plus d'information.<br>Pour cela, il suffit de passer l'élément <a href="">debug</a> de <a href="">$app</a> sur <a href="">true</a></p>
+                    <pre><code contenteditable data-trim class="php">
+$app = new Silex\Application();
+$app['debug'] = true;
+                    </code></pre>
+                   <p>Il est important de penser à le repasser sur <a href="">false</a> une fois le site en production</p>
+                </section>
+
+               <section>
+                   <p>
+                       <img src="src/img/screen-silex-debug.png" alt="">
+                   </p>
+               </section>
+
+               <section>
+                   <p>Il est aussi possible d'utiliser ses propres pages d'erreurs</p>
+                   <p>Cela fonctionne comme la création d'une route sauf qu'il faut écrire <a href="">error</a> au lieu de get et il n'y a pas à préciser de route (logique)</p>
+                   <p>Il est possible de récupérer l'exception ainsi que le code d'erreur dans les paramètres de la fonction</p>
+                    <pre><code contenteditable data-trim class="php">
+// Errors
+$app->error(function (\Exception $e, $code)
+{
+    // Globals
+    global $app;
+
+    $data = array(
+        'title' => $code
+    );
+    if($code == 404)
+        return $app['twig']->render('404.twig',$data);
+});
+                    </code></pre>
+               </section>
+
+               <section>
+                   <ul>
+                       <li>Créez la route d'erreur</li>
+                       <li>Créez un fichier <a href="">404.twig</a> dans le dossier <a href="">view/</a></li>
+                       <li>Mettez-y ce que vous souhaitez ("Page not found")</li>
+                       <li>Testez une URL aléatoire qui n'existe pas</li>
+                   </ul>
+               </section>
+
+               <section>
+                   <p>Votre site est presque terminé</p>
+                   <p>Il vous reste à le skinner ainsi qu'à rajouter les éléments et fonctionnalités pouvant manquer</p>
+               </section> -->
+            </div>
+        </div>
+
+        <script src="../tools/reveal.js/lib/js/head.min.js"></script>
+        <script src="../tools/reveal.js/js/reveal.js"></script>
+        <script>
+            Reveal.initialize({
+                controls     : false,
+                progress     : true,
+                history      : true,
+                center       : true,
+                theme        : Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition   : Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                dependencies : [
+                    { src: '../tools/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../tools/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../tools/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../tools/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../tools/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../tools/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+            Reveal.addEventListener('slidechanged',function(e)
+            {
+                document.getElementById('pagination').innerHTML = e.indexh + 1;
+            });
+        </script>
+    </body>
+</html>
