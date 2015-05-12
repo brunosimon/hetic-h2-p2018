@@ -1,6 +1,0 @@
-Options -MultiViews
-
-RewriteEngine On
-RewriteBase /p2018/exercices/cours-32-silex-blog/web
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [QSA,L]
