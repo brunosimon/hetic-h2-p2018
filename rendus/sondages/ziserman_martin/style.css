@@ -1,9 +1,0 @@
-.container {margin: auto; background-color: #2980B9; position : absolute;
-   -moz-box-shadow: 1px 1px 5px 0px #2980B9;
--webkit-box-shadow: 1px 1px 5px 0px #2980B9;
-	 -o-box-shadow: 1px 1px 5px 0px #2980B9;
-		box-shadow: 1px 1px 5px 0px #2980B9;
-}
-.container * 	{margin-top: 10px;}
-.container h1 	{font-family: arial; display: inline-block;}
-.container div 	{font-family: arial;}

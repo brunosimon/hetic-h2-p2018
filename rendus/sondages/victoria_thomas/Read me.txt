@@ -1,9 +1,0 @@
-Le test fonctionne de la manière suivante :
-
-On a 4 if qui attribut entre 1 et 5 point à la ligne contentant l'id 1 dans la colone calcul_resultat, et qui permet de déterminer le resultat
-du test.
-On a ensuite une une colone question qui permet s'incrémente a chaque clique sur n'importe lequel des lien pour permettre de passer a la 
-question suivante, chaque question étant attribuer a un chiffre entre 1 et 7.
-
-A la fin on véfifie le resultat dans une boucle conditionnel et on affiche le une page en fonction de ce résultat.
-

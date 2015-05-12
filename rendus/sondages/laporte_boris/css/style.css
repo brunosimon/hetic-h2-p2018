@@ -1,9 +1,0 @@
-body { font-size: 14px; font-family: arial;background: #eee;}
-
-.container { margin-top:  50px;text-align: center; }
-
-.container .gif { width: 300px;height: auto; }
-
-.container .responses { position: relative;display: inline-block;width: 300px;vertical-align: top;margin : 50px }
-
-.container .text { padding: 20px;}
