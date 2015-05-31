@@ -1,0 +1,13 @@
+{{include('partials/header.twig')}}
+
+{% for _article in articles %}
+	<div>
+		<h2>{{_article.title}}</h2>
+		<p>{{_article.excerpt}}</p>
+		<a href="{{url('article',{article:_article.slug})}}">
+			Lire la suite
+		</a>
+	</div>
+{% endfor %}
+
+{{include('partials/footer.twig')}}

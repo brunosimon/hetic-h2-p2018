@@ -1,5 +1,8 @@
 <?php
 
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Validator\Constraints;
+
 require_once __DIR__.'/config.php';
 
 /**
@@ -99,7 +102,7 @@ $app->get('/about', function() use ($app)
 /**
  * Contact
  */
-$app->match('/contact', function(Symfony\Component\HttpFoundation\Request $request) use ($app)
+$app->match('/contact', function(Request $request) use ($app)
 {
     // View data
 	$data = array(
@@ -108,41 +111,100 @@ $app->match('/contact', function(Symfony\Component\HttpFoundation\Request $reque
 		'title' => 'Contact'
 	);
 
-	// Form
-	$form_data = array(
-		'name'    => '',
-		'email'   => '',
-		'message' => '',
+	// Create builder
+	$form_builder = $app['form.factory']->createBuilder('form');
+
+	// Set method and action
+	$form_builder->setMethod('post');
+	$form_builder->setAction($app['url_generator']->generate('contact'));
+
+	// Add input
+	$form_builder->add(
+	    'name',
+	    'text',
+	    array(
+	        'label'          => 'Your name',
+	        'constraints'    => array(
+	        	new Constraints\NotEqualTo(
+	        		array(
+	        			'value'   => 'fuck',
+	        			'message' => 'Be polite you shithead'
+        			)
+    			)
+			),
+	        'trim'        => true,
+	        'max_length'  => 50,
+	        'required'    => true,
+	    )
 	);
+	$form_builder->add(
+	    'email',
+	    'email',
+	    array(
+	        'label'      => 'Your email',
+	        'trim'       => true,
+	        'max_length' => 50,
+	        'required'   => true,
+	    )
+	);
+	$form_builder->add(
+	    'subject',
+	    'choice',
+	    array(
+	        'label'       => 'Subject',
+	        'required'    => true,
+	        'empty_value' => 'Choose a subject',
+	        // 'multiple' => true,
+	        // 'expanded' => true,
+	        'choices'     => array(
+	        	'Informations' => 'Informations',
+	        	'Proposition'  => 'Proposition',
+	        	'Other'        => 'Other',
+        	)
+	    )
+	);
+	$form_builder->add(
+	    'message',
+	    'textarea',
+	    array(
+	        'label'      => 'Message',
+	        'trim'       => true,
+	        'max_length' => 50,
+	        'required'   => true,
+	    )
+	);
+	$form_builder->add('submit','submit');
 
-	$form_builder = $app['form.factory']->createBuilder('form', $form_data);
-    $form_builder->add('name');
-    $form_builder->add('email');
-    $form_builder->add('message','textarea');
+	// Create form
+	$form = $form_builder->getForm();
 
-    $form = $form_builder->getForm();
-    $form->handleRequest($request);
-    $data['form'] = $form->createView();
+	// Handle request
+	$form->handleRequest($request);
 
-    // Valid form
-    if($form->isValid())
-    {
-    	$form_data = $form->getData();
-        
-		// Send mail
-		$message = \Swift_Message::newInstance();
-	    $message->setSubject('Mail from: '.$form_data['name']);
-	    $message->setFrom(array($form_data['email']));
-	    $message->setTo(array('simon.bruno.77@gmail.com'));
-	    $message->setBody($form_data['message']);
+	// Is submited
+	if($form->isSubmitted())
+	{
+	    // Get form data
+	    $form_data = $form->getData();
 
-	    $app['mailer']->send($message);
+	    // Is valid
+	    if($form->isValid())
+	    {
+			$message = \Swift_Message::newInstance();
+		    $message->setSubject($form_data['subject'].' ('.$form_data['email'].')');
+		    $message->setFrom(array($form_data['email']));
+		    $message->setTo(array('bruno.simon@hetic.net'));
+		    $message->setBody($form_data['message']);
+		    
+		    $app['mailer']->send($message);
 
-	    // Todo : reset values
+		    return $app->redirect($app['url_generator']->generate('contact'));
+	    }
+	}
 
-	    // Set as sent
-	    $data['sent'] = true;
-    }
+
+	// Send the form to the view
+	$data['form'] = $form->createView();
 
 	// Return
 	return $app['twig']->render('contact.twig',$data);

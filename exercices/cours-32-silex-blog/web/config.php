@@ -11,8 +11,18 @@ $app['debug'] = true;
 $app->register(new Silex\Provider\TwigServiceProvider(), array( 'twig.path' => __DIR__.'/../views' ));
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 $app->register(new Silex\Provider\FormServiceProvider());
-$app->register(new Silex\Provider\TranslationServiceProvider(), array('translator.domains' => array()));
-$app->register(new Silex\Provider\SwiftmailerServiceProvider());
+$app->register(new Silex\Provider\TranslationServiceProvider());
+$app->register(new Silex\Provider\ValidatorServiceProvider());
+$app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
+    'swiftmailer.options' => array(
+        'host' => 'smtp.gmail.com',
+        'port' => 465,
+        'username' => 'hetic.p2018.smtp@gmail.com',
+        'password' => 'heticp2018smtp',
+        'encryption' => 'ssl',
+        'auth_mode' => 'login'
+    )
+));
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array (
         'driver'    => 'pdo_mysql',
@@ -25,15 +35,6 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 ));
 
 $app['db']->setFetchMode(PDO::FETCH_OBJ);
-
-$app['swiftmailer.options'] = array(
-    'host' => 'smtp.gmail.com',
-    'port' => 465,
-    'username' => 'hetic.p2018.smtp@gmail.com',
-    'password' => 'heticp2018smtp',
-    'encryption' => 'ssl',
-    'auth_mode' => 'login'
-);
 
 // Models
 $articles_model = new Articles_Model($app['db']);
