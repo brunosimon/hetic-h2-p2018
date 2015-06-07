@@ -1,6 +1,7 @@
 <?php
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Validator\Constraints;
 
 require_once __DIR__.'/../vendor/autoload.php';
 require_once __DIR__.'/../models/articles.class.php';
@@ -25,6 +26,16 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'password'  => 'root',
         'charset'   => 'utf8'
     ),
+));
+$app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
+    'swiftmailer.options' => array(
+        'host'       => 'smtp.gmail.com',
+        'port'       => 465,
+        'username'   => 'hetic.p2018.smtp@gmail.com',
+        'password'   => 'heticp2018smtp',
+        'encryption' => 'ssl',
+        'auth_mode'  => 'login'
+    )
 ));
 
 $app['db']->setFetchMode(PDO::FETCH_OBJ);
@@ -108,17 +119,35 @@ $app->match('/contact', function(Request $request) use ($app) {
 	// Add inputs
 	$form_builder->add(
 		'name',
-		'text'
+		'text',
+		array(
+			'label'       => 'Your name',
+			'trim'        => true,
+			'max_length'  => 20,
+			'constraints' => array(
+				new Constraints\NotEqualTo(
+					array(
+						'value'   => 'fuck',
+						'message' => 'Be polite you shithead'
+					)
+				)
+			)
+		)
 	);
 	$form_builder->add(
 		'email',
-		'email'
+		'email',
+		array(
+			'label' => 'Your email',
+			'trim'  => true
+		)
 	);
 	$form_builder->add(
 		'subject',
 		'choice',
 		array(
-			'choices' => array(
+			'expanded' => true,
+			'choices'  => array(
 				'sujet 1' => 'sujet 1',
 				'sujet 2' => 'sujet 2',
 				'sujet 3' => 'sujet 3'
@@ -127,7 +156,11 @@ $app->match('/contact', function(Request $request) use ($app) {
 	);
 	$form_builder->add(
 		'message',
-		'textarea'
+		'textarea',
+		array(
+			'label' => 'Message',
+			'trim'  => true
+		)
 	);
 	$form_builder->add(
 		'submit',
@@ -148,12 +181,18 @@ $app->match('/contact', function(Request $request) use ($app) {
 		// Test if form is valid
 		if($form->isValid())
 		{
-			// Send email
-			// Redirect
+			// Prepare message
+			$message = \Swift_Message::newInstance();
+			$message->setSubject($form_data['subject']);
+			$message->setFrom($form_data['email']);
+			$message->setTo('bruno.simon@hetic.net');
+			$message->setBody($form_data['message']);
 
-			echo '<pre>';
-			print_r($form_data);
-			echo '</pre>';
+			// Send email
+			$app['mailer']->send($message);
+
+			// Redirect (to reset form)
+			return $app->redirect($app['url_generator']->generate('contact'));
 		}
 	}
 
